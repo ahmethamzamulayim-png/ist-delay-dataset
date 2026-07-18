@@ -2,7 +2,8 @@ name: Collect IST flight data
 
 on:
   schedule:
-    - cron: "17 6 * * *" # daily ~06:17 UTC, collects yesterday's full UTC day
+    - cron: "45 23 * * *" # daily 23:45 UTC, collects TODAY live (free aviationstack
+      # plan has no historical queries, so the day is captured just before it ends)
   workflow_dispatch:
     inputs:
       date:
@@ -35,8 +36,8 @@ jobs:
 
       - name: Collect
         env:
-          OPENSKY_CLIENT_ID: ${{ secrets.OPENSKY_CLIENT_ID }}
-          OPENSKY_CLIENT_SECRET: ${{ secrets.OPENSKY_CLIENT_SECRET }}
+          OPENSKY_PROXY_URL: ${{ secrets.OPENSKY_PROXY_URL }}
+          OPENSKY_PROXY_KEY: ${{ secrets.OPENSKY_PROXY_KEY }}
           AVIATIONSTACK_KEY: ${{ secrets.AVIATIONSTACK_KEY }}
         run: |
           ARGS=""

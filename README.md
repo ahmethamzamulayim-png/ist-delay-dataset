@@ -12,9 +12,10 @@ to the repo. A [status dashboard](docs/) (GitHub Pages) shows progress.
 ## How it works
 
 ```
-06:17 UTC daily (GitHub Actions)
+23:45 UTC daily (GitHub Actions) — captures TODAY just before it ends
   OpenSky  /flights/departure + /flights/arrival  airport=LTFM   → actual movements
-  aviationstack /v1/flights dep_iata=IST (arr if quota allows)   → schedules + actuals
+           (via a tiny Deno Deploy proxy — OpenSky firewalls GitHub runner IPs)
+  aviationstack /v1/flights dep_iata=IST, real-time mode         → schedules + actuals
   aviationweather.gov METARs for LTFM                            → raw weather strings
   join on normalized ICAO callsign + closest scheduled time (±3h)
   → data/flights/YYYY-MM-DD.csv  (joined + cancelled)
@@ -61,17 +62,22 @@ Cancelled flights go in the **main** CSV with `status=cancelled` — signal, not
 - Partial failure: one source down → the other's rows are still saved and the day
   is annotated in `metrics.csv`. The workflow fails (and GitHub emails you) only
   when **both** flight sources fail.
-- Very first run backfills up to 6 extra days (OpenSky reaches a few days back).
+- No auto-backfill: the free schedule source can't serve past days.
+  `--backfill N` exists for manual (OpenSky-only) historical pulls.
 - Every run regenerates `summary.json` from all accumulated data.
 
 ## Setup
 
-1. `gh secret set OPENSKY_CLIENT_ID`, `gh secret set OPENSKY_CLIENT_SECRET`
-   (an OpenSky account's API client), `gh secret set AVIATIONSTACK_KEY`.
-2. Settings → Pages → deploy from branch `main`, folder `/docs`.
+1. **Deploy the OpenSky proxy** ([proxy/opensky-proxy.ts](proxy/opensky-proxy.ts))
+   on Deno Deploy (dash.deno.com → new project/playground, paste the file).
+   Set its env vars: `OPENSKY_CLIENT_ID`, `OPENSKY_CLIENT_SECRET` (your OpenSky
+   API client) and `PROXY_KEY` (any long random string).
+2. GitHub secrets: `gh secret set OPENSKY_PROXY_URL` (the `https://….deno.dev`
+   URL), `gh secret set OPENSKY_PROXY_KEY` (same value as `PROXY_KEY`), and
+   `gh secret set AVIATIONSTACK_KEY`.
 3. Settings → Actions → General → Workflow permissions → read and write.
 4. Optionally trigger the workflow once manually (Actions → Collect IST flight
-   data → Run workflow) instead of waiting for the cron.
+   data → Run workflow) instead of waiting for the 23:45 UTC cron.
 
 ## Verified the hard way (2026-07-18)
 
@@ -104,6 +110,9 @@ Cancelled flights go in the **main** CSV with `status=cancelled` — signal, not
 
 ## Known limitations
 
+- The day is captured live at 23:45 UTC: flights still in the air lack final
+  times, and post-23:45 departures are missed or partial. That tail is the
+  price of the free-tier real-time-only schedule source.
 - OpenSky has no scheduled times; delays exist only for rows matched to
   aviationstack (or cancelled). Match rate is tracked per day in `metrics.csv`.
 - ADS-B coverage gaps over Turkey can shift `firstSeen`/`lastSeen` by minutes —

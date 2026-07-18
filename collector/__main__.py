@@ -51,14 +51,13 @@ def main():
                    help="also collect N days before the target day")
     args = p.parse_args()
 
+    # default = today (UTC): the cron runs at 23:45 UTC and the free aviationstack
+    # plan only serves real-time (same-day) flights, so the day is collected live.
+    # No auto-backfill — past days have no reachable schedule source on this plan.
     target = (datetime.strptime(args.date, "%Y-%m-%d").date() if args.date
-              else datetime.now(timezone.utc).date() - timedelta(days=1))
-    backfill = args.backfill
-    if not args.date and not backfill and not any(store.FLIGHTS_DIR.glob("*.csv")):
-        backfill = 6  # very first run: try the past week (OpenSky reaches a few days back)
-        log.info("First run detected, backfilling %d extra days", backfill)
+              else datetime.now(timezone.utc).date())
 
-    days = [target - timedelta(days=i) for i in range(backfill, -1, -1)]
+    days = [target - timedelta(days=i) for i in range(args.backfill, -1, -1)]
     # don't re-spend API quota on backfill days that already exist
     days = [d for d in days
             if d == target or not (store.FLIGHTS_DIR / f"{d.isoformat()}.csv").exists()]

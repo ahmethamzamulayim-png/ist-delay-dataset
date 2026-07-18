@@ -65,15 +65,24 @@ def _opensky_headers():
 def fetch_opensky(day: date):
     """LTFM departures + arrivals for one UTC day.
 
+    Goes through the Deno Deploy proxy when OPENSKY_PROXY_URL is set (OpenSky
+    firewalls GitHub's runner IPs; the proxy also handles OAuth). Direct access
+    with local OAuth is kept for runs from residential IPs.
+
     Returns a list of flight dicts (each tagged with direction=dep/arr), which may
     be empty, or None when OpenSky was unreachable for both directions.
     """
     begin = int(datetime(day.year, day.month, day.day, tzinfo=timezone.utc).timestamp())
-    headers = _opensky_headers()
+    base = os.getenv("OPENSKY_PROXY_URL", "").rstrip("/")
+    if base:
+        headers = {"x-proxy-key": os.getenv("OPENSKY_PROXY_KEY", "")}
+    else:
+        base = OPENSKY_API
+        headers = _opensky_headers()
     out, failures = [], 0
     for direction, endpoint in (("dep", "departure"), ("arr", "arrival")):
         try:
-            r = _get(f"{OPENSKY_API}/flights/{endpoint}",
+            r = _get(f"{base}/flights/{endpoint}",
                      params={"airport": "LTFM", "begin": begin, "end": begin + 86400},
                      headers=headers)
         except RateLimited:
@@ -107,10 +116,13 @@ def fetch_aviationstack(day: date):
     for direction, param in (("dep", "dep_iata"), ("arr", "arr_iata")):
         offset = 0
         while budget > 0:
+            params = {"access_key": key, param: "IST", "limit": 100, "offset": offset}
+            # free plan rejects flight_date (function_access_restricted, verified
+            # 2026-07-18) — default is real-time mode: query today, filter below
+            if os.getenv("AVIATIONSTACK_HISTORICAL"):
+                params["flight_date"] = day.isoformat()
             try:
-                r = _get(AVIATIONSTACK_API, tries=2, params={
-                    "access_key": key, param: "IST", "flight_date": day.isoformat(),
-                    "limit": 100, "offset": offset})
+                r = _get(AVIATIONSTACK_API, tries=2, params=params)
             except RateLimited:
                 log.warning("aviationstack rate-limited, stopping")
                 return out or None
@@ -121,13 +133,16 @@ def fetch_aviationstack(day: date):
             if not isinstance(body, dict) or body.get("error"):
                 log.warning("aviationstack error: %s", body)
                 return out or None
-            page = body.get("data") or []
+            raw = body.get("data") or []
+            # in real-time mode rows can straddle midnight — keep the target day only
+            page = [a for a in raw
+                    if a.get("flight_date") in (day.isoformat(), None)]
             for a in page:
                 a["_direction"] = direction
             out.extend(page)
             total = (body.get("pagination") or {}).get("total") or 0
-            offset += len(page)
-            if not page or offset >= total:
+            offset += len(raw)
+            if not raw or offset >= total:
                 break
         log.info("aviationstack %s: %d rows total, %d requests left", direction, len(out), budget)
     return out or None
