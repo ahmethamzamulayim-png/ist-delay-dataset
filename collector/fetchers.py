@@ -1,0 +1,172 @@
+"""API fetchers: OpenSky (actual movements), aviationstack (schedules), aviationweather (METARs)."""
+import logging
+import os
+import time
+from datetime import date, datetime, timedelta, timezone
+
+import requests
+
+log = logging.getLogger("collector")
+
+OPENSKY_API = "https://opensky-network.org/api"
+# ASSUMPTION: OAuth2 client-credentials token endpoint after OpenSky's auth migration.
+OPENSKY_TOKEN_URL = ("https://auth.opensky-network.org/auth/realms/opensky-network"
+                     "/protocol/openid-connect/token")
+AVIATIONSTACK_API = "http://api.aviationstack.com/v1/flights"  # free tier is HTTP-only
+METAR_API = "https://aviationweather.gov/api/data/metar"
+
+
+class RateLimited(Exception):
+    pass
+
+
+def _get(url, *, params=None, headers=None, tries=4):
+    """GET with exponential backoff. Raises RateLimited on 429; returns None if all tries fail."""
+    for attempt in range(tries):
+        try:
+            r = requests.get(url, params=params, headers=headers, timeout=60)
+            if r.status_code == 429:
+                raise RateLimited(url)
+            if r.status_code == 404:  # OpenSky uses 404 for "no flights in interval"
+                return r
+            r.raise_for_status()
+            return r
+        except RateLimited:
+            raise
+        except requests.RequestException as e:
+            log.warning("GET %s failed (%s), attempt %d/%d", url, e, attempt + 1, tries)
+            time.sleep(2 ** attempt)
+    return None
+
+
+def _opensky_headers():
+    cid = os.getenv("OPENSKY_CLIENT_ID")
+    secret = os.getenv("OPENSKY_CLIENT_SECRET")
+    if not (cid and secret):
+        log.info("No OpenSky credentials, using anonymous access")
+        return {}
+    try:
+        r = requests.post(OPENSKY_TOKEN_URL, timeout=60, data={
+            "grant_type": "client_credentials",
+            "client_id": cid, "client_secret": secret})
+        r.raise_for_status()
+        return {"Authorization": "Bearer " + r.json()["access_token"]}
+    except (requests.RequestException, KeyError, ValueError) as e:
+        log.warning("OpenSky token fetch failed (%s), falling back to anonymous", e)
+        return {}
+
+
+def fetch_opensky(day: date):
+    """LTFM departures + arrivals for one UTC day.
+
+    Returns a list of flight dicts (each tagged with direction=dep/arr), which may
+    be empty, or None when OpenSky was unreachable for both directions.
+    """
+    begin = int(datetime(day.year, day.month, day.day, tzinfo=timezone.utc).timestamp())
+    headers = _opensky_headers()
+    out, failures = [], 0
+    for direction, endpoint in (("dep", "departure"), ("arr", "arrival")):
+        try:
+            r = _get(f"{OPENSKY_API}/flights/{endpoint}",
+                     params={"airport": "LTFM", "begin": begin, "end": begin + 86400},
+                     headers=headers)
+        except RateLimited:
+            log.warning("OpenSky rate-limited (429), aborting politely")
+            r = None
+        if r is None:
+            failures += 1
+            continue
+        flights = [] if r.status_code == 404 else r.json()
+        for f in flights:
+            f["direction"] = direction
+        out.extend(flights)
+        log.info("OpenSky %s: %d flights", endpoint, len(flights))
+    return None if failures == 2 else out
+
+
+def fetch_aviationstack(day: date):
+    """Scheduled/estimated/actual times for IST for one day.
+
+    Departures first — the free-tier quota may not cover both directions.
+    Returns None when there is no key or nothing could be fetched at all.
+    """
+    key = os.getenv("AVIATIONSTACK_KEY")
+    if not key:
+        log.warning("AVIATIONSTACK_KEY not set, skipping schedule source")
+        return None
+    # ASSUMPTION: free tier ~100 requests/month, 100 rows/page via limit+offset.
+    # 3/day * 31 covers roughly the monthly quota; raise via env if on a paid plan.
+    budget = int(os.getenv("AVIATIONSTACK_DAILY_BUDGET", "3"))
+    out = []
+    for direction, param in (("dep", "dep_iata"), ("arr", "arr_iata")):
+        offset = 0
+        while budget > 0:
+            try:
+                r = _get(AVIATIONSTACK_API, tries=2, params={
+                    "access_key": key, param: "IST", "flight_date": day.isoformat(),
+                    "limit": 100, "offset": offset})
+            except RateLimited:
+                log.warning("aviationstack rate-limited, stopping")
+                return out or None
+            if r is None:
+                return out or None
+            budget -= 1
+            body = r.json()
+            if not isinstance(body, dict) or body.get("error"):
+                log.warning("aviationstack error: %s", body)
+                return out or None
+            page = body.get("data") or []
+            for a in page:
+                a["_direction"] = direction
+            out.extend(page)
+            total = (body.get("pagination") or {}).get("total") or 0
+            offset += len(page)
+            if not page or offset >= total:
+                break
+        log.info("aviationstack %s: %d rows total, %d requests left", direction, len(out), budget)
+    return out or None
+
+
+def fetch_metars(day: date):
+    """Raw LTFM METAR strings for one UTC day.
+
+    aviationweather.gov only serves recent observations on this endpoint, so days
+    older than ~4 days return []. TAFs are skipped: the API only returns *current*
+    TAFs, which are useless for yesterday.
+    """
+    start = datetime(day.year, day.month, day.day, tzinfo=timezone.utc)
+    end = start + timedelta(days=1)
+    hours_back = (datetime.now(timezone.utc) - start).total_seconds() / 3600
+    if hours_back > 96:
+        return []
+    try:
+        r = _get(METAR_API, params={"ids": "LTFM", "format": "json",
+                                    "hours": min(int(hours_back) + 1, 96)})
+    except RateLimited:
+        return []
+    if r is None:
+        return []
+    try:
+        obs = r.json()
+    except ValueError:
+        return []
+    out = []
+    for m in obs if isinstance(obs, list) else []:
+        raw = m.get("rawOb") or m.get("raw_text") or ""
+        # ASSUMPTION: obsTime is a unix epoch, reportTime an ISO string (new data API)
+        t = m.get("obsTime") or m.get("reportTime")
+        dt = None
+        if isinstance(t, (int, float)):
+            dt = datetime.fromtimestamp(t, tz=timezone.utc)
+        elif isinstance(t, str):
+            try:
+                dt = datetime.fromisoformat(t.replace("Z", "+00:00"))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+            except ValueError:
+                pass
+        if raw and dt and start <= dt < end:
+            out.append({"time_utc": dt.isoformat(), "raw": raw})
+    out.sort(key=lambda m: m["time_utc"])
+    log.info("METARs for %s: %d", day, len(out))
+    return out

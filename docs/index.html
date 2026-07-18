@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IST Rötar Veri Seti — Durum</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#f9f9f7; --card:#fcfcfb; --fg:#0b0b0b; --sub:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --border:rgba(11,11,11,.10);
+  --blue:#2a78d6; --red:#e34948; --green:#006300;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0d0d0d; --card:#1a1a19; --fg:#ffffff; --sub:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --border:rgba(255,255,255,.10);
+    --blue:#3987e5; --red:#e66767; --green:#0ca30c;
+  }
+}
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--bg);color:var(--fg);max-width:960px;margin:0 auto;padding:24px 16px 48px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;
+  justify-content:space-between;margin-bottom:6px}
+h1{font-size:1.35rem}
+.badge{font-size:.8rem;padding:3px 10px;border-radius:999px;border:1px solid var(--border);color:var(--sub)}
+.badge.ok{color:var(--green);border-color:var(--green)}
+.badge.stale{color:var(--red);border-color:var(--red)}
+.sub{color:var(--sub);font-size:.9rem;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.card .n{font-size:1.8rem;font-weight:700}
+.card .l{color:var(--sub);font-size:.85rem}
+.card.red .n{color:var(--red)} .card.green .n{color:var(--green)}
+.warm{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:8px}
+.chart{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:16px;margin-top:20px}
+.chart h2{font-size:.95rem;font-weight:600;margin-bottom:10px}
+footer{color:var(--muted);font-size:.78rem;margin-top:28px;word-break:break-all}
+</style>
+</head>
+<body>
+<header>
+  <h1>IST Rötar Veri Seti</h1>
+  <span id="badge" class="badge">yükleniyor…</span>
+</header>
+<p class="sub">İstanbul Havalimanı (LTFM) için günlük uçuş rötarı verisi toplanıyor —
+Faz 2'de rötar tahmin modeline dönüşecek.</p>
+
+<div class="cards">
+  <div class="card"><div class="n" id="days">—</div><div class="l">Veri toplanıyor (gün)</div></div>
+  <div class="card"><div class="n" id="total">—</div><div class="l">Kaydedilen uçuş</div></div>
+  <div class="card red"><div class="n" id="late">—</div><div class="l">Rötarlı (15+ dk)</div></div>
+  <div class="card green"><div class="n" id="ontime">—</div><div class="l">Zamanında</div></div>
+</div>
+<p class="warm" id="warm" hidden>ısınma dönemi — yüzdeler henüz oturmadı</p>
+
+<div class="chart"><h2>Toplanan uçuş sayısı (kümülatif)</h2><canvas id="c1" height="110"></canvas></div>
+<div class="chart"><h2>Günlük ortalama kalkış rötarı (dk)</h2><canvas id="c2" height="110"></canvas></div>
+
+<footer id="metar"></footer>
+
+<script>
+const tr = n => (n ?? 0).toLocaleString('tr-TR');
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+fetch('summary.json', {cache: 'no-store'})
+  .then(r => r.json())
+  .then(s => {
+    document.getElementById('days').textContent = tr(s.days);
+    document.getElementById('total').textContent = tr(s.total_flights);
+    document.getElementById('late').textContent =
+      s.pct_delayed == null ? tr(s.delayed_15) : `${tr(s.delayed_15)} (%${tr(s.pct_delayed)})`;
+    document.getElementById('ontime').textContent =
+      s.pct_ontime == null ? tr(s.ontime) : `${tr(s.ontime)} (%${tr(s.pct_ontime)})`;
+    if ((s.days || 0) < 14) document.getElementById('warm').hidden = false;
+
+    const badge = document.getElementById('badge');
+    if (s.generated_utc) {
+      const ageH = (Date.now() - new Date(s.generated_utc)) / 36e5;
+      const d = Math.floor(ageH / 24);
+      badge.textContent = 'son toplama: ' + (d === 0 ? 'bugün' : d === 1 ? 'dün' : `${d} gün önce`);
+      badge.className = 'badge ' + (ageH < 48 ? 'ok' : 'stale');
+    } else {
+      badge.textContent = 'henüz veri yok';
+      badge.className = 'badge stale';
+    }
+
+    const daily = s.daily || [];
+    const labels = daily.map(d => d.date.slice(5));
+    let cum = 0;
+    const cumData = daily.map(d => cum += d.flights);
+
+    Chart.defaults.color = css('--muted');
+    Chart.defaults.borderColor = css('--grid');
+    Chart.defaults.font.family = getComputedStyle(document.body).fontFamily;
+    const scales = {x: {grid: {display: false}}, y: {beginAtZero: true}};
+
+    new Chart(document.getElementById('c1'), {
+      type: 'bar',
+      data: {labels, datasets: [{label: 'uçuş', data: cumData,
+        backgroundColor: css('--blue'), borderRadius: 4, maxBarThickness: 18}]},
+      options: {plugins: {legend: {display: false}}, scales}
+    });
+    new Chart(document.getElementById('c2'), {
+      type: 'line',
+      data: {labels, datasets: [{label: 'ort. rötar (dk)',
+        data: daily.map(d => d.avg_dep_delay),
+        borderColor: css('--red'), backgroundColor: css('--red'),
+        borderWidth: 2, pointRadius: 2, tension: .2, spanGaps: true}]},
+      options: {plugins: {legend: {display: false}}, scales}
+    });
+
+    if (s.latest_metar) document.getElementById('metar').textContent = s.latest_metar;
+  })
+  .catch(() => {
+    const badge = document.getElementById('badge');
+    badge.textContent = 'veri yüklenemedi';
+    badge.className = 'badge stale';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+ "generated_utc": null,
+ "days": 0,
+ "first_date": null,
+ "last_date": null,
+ "total_flights": 0,
+ "delayed_15": 0,
+ "ontime": 0,
+ "pct_delayed": null,
+ "pct_ontime": null,
+ "daily": [],
+ "latest_metar": "",
+ "match_rate": null
+}
