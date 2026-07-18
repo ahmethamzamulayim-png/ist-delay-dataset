@@ -109,8 +109,11 @@ Cancelled flights go in the **main** CSV with `status=cancelled` — signal, not
   secrets are effectively required.
 - **ASSUMPTION** aviationstack free tier ≈ 100 requests/month, `limit=100` max per
   page, pagination via `offset`, HTTP only. Daily budget defaults to **3 requests**
-  (`AVIATIONSTACK_DAILY_BUDGET` env var) — that covers ~300 departures/day of
-  IST's ~700, departures prioritized. Raise the budget if your plan allows.
+  (`AVIATIONSTACK_DAILY_BUDGET` env var) ≈ 300 of IST's ~700 daily departures,
+  departures prioritized. The pages beyond the first are sampled at **random
+  offsets** (seeded by date, so re-runs are idempotent) — a fixed head slice
+  would bias the dataset toward one part of the day. Raise the budget if your
+  plan allows; the paid tiers were judged not worth it for this project.
 - **ASSUMPTION** aviationweather.gov `api/data/metar?ids=LTFM&format=json` returns
   `rawOb` + `obsTime`(epoch)/`reportTime`, with roughly ≤4 days of history.
 - **ASSUMPTION** aviationstack timestamps carry a UTC offset; naive ones are

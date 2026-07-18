@@ -1,6 +1,7 @@
 """API fetchers: OpenSky (actual movements), aviationstack (schedules), aviationweather (METARs)."""
 import logging
 import os
+import random
 import time
 from datetime import date, datetime, timedelta, timezone
 
@@ -112,11 +113,15 @@ def fetch_aviationstack(day: date):
     # ASSUMPTION: free tier ~100 requests/month, 100 rows/page via limit+offset.
     # 3/day * 31 covers roughly the monthly quota; raise via env if on a paid plan.
     budget = int(os.getenv("AVIATIONSTACK_DAILY_BUDGET", "3"))
+    # seeded per day: re-running the same date samples the same offsets (idempotent)
+    rng = random.Random(day.toordinal())
     out = []
     for direction, param in (("dep", "dep_iata"), ("arr", "arr_iata")):
-        offset = 0
-        while budget > 0:
-            params = {"access_key": key, param: "IST", "limit": 100, "offset": offset}
+        offsets = [0]  # the first page also tells us the day's total row count
+        sampled = False
+        while offsets and budget > 0:
+            params = {"access_key": key, param: "IST", "limit": 100,
+                      "offset": offsets.pop(0)}
             # free plan rejects flight_date (function_access_restricted, verified
             # 2026-07-18) — default is real-time mode: query today, filter below
             if os.getenv("AVIATIONSTACK_HISTORICAL"):
@@ -142,11 +147,19 @@ def fetch_aviationstack(day: date):
             for a in page:
                 a["_direction"] = direction
             out.extend(page)
-            total = (body.get("pagination") or {}).get("total") or 0
-            offset += len(raw)
-            if not raw or offset >= total:
+            if not sampled:
+                sampled = True
+                total = (body.get("pagination") or {}).get("total") or 0
+                # the budget can't cover the whole day, so sample the remaining
+                # pages at random — a fixed head slice would bias the dataset
+                # toward whatever part of the day the API lists first
+                rest = list(range(100, total, 100))
+                rng.shuffle(rest)
+                offsets = rest
+            if not raw:
                 break
-        log.info("aviationstack %s: %d rows total, %d requests left", direction, len(out), budget)
+        log.info("aviationstack %s: %d rows total, %d requests left",
+                 direction, len(out), budget)
     return out or None
 
 
