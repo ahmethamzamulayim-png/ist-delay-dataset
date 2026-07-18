@@ -26,6 +26,7 @@ def collect(day):
         log.error("%s: both flight sources failed", date_str)
         return False
 
+    store.save_schedules(date_str, schedules)
     flights, unmatched = join_day(date_str, opensky, schedules)
     store.write_day(date_str, flights, unmatched, weather)
 
@@ -41,6 +42,33 @@ def collect(day):
     log.info("%s: %d flights, %d unmatched, %d weather obs", date_str,
              len(flights), len(unmatched), len(weather))
     return True
+
+
+def finalize(day):
+    """Re-join a previously collected day against fresh OpenSky data.
+
+    Same-day OpenSky queries miss a lot (their flight processing lags by hours;
+    arrivals especially), so the next run re-fetches the day's movements and
+    rewrites its files using the schedules stored at collection time.
+    """
+    date_str = day.isoformat()
+    schedules = store.load_schedules(date_str)
+    if schedules is None:
+        return
+    log.info("=== Finalizing %s ===", date_str)
+    opensky = fetchers.fetch_opensky(day)
+    if opensky is None:
+        log.warning("OpenSky unavailable, keeping provisional data for %s", date_str)
+        return
+    flights, unmatched = join_day(date_str, opensky, schedules)
+    store.write_day(date_str, flights, unmatched, None)  # weather file stays as-is
+    matched = sum(1 for r in flights if r["icao24"] and r["scheduled_utc"])
+    os_n = len(opensky)
+    store.update_metrics(date_str, rows=len(flights), unmatched=len(unmatched),
+                         opensky_rows=os_n, avs_rows=len(schedules),
+                         match_rate=round(matched / os_n, 3) if os_n else None,
+                         notes="finalized")
+    log.info("%s finalized: %d flights, %d unmatched", date_str, len(flights), len(unmatched))
 
 
 def main():
@@ -62,6 +90,9 @@ def main():
     days = [d for d in days
             if d == target or not (store.FLIGHTS_DIR / f"{d.isoformat()}.csv").exists()]
 
+    prev = target - timedelta(days=1)
+    if prev not in days:
+        finalize(prev)
     ok = [collect(d) for d in days]
     store.build_summary()
     if not any(ok):

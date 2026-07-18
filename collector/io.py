@@ -1,5 +1,6 @@
 """Idempotent CSV/JSON persistence under data/."""
 import csv
+import gzip
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,6 +14,7 @@ DATA = ROOT / "data"
 FLIGHTS_DIR = DATA / "flights"
 UNMATCHED_DIR = DATA / "unmatched"
 WEATHER_DIR = DATA / "weather"
+SCHEDULES_DIR = DATA / "schedules"
 METRICS = DATA / "metrics.csv"
 
 
@@ -34,6 +36,33 @@ def write_day(date_str, flights, unmatched, weather):
 def write_weather(date_str, weather):
     if weather:
         _write_csv(WEATHER_DIR / f"{date_str}.csv", weather, ["time_utc", "raw"])
+
+
+def save_schedules(date_str, schedules):
+    """Trimmed raw aviationstack rows, kept so the NEXT run can re-join this day
+    once OpenSky's lagging flight processing has caught up."""
+    if not schedules:
+        return
+    trimmed = []
+    for a in schedules:
+        t = {"_direction": a.get("_direction"), "flight_status": a.get("flight_status"),
+             "flight": {k: (a.get("flight") or {}).get(k) for k in ("icao", "iata")},
+             "airline": {"name": (a.get("airline") or {}).get("name")}}
+        for side in ("departure", "arrival"):
+            t[side] = {k: (a.get(side) or {}).get(k)
+                       for k in ("icao", "scheduled", "actual", "terminal", "gate")}
+        trimmed.append(t)
+    SCHEDULES_DIR.mkdir(parents=True, exist_ok=True)
+    with gzip.open(SCHEDULES_DIR / f"{date_str}.json.gz", "wt", encoding="utf-8") as fh:
+        json.dump(trimmed, fh)
+
+
+def load_schedules(date_str):
+    path = SCHEDULES_DIR / f"{date_str}.json.gz"
+    if not path.exists():
+        return None
+    with gzip.open(path, "rt", encoding="utf-8") as fh:
+        return json.load(fh)
 
 
 def update_metrics(date_str, **fields):

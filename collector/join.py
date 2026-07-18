@@ -95,7 +95,21 @@ def join_day(date_str, opensky, schedules):
     for a in schedules:
         by_cs.setdefault(norm_callsign((a.get("flight") or {}).get("icao")), []).append(a)
 
-    used, flights, unmatched = set(), [], []
+    used, flights, unmatched, leftovers = set(), [], [], []
+
+    def nearest(cands, move):
+        best, best_gap = None, MATCH_WINDOW
+        for a in cands:
+            if id(a) in used:
+                continue
+            sched = parse_utc(_sched_side(a)[0].get("scheduled"))
+            if move is None or sched is None:
+                continue
+            gap = abs(move - sched)
+            if gap <= best_gap:
+                best, best_gap = a, gap
+        return best
+
     # ponytail: greedy earliest-first matching, not optimal assignment — fine at
     # this scale; revisit only if multi-leg mismatches show up in data_quality_delta
     for f in sorted(opensky, key=lambda f: f.get("firstSeen") or 0):
@@ -104,22 +118,36 @@ def join_day(date_str, opensky, schedules):
             unmatched.append(_row(date_str, os_f=f) | {"reason": "missing_callsign"})
             continue
         move = _epoch_utc(f.get("firstSeen") if f["direction"] == "dep" else f.get("lastSeen"))
-        best, best_gap = None, MATCH_WINDOW
-        for a in by_cs.get(cs, []):
-            if id(a) in used or a["_direction"] != f["direction"]:
-                continue
-            sched = parse_utc(_sched_side(a)[0].get("scheduled"))
-            if move is None or sched is None:
-                continue
-            gap = abs(move - sched)
-            if gap <= best_gap:
-                best, best_gap = a, gap
+        best = nearest([a for a in by_cs.get(cs, [])
+                        if a["_direction"] == f["direction"]], move)
+        if best is None:
+            leftovers.append((f, cs, move))
+            continue
+        used.add(id(best))
+        flights.append(_row(date_str, os_f=f, a=best))
+
+    # second pass: Turkish carriers often fly ATC callsigns (THY5KX) that never
+    # equal the schedule's flight number (THY162). Recover those via airline
+    # prefix + far-end airport + nearest scheduled time, flagged as fuzzy.
+    for f, cs, move in leftovers:
+        far = (f.get("estArrivalAirport") if f["direction"] == "dep"
+               else f.get("estDepartureAirport"))
+        best = None
+        if far and cs[:3].isalpha():
+            best = nearest([a for a in schedules
+                            if a["_direction"] == f["direction"]
+                            and _sched_side(a)[1] == far
+                            and norm_callsign((a.get("flight") or {}).get("icao"))
+                                .startswith(cs[:3])], move)
         if best is None:
             reason = "no_schedule_match" if schedules else "no_schedule_data"
             unmatched.append(_row(date_str, os_f=f) | {"reason": reason})
             continue
         used.add(id(best))
-        flights.append(_row(date_str, os_f=f, a=best))
+        row = _row(date_str, os_f=f, a=best)
+        row["quality_flags"] = "|".join(
+            x for x in (row["quality_flags"], "fuzzy_callsign_match") if x)
+        flights.append(row)
 
     for a in schedules:
         if id(a) in used:

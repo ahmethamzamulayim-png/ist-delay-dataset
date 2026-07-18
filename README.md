@@ -17,8 +17,16 @@ to the repo. A [status dashboard](docs/) (GitHub Pages) shows progress.
            (via a tiny Deno Deploy proxy — OpenSky firewalls GitHub runner IPs)
   aviationstack /v1/flights dep_iata=IST, real-time mode         → schedules + actuals
   aviationweather.gov METARs for LTFM                            → raw weather strings
-  join on normalized ICAO callsign + closest scheduled time (±3h)
+  join on normalized ICAO callsign + closest scheduled time (±3h);
+  a fuzzy second pass (airline prefix + far-end airport + time) recovers
+  ATC callsigns like THY5KX that never equal the schedule's THY162;
+  codeshare duplicate rows are dropped at fetch time
   → data/flights/YYYY-MM-DD.csv  (joined + cancelled)
+  → data/schedules/YYYY-MM-DD.json.gz (raw schedules, kept for finalization)
+
+next day 23:45 UTC: FINALIZE yesterday — OpenSky's flight processing lags
+  hours (same-day arrivals are near-empty), so each run re-fetches yesterday's
+  movements and re-joins them against the stored schedules, rewriting the files.
   → data/unmatched/YYYY-MM-DD.csv (never discarded, tagged with a reason)
   → data/weather/YYYY-MM-DD.csv
   → data/metrics.csv, data/summary.json (+ copy in docs/ for Pages)
@@ -110,9 +118,12 @@ Cancelled flights go in the **main** CSV with `status=cancelled` — signal, not
 
 ## Known limitations
 
-- The day is captured live at 23:45 UTC: flights still in the air lack final
-  times, and post-23:45 departures are missed or partial. That tail is the
-  price of the free-tier real-time-only schedule source.
+- The day is captured live at 23:45 UTC and **finalized by the next day's run**
+  once OpenSky's processing catches up; a day's numbers are provisional for
+  ~24h. aviationstack `actual` times for post-23:45 departures stay null, but
+  delay still gets computed from OpenSky's movement time at finalization.
+- Verified 2026-07-18: OpenSky same-day queries returned 206 departures and 0
+  arrivals at 18:21 UTC — the finalize pass exists precisely because of this lag.
 - OpenSky has no scheduled times; delays exist only for rows matched to
   aviationstack (or cancelled). Match rate is tracked per day in `metrics.csv`.
 - ADS-B coverage gaps over Turkey can shift `firstSeen`/`lastSeen` by minutes —

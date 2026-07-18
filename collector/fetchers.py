@@ -134,9 +134,11 @@ def fetch_aviationstack(day: date):
                 log.warning("aviationstack error: %s", body)
                 return out or None
             raw = body.get("data") or []
-            # in real-time mode rows can straddle midnight — keep the target day only
+            # keep the target day only (real-time rows straddle midnight) and drop
+            # codeshare rows — marketing-carrier duplicates of the operating flight
             page = [a for a in raw
-                    if a.get("flight_date") in (day.isoformat(), None)]
+                    if a.get("flight_date") in (day.isoformat(), None)
+                    and not (a.get("flight") or {}).get("codeshared")]
             for a in page:
                 a["_direction"] = direction
             out.extend(page)
