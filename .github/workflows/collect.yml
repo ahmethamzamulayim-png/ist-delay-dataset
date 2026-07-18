@@ -45,6 +45,7 @@ jobs:
           python -m collector $ARGS
 
       - name: Commit data
+        if: always() # a failed collection may still have saved weather/partial data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

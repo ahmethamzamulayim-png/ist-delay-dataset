@@ -73,6 +73,19 @@ Cancelled flights go in the **main** CSV with `status=cancelled` — signal, not
 4. Optionally trigger the workflow once manually (Actions → Collect IST flight
    data → Run workflow) instead of waiting for the cron.
 
+## Verified the hard way (2026-07-18)
+
+- **OpenSky drops connections from GitHub Actions runner IPs** (pure connect
+  timeouts from the runner while the same requests answer in 0.5s from a home
+  connection). Collection needs to reach OpenSky from a non-datacenter IP or an
+  unblocked proxy.
+- **aviationstack free plan rejects `flight_date` queries** with
+  `function_access_restricted` — historical day queries need a paid plan; the
+  free plan serves real-time flights only.
+- The OpenSky OAuth2 token endpoint below is correct (live `invalid_client`
+  response to dummy credentials), and anonymous `/flights/*` access is refused
+  with "You cannot access historical flights".
+
 ## Assumptions to verify against live docs
 
 - **ASSUMPTION** OpenSky OAuth2 token URL is
