@@ -1,0 +1,4 @@
+date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,scheduled_utc,actual_utc,opensky_firstseen_utc,opensky_lastseen_utc,delay_minutes,status,terminal,gate,icao24,data_quality_delta_min,quality_flags
+2026-07-18,dep,ANZ4890,NZ4890,Air New Zealand,LTFM,LTAC,2026-07-18T22:00:00+00:00,,,,,cancelled,,,,,
+2026-07-18,dep,ASL8156,JU8156,AirSERBIA,LTFM,LTAC,2026-07-18T22:00:00+00:00,,,,,cancelled,,,,,
+2026-07-18,dep,DAH3964,AH3964,Air Algerie,LTFM,LTAC,2026-07-18T22:00:00+00:00,,,,,cancelled,,,,,
