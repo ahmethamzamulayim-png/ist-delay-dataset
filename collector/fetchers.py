@@ -21,14 +21,20 @@ class RateLimited(Exception):
 
 
 def _get(url, *, params=None, headers=None, tries=4):
-    """GET with exponential backoff. Raises RateLimited on 429; returns None if all tries fail."""
+    """GET with exponential backoff on network errors/5xx. Raises RateLimited on 429,
+    gives up immediately on other 4xx (retrying those is pointless), returns None on failure."""
     for attempt in range(tries):
         try:
-            r = requests.get(url, params=params, headers=headers, timeout=60)
+            # 10s connect timeout: a firewalled host should fail fast, not eat a minute
+            r = requests.get(url, params=params, headers=headers, timeout=(10, 60))
             if r.status_code == 429:
                 raise RateLimited(url)
             if r.status_code == 404:  # OpenSky uses 404 for "no flights in interval"
                 return r
+            if 400 <= r.status_code < 500:
+                log.warning("GET %s -> HTTP %d, not retrying: %s",
+                            url, r.status_code, r.text[:300])
+                return None
             r.raise_for_status()
             return r
         except RateLimited:
