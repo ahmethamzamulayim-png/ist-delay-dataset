@@ -1,0 +1,2 @@
+date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,scheduled_utc,actual_utc,opensky_firstseen_utc,opensky_lastseen_utc,delay_minutes,status,terminal,gate,icao24,data_quality_delta_min,quality_flags
+2026-07-19,dep,THY2412,TK2412,Turkish Airlines,LTFM,LTAI,2026-07-19T09:40:00+00:00,,,,,cancelled,,,,,
