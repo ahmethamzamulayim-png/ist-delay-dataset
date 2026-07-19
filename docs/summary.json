@@ -1,13 +1,13 @@
 {
- "generated_utc": "2026-07-19T01:10:32+00:00",
+ "generated_utc": "2026-07-19T21:12:25+00:00",
  "days": 2,
  "first_date": "2026-07-18",
  "last_date": "2026-07-19",
  "total_flights": 4,
- "delayed_15": 0,
+ "delayed_15": 1,
  "ontime": 0,
- "pct_delayed": null,
- "pct_ontime": null,
+ "pct_delayed": 100.0,
+ "pct_ontime": 0.0,
  "daily": [
   {
    "date": "2026-07-18",
@@ -17,9 +17,9 @@
   {
    "date": "2026-07-19",
    "flights": 1,
-   "avg_dep_delay": null
+   "avg_dep_delay": 32.0
   }
  ],
- "latest_metar": "METAR LTFM 190050Z 06009KT 9999 FEW018 24/19 Q1012 NOSIG RMK RWY17L 07008KT RWY34L 06008KT RWY16R 07007KT RWY36 06008KT RWY18 08008KT",
- "match_rate": 0.0
+ "latest_metar": "METAR LTFM 192050Z 09008KT 050V130 CAVOK 25/18 Q1014 NOSIG RMK RWY17L 08008KT RWY34L 07009KT RWY16R 08008KT RWY36 09006KT 020V110 RWY18 09008KT",
+ "match_rate": 0.005
 }
