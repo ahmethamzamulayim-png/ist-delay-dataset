@@ -60,7 +60,7 @@ def finalize(day):
     if opensky is None:
         log.warning("OpenSky unavailable, keeping provisional data for %s", date_str)
         return
-    flights, unmatched = join_day(date_str, opensky, schedules)
+    flights, unmatched = join_day(date_str, opensky, schedules, final=True)
     store.write_day(date_str, flights, unmatched, None)  # weather file stays as-is
     matched = sum(1 for r in flights if r["icao24"] and r["scheduled_utc"])
     os_n = len(opensky)

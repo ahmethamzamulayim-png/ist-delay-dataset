@@ -61,8 +61,12 @@ direction-relative `scheduled_utc`/`actual_utc` so one column pair serves both
 directions and `delay_minutes` is always "movement at IST vs. its schedule".
 
 `data/unmatched/` uses the same schema plus `reason`
-(`missing_callsign`, `no_schedule_match`, `no_schedule_data`, `no_opensky_match`).
-Cancelled flights go in the **main** CSV with `status=cancelled` — signal, not noise.
+(`missing_callsign`, `no_schedule_match`, `no_schedule_data`, `no_opensky_match`,
+`no_movement_seen`). Cancelled flights go in the **main** CSV with
+`status=cancelled` — signal, not noise. `no_movement_seen` (set at finalization)
+means a flight was still "scheduled" at collection time and no transponder
+movement ever matched it: a cancellation announced after the run, or an ADS-B
+coverage gap — undecidable on the free tier, so it's labeled, not guessed.
 
 ## Workflow behavior
 

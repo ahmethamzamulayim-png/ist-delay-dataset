@@ -87,7 +87,7 @@ def _row(date_str, os_f=None, a=None):
     return row
 
 
-def join_day(date_str, opensky, schedules):
+def join_day(date_str, opensky, schedules, final=False):
     """Returns (flights_rows, unmatched_rows). Nothing is ever discarded."""
     opensky = opensky or []
     schedules = schedules or []
@@ -154,6 +154,12 @@ def join_day(date_str, opensky, schedules):
             continue
         if a.get("flight_status") == "cancelled":
             flights.append(_row(date_str, a=a))  # cancelled flights are signal, keep them
+        elif final and a.get("flight_status") == "scheduled":
+            # the day is over, the flight was never more than "scheduled", and no
+            # transponder movement matched: a cancellation announced after our
+            # collection run, or an ADS-B coverage gap — undecidable on the free
+            # tier, so it gets its own label instead of generic join noise
+            unmatched.append(_row(date_str, a=a) | {"reason": "no_movement_seen"})
         else:
             unmatched.append(_row(date_str, a=a) | {"reason": "no_opensky_match"})
     return flights, unmatched

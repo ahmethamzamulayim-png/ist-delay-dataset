@@ -57,6 +57,17 @@ assert "fuzzy_callsign_match" in by_cs["THY7CV"]["quality_flags"]
 assert by_cs["THY7CV"]["delay_minutes"] == 22
 assert [r["reason"] for r in unmatched] == ["missing_callsign"], unmatched
 
+# finalize pass: a still-"scheduled" row with no movement all day gets its own
+# label (late cancellation or coverage gap), not generic join noise
+ghost = {"_direction": "dep", "flight_status": "scheduled",
+         "flight": {"icao": "PGT9ZZ", "iata": "PC9999"},
+         "airline": {"name": "Pegasus"},
+         "departure": {"scheduled": "2026-07-17T22:00:00+00:00"},
+         "arrival": {"icao": "LTBS"}}
+_, um_final = join_day(D, opensky, schedules + [ghost], final=True)
+assert any(r["reason"] == "no_movement_seen" and r["callsign_icao"] == "PGT9ZZ"
+           for r in um_final), um_final
+
 # re-join with no schedules: everything lands in unmatched, nothing is lost
 f2, u2 = join_day(D, opensky, None)
 assert not f2 and {r["reason"] for r in u2} == {"missing_callsign", "no_schedule_data"}
