@@ -79,7 +79,7 @@ def main():
                    help="also collect N days before the target day")
     args = p.parse_args()
 
-    # default = today (UTC): the cron runs at 20:30 UTC and the free aviationstack
+    # default = today (UTC): the cron runs at 18:45 UTC and the free aviationstack
     # plan only serves real-time (same-day) flights, so the day is collected live.
     # No auto-backfill — past days have no reachable schedule source on this plan.
     target = (datetime.strptime(args.date, "%Y-%m-%d").date() if args.date

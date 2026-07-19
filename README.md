@@ -12,7 +12,7 @@ to the repo. A [status dashboard](docs/) (GitHub Pages) shows progress.
 ## How it works
 
 ```
-20:30 UTC daily (GitHub Actions) — captures TODAY late in its UTC evening
+18:45 UTC daily (GitHub Actions) — captures TODAY in its late local evening
   OpenSky  /flights/departure + /flights/arrival  airport=LTFM   → actual movements
            (via a tiny Deno Deploy proxy — OpenSky firewalls GitHub runner IPs)
   aviationstack /v1/flights dep_iata=IST, real-time mode         → schedules + actuals
@@ -24,7 +24,7 @@ to the repo. A [status dashboard](docs/) (GitHub Pages) shows progress.
   → data/flights/YYYY-MM-DD.csv  (joined + cancelled)
   → data/schedules/YYYY-MM-DD.json.gz (raw schedules, kept for finalization)
 
-next day ~20:30 UTC: FINALIZE yesterday — OpenSky's flight processing lags
+next day ~18:45 UTC: FINALIZE yesterday — OpenSky's flight processing lags
   hours (same-day arrivals are near-empty), so each run re-fetches yesterday's
   movements and re-joins them against the stored schedules, rewriting the files.
   → data/unmatched/YYYY-MM-DD.csv (never discarded, tagged with a reason)
@@ -85,7 +85,7 @@ Cancelled flights go in the **main** CSV with `status=cancelled` — signal, not
    `gh secret set AVIATIONSTACK_KEY`.
 3. Settings → Actions → General → Workflow permissions → read and write.
 4. Optionally trigger the workflow once manually (Actions → Collect IST flight
-   data → Run workflow) instead of waiting for the 20:30 UTC cron.
+   data → Run workflow) instead of waiting for the 18:45 UTC cron.
 
 ## Verified the hard way (2026-07-18)
 
@@ -121,7 +121,7 @@ Cancelled flights go in the **main** CSV with `status=cancelled` — signal, not
 
 ## Known limitations
 
-- The day is captured live at ~20:30 UTC and **finalized by the next day's run**
+- The day is captured live at ~19:00 UTC and **finalized by the next day's run**
   once OpenSky's processing catches up; a day's numbers are provisional for
   ~24h. aviationstack `actual` times for post-run departures stay null, but
   delay still gets computed from OpenSky's movement time at finalization.

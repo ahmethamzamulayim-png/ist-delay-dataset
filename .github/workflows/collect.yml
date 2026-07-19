@@ -2,12 +2,13 @@ name: Collect IST flight data
 
 on:
   schedule:
-    # daily 20:30 UTC, collects TODAY live (free aviationstack plan has no
-    # historical queries). NOT later: GitHub crons fire 30-90+ min late (the
-    # 23:45 cron ran at 01:10 and collected the wrong day) — 20:30 leaves
-    # headroom before midnight UTC. Flights after the run are captured as
-    # "scheduled" rows and get their actual times at next-day finalization.
-    - cron: "30 20 * * *"
+    # daily 18:45 UTC = 21:45 Istanbul. Two midnights must not be crossed even
+    # with GitHub's 30-90+ min cron delay: UTC midnight (collector's day key,
+    # bit us at 23:45→01:10) and ISTANBUL midnight at 21:00 UTC (aviationstack's
+    # real-time feed rolls to the next local day, bit us at 20:30→21:11).
+    # Flights departing after the run are captured as "scheduled" rows and get
+    # actual times at next-day finalization, so running early costs nothing.
+    - cron: "45 18 * * *"
   workflow_dispatch:
     inputs:
       date:

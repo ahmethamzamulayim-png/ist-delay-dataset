@@ -38,23 +38,31 @@ def write_weather(date_str, weather):
         _write_csv(WEATHER_DIR / f"{date_str}.csv", weather, ["time_utc", "raw"])
 
 
+def _trim_schedule(a):
+    t = {"_direction": a.get("_direction"), "flight_status": a.get("flight_status"),
+         "flight": {k: (a.get("flight") or {}).get(k) for k in ("icao", "iata")},
+         "airline": {"name": (a.get("airline") or {}).get("name")}}
+    for side in ("departure", "arrival"):
+        t[side] = {k: (a.get(side) or {}).get(k)
+                   for k in ("icao", "scheduled", "actual", "terminal", "gate")}
+    return t
+
+
 def save_schedules(date_str, schedules):
     """Trimmed raw aviationstack rows, kept so the NEXT run can re-join this day
-    once OpenSky's lagging flight processing has caught up."""
+    once OpenSky's lagging flight processing has caught up. Merges with anything
+    already stored for the day — different runs see different slices, and the
+    union is the best schedule picture (later duplicates win: fresher actuals)."""
     if not schedules:
         return
-    trimmed = []
-    for a in schedules:
-        t = {"_direction": a.get("_direction"), "flight_status": a.get("flight_status"),
-             "flight": {k: (a.get("flight") or {}).get(k) for k in ("icao", "iata")},
-             "airline": {"name": (a.get("airline") or {}).get("name")}}
-        for side in ("departure", "arrival"):
-            t[side] = {k: (a.get(side) or {}).get(k)
-                       for k in ("icao", "scheduled", "actual", "terminal", "gate")}
-        trimmed.append(t)
+    merged = {}
+    for a in (load_schedules(date_str) or []) + [_trim_schedule(a) for a in schedules]:
+        key = (a["flight"].get("icao"), a["_direction"],
+               a["departure"].get("scheduled"), a["arrival"].get("scheduled"))
+        merged[key] = a
     SCHEDULES_DIR.mkdir(parents=True, exist_ok=True)
     with gzip.open(SCHEDULES_DIR / f"{date_str}.json.gz", "wt", encoding="utf-8") as fh:
-        json.dump(trimmed, fh)
+        json.dump(list(merged.values()), fh)
 
 
 def load_schedules(date_str):
