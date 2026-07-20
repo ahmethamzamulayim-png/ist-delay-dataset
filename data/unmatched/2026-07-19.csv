@@ -152,8 +152,8 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY3RK,,,LTFM,,,,2026-07-19T04:05:45+00:00,2026-07-19T05:52:16+00:00,,,,,4ba910,,,no_schedule_match
 2026-07-19,dep,THY39GV,,,LTFM,,,,2026-07-19T04:06:31+00:00,2026-07-19T05:16:15+00:00,,,,,4bb0e4,,,no_schedule_match
 2026-07-19,dep,THY3ZJ,,,LTFM,LICJ,,,2026-07-19T04:08:42+00:00,2026-07-19T06:00:23+00:00,,,,,4ba916,,,no_schedule_match
-2026-07-19,dep,THY6FX,,,LTFM,EDDL,,,2026-07-19T04:09:31+00:00,2026-07-19T06:48:21+00:00,,,,,4bb1e6,,,no_schedule_match
 2026-07-19,dep,THY3WE,,,LTFM,LPPT,,,2026-07-19T04:09:31+00:00,2026-07-19T08:43:24+00:00,,,,,4bb27a,,,no_schedule_match
+2026-07-19,dep,THY6FX,,,LTFM,EDDL,,,2026-07-19T04:09:31+00:00,2026-07-19T06:48:21+00:00,,,,,4bb1e6,,,no_schedule_match
 2026-07-19,arr,THY325,,,,LTFM,,,2026-07-19T04:10:00+00:00,2026-07-19T06:36:58+00:00,,,,,4bb268,,,no_schedule_match
 2026-07-19,dep,THY9GU,,,LTFM,,,,2026-07-19T04:10:16+00:00,2026-07-19T05:31:09+00:00,,,,,4bab25,,,no_schedule_match
 2026-07-19,arr,THY4LE,,,,LTFM,,,2026-07-19T04:11:12+00:00,2026-07-19T06:23:57+00:00,,,,,4bb06d,,,no_schedule_match
@@ -176,12 +176,8 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY2QY,,,LTFM,LBWV,,,2026-07-19T04:40:28+00:00,2026-07-19T05:11:20+00:00,,,,,4bab48,,,no_schedule_match
 2026-07-19,dep,THY5LW,,,LTFM,,,,2026-07-19T04:44:00+00:00,2026-07-19T05:53:48+00:00,,,,,4bb21a,,,no_schedule_match
 2026-07-19,arr,THY3AY,,,EKCH,LTFM,,,2026-07-19T04:45:38+00:00,2026-07-19T07:25:41+00:00,,,,,4baad6,,,no_schedule_match
-2026-07-19,dep,THY4ND,,,LTFM,LGTS,,,2026-07-19T04:46:32+00:00,2026-07-19T05:36:21+00:00,,,,,4baa76,,,no_schedule_match
 2026-07-19,dep,THY1TH,,,LTFM,,,,2026-07-19T04:46:42+00:00,2026-07-19T05:30:48+00:00,,,,,4baa72,,,no_schedule_match
 2026-07-19,dep,THY4ZG,,,LTFM,LDZB,,,2026-07-19T04:47:54+00:00,2026-07-19T06:18:58+00:00,,,,,4baa6f,,,no_schedule_match
-2026-07-19,dep,THY2EG,,,LTFM,LYBE,,,2026-07-19T04:48:21+00:00,2026-07-19T05:57:58+00:00,,,,,4bb207,,,no_schedule_match
-2026-07-19,dep,THY65Y,,,LTFM,LBSF,,,2026-07-19T04:49:00+00:00,2026-07-19T05:34:13+00:00,,,,,4baa67,,,no_schedule_match
-2026-07-19,dep,THY9SD,,,LTFM,LJLJ,,,2026-07-19T04:51:07+00:00,2026-07-19T06:38:22+00:00,,,,,4bb26f,,,no_schedule_match
 2026-07-19,dep,THY7AH,,,LTFM,EPWA,,,2026-07-19T04:51:09+00:00,2026-07-19T06:44:20+00:00,,,,,4bb20f,,,no_schedule_match
 2026-07-19,arr,SVR783,,,,LTFM,,,2026-07-19T04:52:32+00:00,2026-07-19T12:45:28+00:00,,,,,152041,,,no_schedule_match
 2026-07-19,arr,THY145,,,,LTFM,,,2026-07-19T04:53:33+00:00,2026-07-19T06:53:14+00:00,,,,,4bb287,,,no_schedule_match
@@ -648,7 +644,6 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY8RS,,,LCEN,LTFM,,,2026-07-19T14:23:35+00:00,2026-07-19T15:38:03+00:00,,,,,4baa10,,,no_schedule_match
 2026-07-19,arr,THY367,,,,LTFM,,,2026-07-19T14:24:31+00:00,2026-07-19T16:50:36+00:00,,,,,4bb075,,,no_schedule_match
 2026-07-19,dep,THY5KP,,,LTFM,EDDL,,,2026-07-19T14:33:04+00:00,2026-07-19T17:25:36+00:00,,,,,4bb267,,,no_schedule_match
-2026-07-19,dep,THY6315,,,LTFM,VABB,,,2026-07-19T14:40:43+00:00,2026-07-19T20:57:19+00:00,,,,,4bb14e,,,no_schedule_match
 2026-07-19,dep,THY97G,,,LTFM,,,,2026-07-19T14:42:06+00:00,2026-07-19T15:07:59+00:00,,,,,4baad0,,,no_schedule_match
 2026-07-19,arr,MEA267,,,,LTFM,,,2026-07-19T14:42:25+00:00,2026-07-19T16:11:48+00:00,,,,,500213,,,no_schedule_match
 2026-07-19,arr,THY8AD,,,,LTFM,,,2026-07-19T14:42:47+00:00,2026-07-19T16:20:59+00:00,,,,,4bb276,,,no_schedule_match
@@ -951,3 +946,12 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,IRC513,EP513,Iran Aseman Airlines,LTFM,OIIE,2026-07-19T19:30:00+00:00,,,,,,,,,,,no_opensky_match
 2026-07-19,dep,THY2738,TK2738,Turkish Airlines,LTFM,LTAL,2026-07-19T19:25:00+00:00,2026-07-19T19:54:00+00:00,,,29,,,G7B,,,,no_opensky_match
 2026-07-19,dep,THY1015,TK1015,Turkish Airlines,LTFM,LRTR,2026-07-19T19:25:00+00:00,2026-07-19T19:54:00+00:00,,,29,landed,,A1B,,,,no_opensky_match
+2026-07-19,dep,THY1071,TK1071,Turkish Airlines,LTFM,LBWN,2026-07-19T07:30:00+00:00,2026-07-19T07:38:00+00:00,,,8,landed,,C3,,,,no_opensky_match
+2026-07-19,dep,THY1047,TK1047,Turkish Airlines,LTFM,LRCL,2026-07-19T07:30:00+00:00,2026-07-19T07:57:00+00:00,,,27,landed,,F8B,,,,no_opensky_match
+2026-07-19,dep,THY1053,TK1053,Turkish Airlines,LTFM,LDZA,2026-07-19T07:30:00+00:00,2026-07-19T07:45:00+00:00,,,15,landed,,E4,,,,no_opensky_match
+2026-07-19,dep,AFL2171,SU2171,Aeroflot,LTFM,UUEE,2026-07-19T07:30:00+00:00,2026-07-19T07:33:00+00:00,,,3,,,A11B,,,,no_opensky_match
+2026-07-19,dep,THY1843,TK1843,Turkish Airlines,LTFM,LGAV,2026-07-19T07:25:00+00:00,2026-07-19T07:50:00+00:00,,,25,landed,,F14,,,,no_opensky_match
+2026-07-19,dep,THY350,TK350,Turkish Airlines,LTFM,UAAA,2026-07-19T20:15:00+00:00,2026-07-19T20:44:00+00:00,,,29,landed,,A4B,,,,no_opensky_match
+2026-07-19,dep,THY322,TK322,Turkish Airlines,LTFM,UTAA,2026-07-19T20:15:00+00:00,2026-07-19T20:29:00+00:00,,,14,active,,F13A,,,,no_opensky_match
+2026-07-19,dep,THY215,TK215,Turkish Airlines,LTFM,SBGR,2026-07-19T20:15:00+00:00,2026-07-19T20:44:00+00:00,,,29,landed,,D11,,,,no_opensky_match
+2026-07-19,dep,KZU6164,GO6164,ULS Airlines Cargo,LTFM,OTHH,2026-07-19T15:55:00+00:00,,,,,,,,,,,no_opensky_match
