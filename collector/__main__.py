@@ -93,10 +93,12 @@ def main():
     days = [d for d in days
             if d == target or not (store.FLIGHTS_DIR / f"{d.isoformat()}.csv").exists()]
 
+    # collect FIRST: today's fetch also banks yesterday's rows (the ones with
+    # final actual times) into its store — finalize must run after, not before
+    ok = [collect(d) for d in days]
     prev = target - timedelta(days=1)
     if prev not in days:
         finalize(prev)
-    ok = [collect(d) for d in days]
     store.build_summary()
     if not any(ok):
         log.error("No flight source returned data for any requested day")
