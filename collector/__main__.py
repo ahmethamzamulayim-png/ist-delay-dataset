@@ -26,10 +26,10 @@ def collect(day):
         log.error("%s: both flight sources failed", date_str)
         return False
 
-    store.save_schedules(date_str, schedules)
-    # join against the merged store, not just this run's fetch: a run delayed past
-    # Istanbul midnight fetches almost nothing, but earlier runs' schedules survive
-    schedules = store.load_schedules(date_str) or schedules
+    store.save_schedules(schedules)
+    # join against today's merged bucket, not the raw fetch: the fetch spans ~3
+    # days and earlier runs' rows for today survive in the store
+    schedules = store.load_schedules(date_str) or []
     flights, unmatched = join_day(date_str, opensky, schedules)
     store.write_day(date_str, flights, unmatched, weather)
 

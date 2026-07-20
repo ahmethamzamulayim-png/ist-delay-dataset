@@ -100,6 +100,11 @@ coverage gap — undecidable on the free tier, so it's labeled, not guessed.
 - **aviationstack free plan rejects `flight_date` queries** with
   `function_access_restricted` — historical day queries need a paid plan; the
   free plan serves real-time flights only.
+- **The real-time feed is a rolling ~3-day window, newest-first** (verified
+  2026-07-20: `total=4196`, offset 0 = tomorrow's flights, deep offsets =
+  yesterday's). Rows are therefore bucketed into schedule stores by their OWN
+  scheduled date, and each day's store accumulates across ~3 days of runs
+  before finalization reaps it.
 - The OpenSky OAuth2 token endpoint below is correct (live `invalid_client`
   response to dummy credentials), and anonymous `/flights/*` access is refused
   with "You cannot access historical flights".

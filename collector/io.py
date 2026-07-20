@@ -48,21 +48,30 @@ def _trim_schedule(a):
     return t
 
 
-def save_schedules(date_str, schedules):
-    """Trimmed raw aviationstack rows, kept so the NEXT run can re-join this day
-    once OpenSky's lagging flight processing has caught up. Merges with anything
-    already stored for the day — different runs see different slices, and the
-    union is the best schedule picture (later duplicates win: fresher actuals)."""
-    if not schedules:
-        return
-    merged = {}
-    for a in (load_schedules(date_str) or []) + [_trim_schedule(a) for a in schedules]:
-        key = (a["flight"].get("icao"), a["_direction"],
-               a["departure"].get("scheduled"), a["arrival"].get("scheduled"))
-        merged[key] = a
-    SCHEDULES_DIR.mkdir(parents=True, exist_ok=True)
-    with gzip.open(SCHEDULES_DIR / f"{date_str}.json.gz", "wt", encoding="utf-8") as fh:
-        json.dump(list(merged.values()), fh)
+def save_schedules(schedules):
+    """Bucket trimmed aviationstack rows into data/schedules/<scheduled-date>.json.gz.
+
+    The real-time feed is a rolling ~3-day window (yesterday→tomorrow, verified
+    total=4196 on 2026-07-20), so rows are routed to the store of their OWN
+    scheduled date rather than the day we happened to ask for — every fetch
+    enriches several days, and finalization reaps whatever accumulated. Stores
+    merge across runs; later duplicates win (fresher actuals)."""
+    buckets = {}
+    for a in schedules or []:
+        t = _trim_schedule(a)
+        side = t["departure"] if t["_direction"] == "dep" else t["arrival"]
+        d = (side.get("scheduled") or "")[:10]
+        if d:
+            buckets.setdefault(d, []).append(t)
+    for d, rows in buckets.items():
+        merged = {}
+        for a in (load_schedules(d) or []) + rows:
+            key = (a["flight"].get("icao"), a["_direction"],
+                   a["departure"].get("scheduled"), a["arrival"].get("scheduled"))
+            merged[key] = a
+        SCHEDULES_DIR.mkdir(parents=True, exist_ok=True)
+        with gzip.open(SCHEDULES_DIR / f"{d}.json.gz", "wt", encoding="utf-8") as fh:
+            json.dump(list(merged.values()), fh)
 
 
 def load_schedules(date_str):
