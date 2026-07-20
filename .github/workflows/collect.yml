@@ -1,14 +1,11 @@
 name: Collect IST flight data
 
 on:
-  schedule:
-    # daily 18:45 UTC = 21:45 Istanbul. Two midnights must not be crossed even
-    # with GitHub's 30-90+ min cron delay: UTC midnight (collector's day key,
-    # bit us at 23:45→01:10) and ISTANBUL midnight at 21:00 UTC (aviationstack's
-    # real-time feed rolls to the next local day, bit us at 20:30→21:11).
-    # Flights departing after the run are captured as "scheduled" rows and get
-    # actual times at next-day finalization, so running early costs nothing.
-    - cron: "45 18 * * *"
+  # Scheduling lives in the Deno proxy worker (Deno.cron, 18:45 UTC daily) —
+  # it dispatches this workflow via the GitHub API because GitHub's own cron
+  # queue fires 30-90+ min late, which repeatedly pushed runs across midnight
+  # boundaries (UTC midnight = collector day key; Istanbul midnight 21:00 UTC =
+  # aviationstack's real-time feed rollover). Dispatched runs start in seconds.
   workflow_dispatch:
     inputs:
       date:

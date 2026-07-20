@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .venv/
+# never commit tokens/keys jotted down during setup
+github_api.txt
