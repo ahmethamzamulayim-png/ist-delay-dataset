@@ -1,2 +1,1 @@
 date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,scheduled_utc,actual_utc,opensky_firstseen_utc,opensky_lastseen_utc,delay_minutes,status,terminal,gate,icao24,data_quality_delta_min,quality_flags
-2026-07-19,dep,AXY687E,,AirX,LTFM,EBLG,2026-07-19T18:10:00+00:00,2026-07-19T19:23:00+00:00,2026-07-19T16:24:42+00:00,2026-07-19T19:26:50+00:00,73,scheduled,,,4d2093,-178,actuals_disagree|fuzzy_callsign_match
