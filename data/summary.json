@@ -1,9 +1,9 @@
 {
- "generated_utc": "2026-07-20T19:56:34+00:00",
+ "generated_utc": "2026-07-20T19:59:38+00:00",
  "days": 3,
  "first_date": "2026-07-18",
  "last_date": "2026-07-20",
- "total_flights": 4,
+ "total_flights": 6,
  "delayed_15": 1,
  "ontime": 0,
  "pct_delayed": 100.0,
@@ -18,8 +18,13 @@
    "date": "2026-07-19",
    "flights": 1,
    "avg_dep_delay": 73.0
+  },
+  {
+   "date": "2026-07-20",
+   "flights": 2,
+   "avg_dep_delay": null
   }
  ],
- "latest_metar": "METAR LTFM 201950Z 08008KT CAVOK 24/19 Q1015 NOSIG",
+ "latest_metar": "METAR LTFM 201950Z 08008KT CAVOK 24/19 Q1015 NOSIG RMK RWY17L 08007KT RWY34L 07010KT RWY16R 08009KT RWY36 08007KT 030V110 RWY18 08008KT",
  "match_rate": 0.0
 }

@@ -1,4 +1,4 @@
 date,rows,unmatched,opensky_rows,avs_rows,match_rate,notes
 2026-07-18,3,416,206,213,0.0,
 2026-07-19,1,957,951,8,0.001,finalized
-2026-07-20,0,226,226,0,0.0,no_schedule_data
+2026-07-20,2,354,225,131,0.0,
