@@ -27,6 +27,9 @@ def collect(day):
         return False
 
     store.save_schedules(date_str, schedules)
+    # join against the merged store, not just this run's fetch: a run delayed past
+    # Istanbul midnight fetches almost nothing, but earlier runs' schedules survive
+    schedules = store.load_schedules(date_str) or schedules
     flights, unmatched = join_day(date_str, opensky, schedules)
     store.write_day(date_str, flights, unmatched, weather)
 
