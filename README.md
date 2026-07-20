@@ -90,6 +90,11 @@ coverage gap — undecidable on the free tier, so it's labeled, not guessed.
 3. Settings → Actions → General → Workflow permissions → read and write.
 4. Optionally trigger the workflow once manually (Actions → Collect IST flight
    data → Run workflow) instead of waiting for the 18:45 UTC cron.
+5. **Precise scheduling (recommended):** GitHub's cron queue fires 30–90+ min
+   late. The proxy worker doubles as an on-time scheduler via `Deno.cron` —
+   give the Deno project a `GITHUB_TOKEN` env var (fine-grained PAT scoped to
+   this repo, Actions read+write), redeploy the current proxy file, then delete
+   the `schedule:` block from `collect.yml` so runs aren't doubled.
 
 ## Verified the hard way (2026-07-18)
 

@@ -7,6 +7,27 @@
 //   OPENSKY_CLIENT_ID, OPENSKY_CLIENT_SECRET  — your OpenSky API client
 //   PROXY_KEY                                 — shared secret; the collector
 //                                               sends it as the x-proxy-key header
+// Precise scheduler: GitHub's own cron queue fires 30-90+ min late, so this
+// worker dispatches the workflow instead — Deno.cron is on-the-minute and
+// dispatched workflows start within seconds. Extra env var: GITHUB_TOKEN
+// (fine-grained PAT, Actions read+write on ist-delay-dataset only).
+// Once this is live, delete the schedule: block from collect.yml.
+Deno.cron("trigger IST collection", "45 18 * * *", async () => {
+  const r = await fetch(
+    "https://api.github.com/repos/ahmethamzamulayim-png/ist-delay-dataset/actions/workflows/collect.yml/dispatches",
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${Deno.env.get("GITHUB_TOKEN")}`,
+        Accept: "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+      body: JSON.stringify({ ref: "main" }),
+    },
+  );
+  console.log("workflow dispatch:", r.status, r.ok ? "ok" : await r.text());
+});
+
 const TOKEN_URL =
   "https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token";
 const API = "https://opensky-network.org/api";
