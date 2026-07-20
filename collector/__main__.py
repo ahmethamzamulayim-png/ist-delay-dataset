@@ -64,7 +64,9 @@ def finalize(day):
         log.warning("OpenSky unavailable, keeping provisional data for %s", date_str)
         return
     flights, unmatched = join_day(date_str, opensky, schedules, final=True)
-    store.write_day(date_str, flights, unmatched, None)  # weather file stays as-is
+    # re-fetch the day's METARs too: the collection run happened ~3h before the
+    # UTC day ended, so the evening observations only exist now (API reaches 96h)
+    store.write_day(date_str, flights, unmatched, fetchers.fetch_metars(day))
     matched = sum(1 for r in flights if r["icao24"] and r["scheduled_utc"])
     os_n = len(opensky)
     store.update_metrics(date_str, rows=len(flights), unmatched=len(unmatched),
@@ -77,7 +79,7 @@ def finalize(day):
 def main():
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     p = argparse.ArgumentParser(prog="collector")
-    p.add_argument("--date", help="UTC day to collect (default: yesterday)")
+    p.add_argument("--date", help="UTC day to collect (default: today)")
     p.add_argument("--backfill", type=int, default=0,
                    help="also collect N days before the target day")
     args = p.parse_args()
@@ -94,11 +96,13 @@ def main():
             if d == target or not (store.FLIGHTS_DIR / f"{d.isoformat()}.csv").exists()]
 
     # collect FIRST: today's fetch also banks yesterday's rows (the ones with
-    # final actual times) into its store — finalize must run after, not before
+    # final actual times) into its store — finalize must run after, not before.
+    # Finalizing 2 days back self-heals a skipped cron night (idempotent, and
+    # costs only OpenSky proxy calls, no aviationstack quota).
     ok = [collect(d) for d in days]
-    prev = target - timedelta(days=1)
-    if prev not in days:
-        finalize(prev)
+    for prev in (target - timedelta(days=2), target - timedelta(days=1)):
+        if prev not in days:
+            finalize(prev)
     store.build_summary()
     if not any(ok):
         log.error("No flight source returned data for any requested day")
