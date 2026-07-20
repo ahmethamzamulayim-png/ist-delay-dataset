@@ -139,17 +139,19 @@ def fetch_aviationstack(day: date):
                 log.warning("aviationstack error: %s", body)
                 return out or None
             raw = body.get("data") or []
-            # keep the target day only (real-time rows straddle midnight) and drop
-            # codeshare rows — marketing-carrier duplicates of the operating flight
-            page = [a for a in raw
-                    if a.get("flight_date") in (day.isoformat(), None)
-                    and not (a.get("flight") or {}).get("codeshared")]
+            total = (body.get("pagination") or {}).get("total") or 0
+            # drop codeshare rows (marketing-carrier duplicates); do NOT filter by
+            # flight_date — its day-labeling semantics burned us twice, and the
+            # join's ±3h window is the real day-bucketing authority anyway
+            page = [a for a in raw if not (a.get("flight") or {}).get("codeshared")]
             for a in page:
                 a["_direction"] = direction
             out.extend(page)
+            dates = sorted({a.get("flight_date") for a in raw if a.get("flight_date")})
+            log.info("aviationstack %s offset=%s: %d raw (%d kept), total=%s, flight_dates=%s",
+                     direction, params["offset"], len(raw), len(page), total, dates)
             if not sampled:
                 sampled = True
-                total = (body.get("pagination") or {}).get("total") or 0
                 # the budget can't cover the whole day, so sample the remaining
                 # pages at random — a fixed head slice would bias the dataset
                 # toward whatever part of the day the API lists first

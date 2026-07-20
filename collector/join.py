@@ -154,7 +154,8 @@ def join_day(date_str, opensky, schedules, final=False):
             continue
         if a.get("flight_status") == "cancelled":
             flights.append(_row(date_str, a=a))  # cancelled flights are signal, keep them
-        elif final and a.get("flight_status") == "scheduled":
+        elif (final and a.get("flight_status") == "scheduled"
+              and (_row(date_str, a=a)["scheduled_utc"] or "")[:10] == date_str):
             # the day is over, the flight was never more than "scheduled", and no
             # transponder movement matched: a cancellation announced after our
             # collection run, or an ADS-B coverage gap — undecidable on the free
