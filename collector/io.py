@@ -110,6 +110,14 @@ def build_summary():
     delayed = int((delay >= 15).sum())
     ontime = int((delay.notna() & (delay < 15)).sum())
 
+    # distribution tells the real story a single % hides: an on-time cluster
+    # plus a thin tail of genuine delays
+    dvals = delay.dropna()
+    _bins = [("<15", -1e9, 15), ("15–30", 15, 30), ("30–60", 30, 60), ("60+", 60, 1e9)]
+    delay_hist = [{"bin": lb, "count": int(((dvals >= lo) & (dvals < hi)).sum())}
+                  for lb, lo, hi in _bins]
+    median_delay = round(float(dvals.median()), 1) if len(dvals) else None
+
     daily = []
     for d, g in df.groupby("date"):
         gd = pd.to_numeric(g.loc[g["direction"] == "dep", "avs_delay_minutes"],
@@ -139,6 +147,8 @@ def build_summary():
         "last_date": files[-1].stem if files else None,
         "total_flights": int(len(df)),
         "delay_known": int(len(known)),  # flights with gate-based delay data
+        "median_delay": median_delay,
+        "delay_hist": delay_hist,
         "delayed_15": delayed,
         "ontime": ontime,
         "pct_delayed": round(100 * delayed / len(known), 1) if len(known) else None,
