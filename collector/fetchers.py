@@ -1,7 +1,6 @@
 """API fetchers: OpenSky (actual movements), aviationstack (schedules), aviationweather (METARs)."""
 import logging
 import os
-import random
 import time
 from datetime import date, datetime, timedelta, timezone
 
@@ -113,12 +112,10 @@ def fetch_aviationstack(day: date):
     # ASSUMPTION: free tier ~100 requests/month, 100 rows/page via limit+offset.
     # 3/day * 31 covers roughly the monthly quota; raise via env if on a paid plan.
     budget = int(os.getenv("AVIATIONSTACK_DAILY_BUDGET", "3"))
-    # seeded per day: re-running the same date samples the same offsets (idempotent)
-    rng = random.Random(day.toordinal())
     out = []
     for direction, param in (("dep", "dep_iata"), ("arr", "arr_iata")):
-        offsets = [0]  # the first page also tells us the day's total row count
-        sampled = False
+        offsets = [0]  # the first page also tells us the feed's total row count
+        planned = False
         while offsets and budget > 0:
             params = {"access_key": key, param: "IST", "limit": 100,
                       "offset": offsets.pop(0)}
@@ -150,14 +147,20 @@ def fetch_aviationstack(day: date):
             dates = sorted({a.get("flight_date") for a in raw if a.get("flight_date")})
             log.info("aviationstack %s offset=%s: %d raw (%d kept), total=%s, flight_dates=%s",
                      direction, params["offset"], len(raw), len(page), total, dates)
-            if not sampled:
-                sampled = True
-                # the budget can't cover the whole day, so sample the remaining
-                # pages at random — a fixed head slice would bias the dataset
-                # toward whatever part of the day the API lists first
-                rest = list(range(100, total, 100))
-                rng.shuffle(rest)
-                offsets = rest
+            if not planned:
+                planned = True
+                # The real-time feed is newest-first spanning ~3 days
+                # (tomorrow → today → yesterday). "Today" sits in the MIDDLE, so
+                # random sampling can miss it entirely — it did on 2026-07-20,
+                # which got 0 of its own rows. Deterministically hit the centre of
+                # the today-zone (~0.5) and yesterday-zone (~0.83, has actual
+                # times for finalization). offset 0 already grabbed tomorrow.
+                # ponytail: one 100-row page per zone → within-day time bias;
+                # upgrade to per-zone random offset once zone edges are known.
+                for frac in (0.5, 0.83):
+                    o = min(int(total * frac) // 100 * 100, max(total - 100, 0))
+                    if o and o not in offsets:
+                        offsets.append(o)
             if not raw:
                 break
         log.info("aviationstack %s: %d rows total, %d requests left",
