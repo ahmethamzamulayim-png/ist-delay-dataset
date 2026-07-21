@@ -1,14 +1,14 @@
 {
- "generated_utc": "2026-07-21T19:46:32+00:00",
+ "generated_utc": "2026-07-21T19:48:41+00:00",
  "days": 4,
  "first_date": "2026-07-18",
  "last_date": "2026-07-21",
- "total_flights": 92,
- "delay_known": 12,
- "delayed_15": 8,
- "ontime": 4,
- "pct_delayed": 66.7,
- "pct_ontime": 33.3,
+ "total_flights": 149,
+ "delay_known": 35,
+ "delayed_15": 16,
+ "ontime": 19,
+ "pct_delayed": 45.7,
+ "pct_ontime": 54.3,
  "daily": [
   {
    "date": "2026-07-18",
@@ -22,8 +22,8 @@
   },
   {
    "date": "2026-07-20",
-   "flights": 30,
-   "avg_dep_delay": 45.5
+   "flights": 87,
+   "avg_dep_delay": 27.9
   },
   {
    "date": "2026-07-21",

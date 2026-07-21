@@ -151,8 +151,8 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY3RK,,,LTFM,,,,2026-07-19T04:05:45+00:00,2026-07-19T05:52:16+00:00,,,,,,4ba910,,,no_schedule_match
 2026-07-19,dep,THY39GV,,,LTFM,,,,2026-07-19T04:06:31+00:00,2026-07-19T05:16:15+00:00,,,,,,4bb0e4,,,no_schedule_match
 2026-07-19,dep,THY3ZJ,,,LTFM,LICJ,,,2026-07-19T04:08:42+00:00,2026-07-19T06:00:23+00:00,,,,,,4ba916,,,no_schedule_match
-2026-07-19,dep,THY3WE,,,LTFM,LPPT,,,2026-07-19T04:09:31+00:00,2026-07-19T08:43:24+00:00,,,,,,4bb27a,,,no_schedule_match
 2026-07-19,dep,THY6FX,,,LTFM,EDDL,,,2026-07-19T04:09:31+00:00,2026-07-19T06:48:21+00:00,,,,,,4bb1e6,,,no_schedule_match
+2026-07-19,dep,THY3WE,,,LTFM,LPPT,,,2026-07-19T04:09:31+00:00,2026-07-19T08:43:24+00:00,,,,,,4bb27a,,,no_schedule_match
 2026-07-19,arr,THY325,,,,LTFM,,,2026-07-19T04:10:00+00:00,2026-07-19T06:36:58+00:00,,,,,,4bb268,,,no_schedule_match
 2026-07-19,dep,THY9GU,,,LTFM,,,,2026-07-19T04:10:16+00:00,2026-07-19T05:31:09+00:00,,,,,,4bab25,,,no_schedule_match
 2026-07-19,arr,THY4LE,,,,LTFM,,,2026-07-19T04:11:12+00:00,2026-07-19T06:23:57+00:00,,,,,,4bb06d,,,no_schedule_match
