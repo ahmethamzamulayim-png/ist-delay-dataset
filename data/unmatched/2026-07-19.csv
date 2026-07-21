@@ -152,8 +152,8 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY3RK,,,LTFM,,,,2026-07-19T04:05:45+00:00,2026-07-19T05:52:16+00:00,,,,,4ba910,,,no_schedule_match
 2026-07-19,dep,THY39GV,,,LTFM,,,,2026-07-19T04:06:31+00:00,2026-07-19T05:16:15+00:00,,,,,4bb0e4,,,no_schedule_match
 2026-07-19,dep,THY3ZJ,,,LTFM,LICJ,,,2026-07-19T04:08:42+00:00,2026-07-19T06:00:23+00:00,,,,,4ba916,,,no_schedule_match
-2026-07-19,dep,THY3WE,,,LTFM,LPPT,,,2026-07-19T04:09:31+00:00,2026-07-19T08:43:24+00:00,,,,,4bb27a,,,no_schedule_match
 2026-07-19,dep,THY6FX,,,LTFM,EDDL,,,2026-07-19T04:09:31+00:00,2026-07-19T06:48:21+00:00,,,,,4bb1e6,,,no_schedule_match
+2026-07-19,dep,THY3WE,,,LTFM,LPPT,,,2026-07-19T04:09:31+00:00,2026-07-19T08:43:24+00:00,,,,,4bb27a,,,no_schedule_match
 2026-07-19,arr,THY325,,,,LTFM,,,2026-07-19T04:10:00+00:00,2026-07-19T06:36:58+00:00,,,,,4bb268,,,no_schedule_match
 2026-07-19,dep,THY9GU,,,LTFM,,,,2026-07-19T04:10:16+00:00,2026-07-19T05:31:09+00:00,,,,,4bab25,,,no_schedule_match
 2026-07-19,arr,THY4LE,,,,LTFM,,,2026-07-19T04:11:12+00:00,2026-07-19T06:23:57+00:00,,,,,4bb06d,,,no_schedule_match
@@ -166,6 +166,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY2HR,,,LTFM,LTFB,,,2026-07-19T04:24:23+00:00,2026-07-19T05:00:49+00:00,,,,,4baa0e,,,no_schedule_match
 2026-07-19,dep,THY4BS,,,LTFM,,,,2026-07-19T04:25:43+00:00,2026-07-19T04:48:59+00:00,,,,,4baacc,,,no_schedule_match
 2026-07-19,dep,THY1BX,,,LTFM,,,,2026-07-19T04:30:38+00:00,2026-07-19T06:43:40+00:00,,,,,4ba9c8,,,no_schedule_match
+2026-07-19,dep,THY6380,,,LTFM,LTFM,,,2026-07-19T04:30:39+00:00,2026-07-20T11:22:13+00:00,,,,,4ba9f5,,,no_schedule_match
 2026-07-19,arr,THY8UP,,,,LTFM,,,2026-07-19T04:32:16+00:00,2026-07-19T04:59:51+00:00,,,,,4bb26e,,,no_schedule_match
 2026-07-19,arr,THY2MH,,,,LTFM,,,2026-07-19T04:34:14+00:00,2026-07-19T06:51:14+00:00,,,,,4ba9c1,,,no_schedule_match
 2026-07-19,arr,THY097,,,,LTFM,,,2026-07-19T04:34:43+00:00,2026-07-19T06:38:24+00:00,,,,,4bb286,,,no_schedule_match
@@ -254,6 +255,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY4YT,,,KEWR,LTFM,,,2026-07-19T05:55:30+00:00,2026-07-19T14:48:56+00:00,,,,,4bb0ea,,,no_schedule_match
 2026-07-19,dep,THY6405,,,LTFM,EDDF,,,2026-07-19T05:57:48+00:00,2026-07-19T08:24:43+00:00,,,,,4bb154,,,no_schedule_match
 2026-07-19,arr,THY8FV,,,,LTFM,,,2026-07-19T05:59:42+00:00,2026-07-19T06:35:57+00:00,,,,,4baac2,,,no_schedule_match
+2026-07-19,dep,AXV9215,,,LTFM,,,,2026-07-19T06:04:47+00:00,2026-07-19T07:06:57+00:00,,,,,734844,,,no_schedule_match
 2026-07-19,arr,RMB3,,,,LTFM,,,2026-07-19T06:06:01+00:00,2026-07-19T08:03:13+00:00,,,,,506cab,,,no_schedule_match
 2026-07-19,arr,THY361,,,,LTFM,,,2026-07-19T06:07:30+00:00,2026-07-19T07:57:25+00:00,,,,,4bb282,,,no_schedule_match
 2026-07-19,arr,THY9SF,,,LEMD,LTFM,,,2026-07-19T06:07:55+00:00,2026-07-19T09:26:10+00:00,,,,,4baac6,,,no_schedule_match
@@ -478,8 +480,10 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY5QF,,,LIPZ,LTFM,,,2026-07-19T09:57:30+00:00,2026-07-19T11:45:27+00:00,,,,,4bb199,,,no_schedule_match
 2026-07-19,arr,THY6FL,,,LFPG,LTFM,,,2026-07-19T09:59:05+00:00,2026-07-19T12:41:14+00:00,,,,,4bb267,,,no_schedule_match
 2026-07-19,dep,THY9HP,,,LTFM,,,,2026-07-19T09:59:31+00:00,2026-07-19T10:26:28+00:00,,,,,4baa0b,,,no_schedule_match
+2026-07-19,dep,UZB553,,,LTFM,WMKK,,,2026-07-19T09:59:39+00:00,2026-07-20T01:40:13+00:00,,,,,507c50,,,no_schedule_match
 2026-07-19,arr,THY3HM,,,,LTFM,,,2026-07-19T10:00:34+00:00,2026-07-19T11:01:57+00:00,,,,,4baac8,,,no_schedule_match
 2026-07-19,dep,THY108,,,LTFM,,,,2026-07-19T10:01:12+00:00,2026-07-19T12:03:09+00:00,,,,,4bb261,,,no_schedule_match
+2026-07-19,dep,IRB9708,,,LTFM,,,,2026-07-19T10:01:15+00:00,2026-07-19T11:10:23+00:00,,,,,733491,,,no_schedule_match
 2026-07-19,arr,THY640,,,,LTFM,,,2026-07-19T10:01:55+00:00,2026-07-19T12:04:22+00:00,,,,,4bb274,,,no_schedule_match
 2026-07-19,dep,THY1GP,,,LTFM,LIPE,,,2026-07-19T10:03:02+00:00,2026-07-19T12:10:10+00:00,,,,,4baa8a,,,no_schedule_match
 2026-07-19,arr,THY4PD,,,LFBD,LTFM,,,2026-07-19T10:03:37+00:00,2026-07-19T13:04:15+00:00,,,,,4bb289,,,no_schedule_match
@@ -504,6 +508,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY5TD,,,LTFM,LCEN,,,2026-07-19T10:37:00+00:00,2026-07-19T11:48:59+00:00,,,,,4baa12,,,no_schedule_match
 2026-07-19,dep,THY5GJ,,,LTFM,EDDM,,,2026-07-19T10:38:10+00:00,2026-07-19T13:09:43+00:00,,,,,4bb265,,,no_schedule_match
 2026-07-19,dep,THY6NG,,,LTFM,,,,2026-07-19T10:40:45+00:00,2026-07-19T12:23:29+00:00,,,,,4bb276,,,no_schedule_match
+2026-07-19,dep,IRB9734,,,LTFM,,,,2026-07-19T10:42:28+00:00,2026-07-19T11:48:27+00:00,,,,,73348c,,,no_schedule_match
 2026-07-19,arr,THY143,,,,LTFM,,,2026-07-19T10:43:40+00:00,2026-07-19T12:50:54+00:00,,,,,4bb066,,,no_schedule_match
 2026-07-19,dep,THY840,,,LTFM,,,,2026-07-19T10:43:45+00:00,2026-07-19T11:11:25+00:00,,,,,4bab22,,,no_schedule_match
 2026-07-19,dep,THY2QJ,,,LTFM,LGAV,,,2026-07-19T10:45:31+00:00,2026-07-19T11:43:29+00:00,,,,,4baa87,,,no_schedule_match
@@ -516,12 +521,17 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY1PY,,,LTFM,EIDW,,,2026-07-19T10:52:53+00:00,2026-07-19T14:52:16+00:00,,,,,4bb214,,,no_schedule_match
 2026-07-19,arr,THY1MW,,,EIDW,LTFM,,,2026-07-19T10:55:06+00:00,2026-07-19T14:32:14+00:00,,,,,4bb273,,,no_schedule_match
 2026-07-19,dep,THY7LN,,,LTFM,LTGP,,,2026-07-19T10:55:56+00:00,2026-07-19T11:58:24+00:00,,,,,4baacf,,,no_schedule_match
+2026-07-19,dep,AFL1646,,,LTFM,,,,2026-07-19T10:56:47+00:00,2026-07-19T21:34:37+00:00,,,,,152014,,,no_schedule_match
 2026-07-19,arr,AEE992,,,LGAV,LTFM,,,2026-07-19T10:58:00+00:00,2026-07-19T11:50:57+00:00,,,,,4690e1,,,no_schedule_match
+2026-07-19,dep,QSM2212,,,LTFM,,,,2026-07-19T10:59:47+00:00,2026-07-19T12:01:52+00:00,,,,,731a2b,,,no_schedule_match
 2026-07-19,arr,THY7NC,,,LTCG,LTFM,,,2026-07-19T11:00:42+00:00,2026-07-19T12:29:37+00:00,,,,,4bab29,,,no_schedule_match
 2026-07-19,dep,THY1MA,,,LTFM,,,,2026-07-19T11:01:13+00:00,2026-07-19T11:38:16+00:00,,,,,4baa88,,,no_schedule_match
 2026-07-19,arr,NWS1015,,,,LTFM,,,2026-07-19T11:01:29+00:00,2026-07-19T15:13:12+00:00,,,,,151e69,,,no_schedule_match
 2026-07-19,dep,THY1NQ,,,LTFM,LTFE,,,2026-07-19T11:02:30+00:00,2026-07-19T11:53:44+00:00,,,,,4ba9ab,,,no_schedule_match
+2026-07-19,dep,MGL501,,,LTFM,RJAA,,,2026-07-19T11:03:54+00:00,2026-07-20T04:24:29+00:00,,,,,682211,,,no_schedule_match
+2026-07-19,dep,SBI5263,,,LTFM,,,,2026-07-19T11:04:53+00:00,2026-07-19T18:50:42+00:00,,,,,151ec3,,,no_schedule_match
 2026-07-19,dep,ETD51M,,,LTFM,OMAA,,,2026-07-19T11:07:00+00:00,2026-07-19T15:14:12+00:00,,,,,896698,,,no_schedule_match
+2026-07-19,dep,THY79K,,,LTFM,KSFO,,,2026-07-19T11:08:08+00:00,2026-07-20T00:27:19+00:00,,,,,4bb103,,,no_schedule_match
 2026-07-19,dep,THY5LF,,,LTFM,LTFM,,,2026-07-19T11:09:05+00:00,2026-07-19T14:38:41+00:00,,,,,4baace,,,no_schedule_match
 2026-07-19,arr,THY5LF,,,LTFM,LTFM,,,2026-07-19T11:09:05+00:00,2026-07-19T14:38:41+00:00,,,,,4baace,,,no_schedule_match
 2026-07-19,dep,T7EVO,,,LTFM,LTFE,,,2026-07-19T11:10:12+00:00,2026-07-19T12:18:54+00:00,,,,,5004bf,,,no_schedule_match
@@ -548,6 +558,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY3RP,,,LTFM,,,,2026-07-19T11:37:06+00:00,2026-07-19T12:06:50+00:00,,,,,4bab25,,,no_schedule_match
 2026-07-19,dep,THY320,,,LTFM,,,,2026-07-19T11:38:07+00:00,2026-07-19T13:32:44+00:00,,,,,4baaca,,,no_schedule_match
 2026-07-19,dep,THY5KM,,,LTFM,KIAH,,,2026-07-19T11:38:23+00:00,2026-07-19T23:35:21+00:00,,,,,4ba95a,,,no_schedule_match
+2026-07-19,dep,CSN8066,,,LTFM,RKSI,,,2026-07-19T11:40:15+00:00,2026-07-20T04:34:16+00:00,,,,,781934,,,no_schedule_match
 2026-07-19,dep,THY5GX,,,LTFM,LCEN,,,2026-07-19T11:42:01+00:00,2026-07-19T12:52:24+00:00,,,,,4baa10,,,no_schedule_match
 2026-07-19,dep,THY43C,,,LTFM,,,,2026-07-19T11:43:30+00:00,2026-07-19T12:52:27+00:00,,,,,4ba9ce,,,no_schedule_match
 2026-07-19,dep,THY7ZV,,,LTFM,LYBE,,,2026-07-19T11:44:42+00:00,2026-07-19T12:58:38+00:00,,,,,4baa79,,,no_schedule_match
@@ -575,6 +586,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY4XH,,,LTFM,,,,2026-07-19T12:16:17+00:00,2026-07-19T12:38:57+00:00,,,,,4baa0c,,,no_schedule_match
 2026-07-19,dep,THY4CV,,,LTFM,LTFE,,,2026-07-19T12:17:03+00:00,2026-07-19T13:07:38+00:00,,,,,4bab2f,,,no_schedule_match
 2026-07-19,dep,THY6RB,,,LTFM,ENGM,,,2026-07-19T12:21:33+00:00,2026-07-19T15:28:26+00:00,,,,,4bb20f,,,no_schedule_match
+2026-07-19,dep,AFL2173,,,LTFM,,,,2026-07-19T12:23:10+00:00,2026-07-19T12:44:10+00:00,,,,,152031,,,no_schedule_match
 2026-07-19,dep,THY1RW,,,LTFM,LTFM,,,2026-07-19T12:23:50+00:00,2026-07-19T16:52:58+00:00,,,,,4bb044,,,no_schedule_match
 2026-07-19,arr,THY1RW,,,LTFM,LTFM,,,2026-07-19T12:23:50+00:00,2026-07-19T16:52:58+00:00,,,,,4bb044,,,no_schedule_match
 2026-07-19,dep,THY1HZ,,,LTFM,EBBR,,,2026-07-19T12:25:11+00:00,2026-07-19T15:19:09+00:00,,,,,4bb1e7,,,no_schedule_match
@@ -582,6 +594,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY6MF,,,LTFM,EDDL,,,2026-07-19T12:27:13+00:00,2026-07-19T15:14:58+00:00,,,,,4ba9d2,,,no_schedule_match
 2026-07-19,dep,THY5QT,,,LTFM,LEBL,,,2026-07-19T12:28:06+00:00,2026-07-19T15:32:40+00:00,,,,,4bb1c3,,,no_schedule_match
 2026-07-19,dep,THY4BZ,,,LTFM,,,,2026-07-19T12:29:34+00:00,2026-07-19T15:02:36+00:00,,,,,4baa6c,,,no_schedule_match
+2026-07-19,dep,THY281,,,LTFM,LTFM,,,2026-07-19T12:30:21+00:00,2026-07-20T11:38:14+00:00,,,,,4bb1a5,,,no_schedule_match
 2026-07-19,arr,THY1928,,,EGBB,LTFM,,,2026-07-19T12:30:32+00:00,2026-07-19T15:43:24+00:00,,,,,4bb28a,,,no_schedule_match
 2026-07-19,dep,THY7KG,,,LTFM,KDTW,,,2026-07-19T12:32:06+00:00,2026-07-19T22:38:44+00:00,,,,,4bb18b,,,no_schedule_match
 2026-07-19,arr,THY5UW,,,LOWW,LTFM,,,2026-07-19T12:32:41+00:00,2026-07-19T14:33:51+00:00,,,,,4bb06d,,,no_schedule_match
@@ -590,6 +603,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY982,,,LTFM,LCEN,,,2026-07-19T12:36:38+00:00,2026-07-19T13:47:51+00:00,,,,,4baa0a,,,no_schedule_match
 2026-07-19,dep,THY5EC,,,LTFM,LTFM,,,2026-07-19T12:37:03+00:00,2026-07-19T20:31:42+00:00,,,,,4ba90d,,,no_schedule_match
 2026-07-19,arr,THY5EC,,,LTFM,LTFM,,,2026-07-19T12:37:03+00:00,2026-07-19T20:31:42+00:00,,,,,4ba90d,,,no_schedule_match
+2026-07-19,dep,THY37R,,,LTFM,,,,2026-07-19T12:38:51+00:00,2026-07-19T14:13:53+00:00,,,,,4ba9c5,,,no_schedule_match
 2026-07-19,dep,THY1VR,,,LTFM,,,,2026-07-19T12:41:33+00:00,2026-07-19T14:22:42+00:00,,,,,4baa6d,,,no_schedule_match
 2026-07-19,dep,THY7LS,,,LTFM,,,,2026-07-19T12:42:01+00:00,2026-07-19T13:11:17+00:00,,,,,4ba914,,,no_schedule_match
 2026-07-19,dep,THY7AU,,,LTFM,EHAM,,,2026-07-19T12:42:12+00:00,2026-07-19T15:40:29+00:00,,,,,4ba9d3,,,no_schedule_match
@@ -598,6 +612,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY7LY,,,EGCC,LTFM,,,2026-07-19T12:50:00+00:00,2026-07-19T16:04:57+00:00,,,,,4bb281,,,no_schedule_match
 2026-07-19,arr,THY30N,,,LEBL,LTFM,,,2026-07-19T12:50:02+00:00,2026-07-19T15:40:11+00:00,,,,,4bb206,,,no_schedule_match
 2026-07-19,arr,THY4GL,,,LDZA,LTFM,,,2026-07-19T12:50:46+00:00,2026-07-19T14:26:10+00:00,,,,,4baa75,,,no_schedule_match
+2026-07-19,dep,SVA256,,,LTFM,,,,2026-07-19T12:52:13+00:00,2026-07-19T23:30:27+00:00,,,,,710122,,,no_schedule_match
 2026-07-19,arr,THY2SA,,,LSGG,LTFM,,,2026-07-19T12:55:37+00:00,2026-07-19T15:25:26+00:00,,,,,4bb287,,,no_schedule_match
 2026-07-19,dep,BTI712,,,LTFM,EVRA,,,2026-07-19T12:58:38+00:00,2026-07-19T15:32:22+00:00,,,,,502d45,,,no_schedule_match
 2026-07-19,dep,THY1PA,,,LTFM,LFPG,,,2026-07-19T13:00:35+00:00,2026-07-19T16:07:41+00:00,,,,,4bb10a,,,no_schedule_match
@@ -643,13 +658,19 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY7NQ,,,,LTFM,,,2026-07-19T14:23:23+00:00,2026-07-19T14:43:54+00:00,,,,,4baa0c,,,no_schedule_match
 2026-07-19,arr,THY8RS,,,LCEN,LTFM,,,2026-07-19T14:23:35+00:00,2026-07-19T15:38:03+00:00,,,,,4baa10,,,no_schedule_match
 2026-07-19,arr,THY367,,,,LTFM,,,2026-07-19T14:24:31+00:00,2026-07-19T16:50:36+00:00,,,,,4bb075,,,no_schedule_match
+2026-07-19,dep,DAH3017,,,LTFM,,,,2026-07-19T14:28:18+00:00,2026-07-19T16:36:33+00:00,,,,,0a0021,,,no_schedule_match
 2026-07-19,dep,THY5KP,,,LTFM,EDDL,,,2026-07-19T14:33:04+00:00,2026-07-19T17:25:36+00:00,,,,,4bb267,,,no_schedule_match
+2026-07-19,dep,THY7JA,,,LTFM,,,,2026-07-19T14:39:43+00:00,2026-07-19T15:07:22+00:00,,,,,4baa8e,,,no_schedule_match
+2026-07-19,dep,THY7ZH,,,LTFM,,,,2026-07-19T14:39:45+00:00,2026-07-19T14:56:50+00:00,,,,,4bab47,,,no_schedule_match
 2026-07-19,dep,THY97G,,,LTFM,,,,2026-07-19T14:42:06+00:00,2026-07-19T15:07:59+00:00,,,,,4baad0,,,no_schedule_match
+2026-07-19,dep,AFL1482,,,LTFM,,,,2026-07-19T14:42:08+00:00,2026-07-20T02:59:22+00:00,,,,,151fea,,,no_schedule_match
 2026-07-19,arr,MEA267,,,,LTFM,,,2026-07-19T14:42:25+00:00,2026-07-19T16:11:48+00:00,,,,,500213,,,no_schedule_match
 2026-07-19,arr,THY8AD,,,,LTFM,,,2026-07-19T14:42:47+00:00,2026-07-19T16:20:59+00:00,,,,,4bb276,,,no_schedule_match
+2026-07-19,dep,THY45M,,,LTFM,WMKK,,,2026-07-19T14:44:37+00:00,2026-07-20T00:22:38+00:00,,,,,4bb0ed,,,no_schedule_match
 2026-07-19,dep,THY5BJ,,,LTFM,EPWA,,,2026-07-19T14:46:38+00:00,2026-07-19T16:41:04+00:00,,,,,4bab21,,,no_schedule_match
 2026-07-19,dep,THY3ED,,,LTFM,LKPR,,,2026-07-19T14:47:31+00:00,2026-07-19T16:54:26+00:00,,,,,4ba9c4,,,no_schedule_match
 2026-07-19,arr,T7EVO,,,LTFE,LTFM,,,2026-07-19T14:48:52+00:00,2026-07-19T15:47:55+00:00,,,,,5004bf,,,no_schedule_match
+2026-07-19,dep,THY450,,,LTFM,,,,2026-07-19T14:48:57+00:00,2026-07-19T16:45:58+00:00,,,,,4bb2b0,,,no_schedule_match
 2026-07-19,dep,THY9EH,,,LTFM,,,,2026-07-19T14:51:01+00:00,2026-07-19T15:35:24+00:00,,,,,4baa90,,,no_schedule_match
 2026-07-19,arr,VJH728,,,LEPA,LTFM,,,2026-07-19T14:51:47+00:00,2026-07-19T17:35:28+00:00,,,,,3c0c0c,,,no_schedule_match
 2026-07-19,dep,AWG725,,,LTFM,LRCL,,,2026-07-19T14:52:38+00:00,2026-07-19T15:52:54+00:00,,,,,4a12ae,,,no_schedule_match
@@ -657,6 +678,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY2ZC,,,LOWW,LTFM,,,2026-07-19T14:53:09+00:00,2026-07-19T16:37:10+00:00,,,,,4bb26f,,,no_schedule_match
 2026-07-19,arr,THY1634,,,EDDM,LTFM,,,2026-07-19T14:54:36+00:00,2026-07-19T17:02:53+00:00,,,,,4bb265,,,no_schedule_match
 2026-07-19,dep,THY986,,,LTFM,LCEN,,,2026-07-19T14:54:38+00:00,2026-07-19T16:10:26+00:00,,,,,4ba999,,,no_schedule_match
+2026-07-19,dep,THY4KH,,,LTFM,,,,2026-07-19T14:54:58+00:00,2026-07-19T17:19:25+00:00,,,,,4ba9ea,,,no_schedule_match
 2026-07-19,arr,THY841,,,,LTFM,,,2026-07-19T14:56:00+00:00,2026-07-19T15:28:45+00:00,,,,,4bab22,,,no_schedule_match
 2026-07-19,arr,THY1896,,,LIMC,LTFM,,,2026-07-19T14:57:43+00:00,2026-07-19T17:00:28+00:00,,,,,4ba94f,,,no_schedule_match
 2026-07-19,arr,THY5MG,,,LTAI,LTFM,,,2026-07-19T15:01:06+00:00,2026-07-19T15:57:13+00:00,,,,,4bb279,,,no_schedule_match
@@ -691,10 +713,12 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY9BX,,,LTFM,LJLJ,,,2026-07-19T15:37:46+00:00,2026-07-19T17:34:10+00:00,,,,,4bb204,,,no_schedule_match
 2026-07-19,dep,RAM911T,,,LTFM,GMMN,,,2026-07-19T15:38:10+00:00,2026-07-19T20:03:53+00:00,,,,,020123,,,no_schedule_match
 2026-07-19,arr,THY3CE,,,,LTFM,,,2026-07-19T15:38:10+00:00,2026-07-19T16:13:59+00:00,,,,,4baa61,,,no_schedule_match
+2026-07-19,dep,THY254,,,LTFM,,,,2026-07-19T15:38:39+00:00,2026-07-19T17:37:20+00:00,,,,,4bb289,,,no_schedule_match
 2026-07-19,dep,THY3PC,,,LTFM,HEEM,,,2026-07-19T15:42:05+00:00,2026-07-19T17:19:54+00:00,,,,,4baa8f,,,no_schedule_match
 2026-07-19,dep,THY7SP,,,LTFM,,,,2026-07-19T15:42:11+00:00,2026-07-19T17:23:59+00:00,,,,,4baa6f,,,no_schedule_match
 2026-07-19,dep,THY1TE,,,LTFM,,,,2026-07-19T15:43:23+00:00,2026-07-19T16:12:27+00:00,,,,,4baa09,,,no_schedule_match
 2026-07-19,dep,THY6VU,,,LTFM,,,,2026-07-19T15:44:23+00:00,2026-07-19T17:27:14+00:00,,,,,4baa5a,,,no_schedule_match
+2026-07-19,dep,THY4BT,,,LTFM,LTFM,,,2026-07-19T15:50:18+00:00,2026-07-20T08:20:38+00:00,,,,,4bb06f,,,no_schedule_match
 2026-07-19,arr,THY3EW,,,,LTFM,,,2026-07-19T15:52:01+00:00,2026-07-19T16:27:44+00:00,,,,,4baa99,,,no_schedule_match
 2026-07-19,arr,THY2GN,,,,LTFM,,,2026-07-19T15:52:34+00:00,2026-07-19T16:29:53+00:00,,,,,4ba90e,,,no_schedule_match
 2026-07-19,arr,THY5YE,,,,LTFM,,,2026-07-19T15:54:11+00:00,2026-07-19T19:56:29+00:00,,,,,4bb06e,,,no_schedule_match
@@ -702,6 +726,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,HYM422,,,LTFM,,,,2026-07-19T15:57:35+00:00,2026-07-19T16:40:57+00:00,,,,,4d2524,,,no_schedule_match
 2026-07-19,dep,THY7HV,,,LTFM,,,,2026-07-19T15:58:37+00:00,2026-07-19T16:30:25+00:00,,,,,4bb109,,,no_schedule_match
 2026-07-19,arr,THY7ZA,,,LPPR,LTFM,,,2026-07-19T15:59:45+00:00,2026-07-19T19:37:59+00:00,,,,,4bb06c,,,no_schedule_match
+2026-07-19,dep,THY4LD,,,LTFM,,,,2026-07-19T15:59:48+00:00,2026-07-19T16:22:51+00:00,,,,,4baacf,,,no_schedule_match
 2026-07-19,dep,THY6102,,,LTFM,VOBL,,,2026-07-19T16:00:42+00:00,2026-07-19T23:06:31+00:00,,,,,4ba892,,,no_schedule_match
 2026-07-19,dep,THY2YJ,,,LTFM,,,,2026-07-19T16:01:00+00:00,2026-07-19T20:28:12+00:00,,,,,4bb20b,,,no_schedule_match
 2026-07-19,dep,THY98U,,,LTFM,LRCL,,,2026-07-19T16:02:26+00:00,2026-07-19T17:01:29+00:00,,,,,4bb245,,,no_schedule_match
@@ -712,13 +737,17 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY5UZ,,,LTBK,LTFM,,,2026-07-19T16:09:41+00:00,2026-07-19T16:49:45+00:00,,,,,4baa55,,,no_schedule_match
 2026-07-19,dep,THY3FH,,,LTFM,,,,2026-07-19T16:12:33+00:00,2026-07-19T17:20:58+00:00,,,,,4bb106,,,no_schedule_match
 2026-07-19,arr,THY3RU,,,GMMN,LTFM,,,2026-07-19T16:13:46+00:00,2026-07-19T19:59:57+00:00,,,,,4ba94e,,,no_schedule_match
+2026-07-19,dep,THY370,,,LTFM,,,,2026-07-19T16:14:05+00:00,2026-07-19T18:08:52+00:00,,,,,4ba934,,,no_schedule_match
 2026-07-19,dep,THY5DQ,,,LTFM,,,,2026-07-19T16:14:53+00:00,2026-07-19T17:16:07+00:00,,,,,4baa7a,,,no_schedule_match
 2026-07-19,dep,THY2HU,,,LTFM,LHBP,,,2026-07-19T16:15:47+00:00,2026-07-19T17:47:18+00:00,,,,,4baa64,,,no_schedule_match
 2026-07-19,dep,THY1LR,,,LTFM,,,,2026-07-19T16:18:23+00:00,2026-07-19T17:09:40+00:00,,,,,4baa75,,,no_schedule_match
+2026-07-19,dep,OMA166,,,LTFM,VOCI,,,2026-07-19T16:20:17+00:00,2026-07-20T02:01:24+00:00,,,,,70c0fa,,,no_schedule_match
 2026-07-19,arr,AZO6069,,,,LTFM,,,2026-07-19T16:20:37+00:00,2026-07-19T16:42:50+00:00,,,,,155c33,,,no_schedule_match
 2026-07-19,dep,THY9XE,,,LTFM,,,,2026-07-19T16:21:31+00:00,2026-07-19T17:07:12+00:00,,,,,4baa12,,,no_schedule_match
 2026-07-19,dep,THY2VB,,,LTFM,LGTS,,,2026-07-19T16:21:54+00:00,2026-07-19T17:12:27+00:00,,,,,4ba9ab,,,no_schedule_match
 2026-07-19,dep,THY1EF,,,LTFM,EBBR,,,2026-07-19T16:22:55+00:00,2026-07-19T19:28:29+00:00,,,,,4bb266,,,no_schedule_match
+2026-07-19,dep,THY8MC,,,LTFM,,,,2026-07-19T16:23:59+00:00,2026-07-19T18:07:36+00:00,,,,,4bb067,,,no_schedule_match
+2026-07-19,dep,THY8HG,,,LTFM,,,,2026-07-19T16:24:44+00:00,2026-07-19T18:18:58+00:00,,,,,4bb061,,,no_schedule_match
 2026-07-19,dep,THY439,,,LTFM,LDDU,,,2026-07-19T16:26:23+00:00,2026-07-19T17:58:28+00:00,,,,,4baa50,,,no_schedule_match
 2026-07-19,dep,THY4YN,,,LTFM,,,,2026-07-19T16:28:00+00:00,2026-07-19T16:54:59+00:00,,,,,4baa73,,,no_schedule_match
 2026-07-19,dep,THY4SE,,,LTFM,LQVI,,,2026-07-19T16:28:45+00:00,2026-07-19T17:50:21+00:00,,,,,4baa0b,,,no_schedule_match
@@ -745,6 +774,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY4HC,,,LTFM,HKNW,,,2026-07-19T16:44:31+00:00,2026-07-19T22:50:13+00:00,,,,,4ba9e4,,,no_schedule_match
 2026-07-19,arr,THY3HN,,,,LTFM,,,2026-07-19T16:45:35+00:00,2026-07-19T19:58:22+00:00,,,,,4bb285,,,no_schedule_match
 2026-07-19,dep,THY2XQ,,,LTFM,LGAV,,,2026-07-19T16:45:42+00:00,2026-07-19T17:40:24+00:00,,,,,4ba94c,,,no_schedule_match
+2026-07-19,dep,THY31M,,,LTFM,,,,2026-07-19T16:47:55+00:00,2026-07-19T18:29:50+00:00,,,,,4ba9cc,,,no_schedule_match
 2026-07-19,dep,ABY288,,,LTFM,OMSJ,,,2026-07-19T16:48:48+00:00,2026-07-19T20:44:24+00:00,,,,,89642d,,,no_schedule_match
 2026-07-19,arr,FDB3VG,,,OMDB,LTFM,,,2026-07-19T16:49:54+00:00,2026-07-19T20:53:22+00:00,,,,,896468,,,no_schedule_match
 2026-07-19,arr,THY50V,,,ESGG,LTFM,,,2026-07-19T16:50:45+00:00,2026-07-19T19:44:59+00:00,,,,,4ba9c2,,,no_schedule_match
@@ -760,6 +790,8 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY77C,,,LTFM,FKKY,,,2026-07-19T16:55:16+00:00,2026-07-19T22:36:20+00:00,,,,,4bb06d,,,no_schedule_match
 2026-07-19,dep,THY6FD,,,LTFM,,,,2026-07-19T16:56:36+00:00,2026-07-19T17:58:19+00:00,,,,,4ba91a,,,no_schedule_match
 2026-07-19,dep,THY4PW,,,LTFM,,,,2026-07-19T16:57:44+00:00,2026-07-19T18:05:07+00:00,,,,,4baa8d,,,no_schedule_match
+2026-07-19,dep,THY9YQ,,,LTFM,LTFM,,,2026-07-19T16:57:47+00:00,2026-07-20T00:47:41+00:00,,,,,4ba912,,,no_schedule_match
+2026-07-19,dep,THY1AK,,,LTFM,LTFM,,,2026-07-19T16:59:26+00:00,2026-07-20T05:06:39+00:00,,,,,4bb1e8,,,no_schedule_match
 2026-07-19,arr,THY6545,,,EKCH,LTFM,,,2026-07-19T17:00:16+00:00,2026-07-19T19:37:20+00:00,,,,,4ba9f6,,,no_schedule_match
 2026-07-19,arr,THY88L,,,,LTFM,,,2026-07-19T17:02:34+00:00,2026-07-19T19:24:56+00:00,,,,,4ba910,,,no_schedule_match
 2026-07-19,arr,THY8BC,,,EGBB,LTFM,,,2026-07-19T17:05:31+00:00,2026-07-19T20:21:53+00:00,,,,,4bb262,,,no_schedule_match
@@ -811,6 +843,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY80R,,,LGTS,LTFM,,,2026-07-19T18:25:00+00:00,2026-07-19T19:16:18+00:00,,,,,4ba9ab,,,no_schedule_match
 2026-07-19,dep,THY136,,,LTFM,,,,2026-07-19T18:25:06+00:00,2026-07-19T20:28:21+00:00,,,,,4bb276,,,no_schedule_match
 2026-07-19,arr,OYA502,,,,LTFM,,,2026-07-19T18:27:10+00:00,2026-07-19T21:13:17+00:00,,,,,4bbb30,,,no_schedule_match
+2026-07-19,dep,AZO6070,,,LTFM,,,,2026-07-19T18:29:59+00:00,2026-07-19T18:43:15+00:00,,,,,155c33,,,no_schedule_match
 2026-07-19,arr,THY1YR,,,LIPZ,LTFM,,,2026-07-19T18:30:53+00:00,2026-07-19T20:23:01+00:00,,,,,4bb20c,,,no_schedule_match
 2026-07-19,arr,THY2NA,,,LIRF,LTFM,,,2026-07-19T18:31:01+00:00,2026-07-19T20:24:59+00:00,,,,,4bb199,,,no_schedule_match
 2026-07-19,arr,THY9WR,,,LFPG,LTFM,,,2026-07-19T18:32:22+00:00,2026-07-19T21:09:12+00:00,,,,,4bb10a,,,no_schedule_match
@@ -827,6 +860,7 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,THY5NX,,,LKPR,LTFM,,,2026-07-19T18:40:20+00:00,2026-07-19T20:37:58+00:00,,,,,4ba9c4,,,no_schedule_match
 2026-07-19,arr,THY91S,,,,LTFM,,,2026-07-19T18:40:32+00:00,2026-07-19T19:23:25+00:00,,,,,4bb055,,,no_schedule_match
 2026-07-19,arr,BYS994,,,UGTB,LTFM,,,2026-07-19T18:43:13+00:00,2026-07-19T20:50:34+00:00,,,,,510163,,,no_schedule_match
+2026-07-19,dep,LOT2302,,,LTFM,,,,2026-07-19T18:43:23+00:00,2026-07-19T20:31:25+00:00,,,,,48ada2,,,no_schedule_match
 2026-07-19,arr,THY1TU,,,LDZA,LTFM,,,2026-07-19T18:43:44+00:00,2026-07-19T20:21:52+00:00,,,,,4baa6f,,,no_schedule_match
 2026-07-19,arr,BAW720,,,EGLL,LTFM,,,2026-07-19T18:43:54+00:00,2026-07-19T21:47:07+00:00,,,,,4081bf,,,no_schedule_match
 2026-07-19,arr,THY1ED,,,,LTFM,,,2026-07-19T18:45:22+00:00,2026-07-19T19:19:34+00:00,,,,,4baa0c,,,no_schedule_match
@@ -856,31 +890,41 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY6BP,,,LTFM,,,,2026-07-19T19:09:32+00:00,2026-07-19T21:04:23+00:00,,,,,4bb265,,,no_schedule_match
 2026-07-19,arr,THY2JV,,,LROP,LTFM,,,2026-07-19T19:10:44+00:00,2026-07-19T20:06:13+00:00,,,,,4bb1a3,,,no_schedule_match
 2026-07-19,dep,THY7NX,,,LTFM,,,,2026-07-19T19:11:19+00:00,2026-07-19T19:34:52+00:00,,,,,4ba915,,,no_schedule_match
+2026-07-19,dep,UZB274,,,LTFM,,,,2026-07-19T19:12:29+00:00,2026-07-19T21:10:09+00:00,,,,,507c49,,,no_schedule_match
 2026-07-19,arr,THY5BU,,,,LTFM,,,2026-07-19T19:12:35+00:00,2026-07-19T20:28:45+00:00,,,,,4baa0b,,,no_schedule_match
 2026-07-19,arr,THY9VU,,,,LTFM,,,2026-07-19T19:12:43+00:00,2026-07-19T20:08:29+00:00,,,,,4ba9a9,,,no_schedule_match
 2026-07-19,arr,THY1JZ,,,,LTFM,,,2026-07-19T19:13:09+00:00,2026-07-19T20:34:26+00:00,,,,,4bb106,,,no_schedule_match
 2026-07-19,dep,THY6AM,,,LTFM,LIMC,,,2026-07-19T19:14:35+00:00,2026-07-19T21:42:53+00:00,,,,,4bb20d,,,no_schedule_match
 2026-07-19,dep,THY1VP,,,LTFM,,,,2026-07-19T19:16:24+00:00,2026-07-19T19:38:54+00:00,,,,,4baa13,,,no_schedule_match
+2026-07-19,dep,BNL304,,,LTFM,,,,2026-07-19T19:18:21+00:00,2026-07-19T20:30:21+00:00,,,,,4a1923,,,no_schedule_match
 2026-07-19,arr,THY7VM,,,,LTFM,,,2026-07-19T19:20:04+00:00,2026-07-19T20:59:01+00:00,,,,,4baa5a,,,no_schedule_match
 2026-07-19,arr,AFL812,,,,LTFM,,,2026-07-19T19:20:16+00:00,2026-07-19T19:41:43+00:00,,,,,152025,,,no_schedule_match
 2026-07-19,dep,SEH671,,,LTFM,LGAV,,,2026-07-19T19:20:42+00:00,2026-07-19T20:18:41+00:00,,,,,468e45,,,no_schedule_match
 2026-07-19,arr,THY2RE,,,LCEN,LTFM,,,2026-07-19T19:22:30+00:00,2026-07-19T20:31:00+00:00,,,,,4baa8c,,,no_schedule_match
+2026-07-19,dep,THY98E,,,LTFM,,,,2026-07-19T19:22:46+00:00,2026-07-19T20:32:08+00:00,,,,,4bb261,,,no_schedule_match
 2026-07-19,dep,THY4TX,,,LTFM,LCEN,,,2026-07-19T19:24:00+00:00,2026-07-19T20:35:58+00:00,,,,,4baac8,,,no_schedule_match
+2026-07-19,dep,THY364,,,LTFM,,,,2026-07-19T19:25:17+00:00,2026-07-19T21:29:28+00:00,,,,,4bb28e,,,no_schedule_match
+2026-07-19,dep,THY372,,,LTFM,,,,2026-07-19T19:26:43+00:00,2026-07-19T21:23:22+00:00,,,,,4bb20e,,,no_schedule_match
 2026-07-19,arr,THY3AX,,,LGAV,LTFM,,,2026-07-19T19:29:50+00:00,2026-07-19T20:25:18+00:00,,,,,4ba94c,,,no_schedule_match
+2026-07-19,dep,THY52,,,LTFM,VTBS,,,2026-07-19T19:29:53+00:00,2026-07-20T04:19:17+00:00,,,,,4ba9cb,,,no_schedule_match
 2026-07-19,dep,THY4LU,,,LTFM,LTFE,,,2026-07-19T19:31:50+00:00,2026-07-19T20:22:48+00:00,,,,,4baacd,,,no_schedule_match
 2026-07-19,dep,THY7JD,,,LTFM,UGTB,,,2026-07-19T19:34:01+00:00,2026-07-19T21:30:54+00:00,,,,,4bb282,,,no_schedule_match
 2026-07-19,arr,THY2LJ,,,LTCG,LTFM,,,2026-07-19T19:37:30+00:00,2026-07-19T21:04:36+00:00,,,,,4bab23,,,no_schedule_match
 2026-07-19,arr,THY8BN,,,,LTFM,,,2026-07-19T19:38:36+00:00,2026-07-19T20:58:42+00:00,,,,,4baa8d,,,no_schedule_match
+2026-07-19,dep,AEE435,,,LTFM,,,,2026-07-19T19:41:24+00:00,2026-07-19T20:33:46+00:00,,,,,4692d3,,,no_schedule_match
 2026-07-19,arr,THY7CG,,,,LTFM,,,2026-07-19T19:41:39+00:00,2026-07-19T21:22:31+00:00,,,,,4baa6d,,,no_schedule_match
 2026-07-19,dep,THY3CV,,,LTFM,,,,2026-07-19T19:42:48+00:00,2026-07-19T20:24:40+00:00,,,,,4baa4e,,,no_schedule_match
+2026-07-19,dep,SVA260,,,LTFM,,,,2026-07-19T19:45:10+00:00,2026-07-19T21:29:49+00:00,,,,,717ca4,,,no_schedule_match
 2026-07-19,arr,THY4YH,,,LTBK,LTFM,,,2026-07-19T19:50:51+00:00,2026-07-19T20:33:27+00:00,,,,,4ba946,,,no_schedule_match
 2026-07-19,arr,THY9EJ,,,LTAI,LTFM,,,2026-07-19T19:51:34+00:00,2026-07-19T20:49:00+00:00,,,,,4baa65,,,no_schedule_match
 2026-07-19,arr,THY7HL,,,,LTFM,,,2026-07-19T19:58:22+00:00,2026-07-19T20:45:55+00:00,,,,,4bb281,,,no_schedule_match
 2026-07-19,arr,DAH3020,,,,LTFM,,,2026-07-19T20:00:35+00:00,2026-07-19T21:59:13+00:00,,,,,0a0075,,,no_schedule_match
 2026-07-19,arr,KLM1961,,,EHAM,LTFM,,,2026-07-19T20:02:51+00:00,2026-07-19T22:39:24+00:00,,,,,485a34,,,no_schedule_match
+2026-07-19,dep,FAD808,,,LTFM,,,,2026-07-19T20:06:24+00:00,2026-07-19T21:54:45+00:00,,,,,711504,,,no_schedule_match
 2026-07-19,arr,THY1KA,,,,LTFM,,,2026-07-19T20:06:35+00:00,2026-07-19T20:39:55+00:00,,,,,4baac5,,,no_schedule_match
 2026-07-19,arr,TBZ6619,,,,LTFM,,,2026-07-19T20:08:07+00:00,2026-07-19T21:15:41+00:00,,,,,735024,,,no_schedule_match
 2026-07-19,arr,TVF29AH,,,LFPO,LTFM,,,2026-07-19T20:10:05+00:00,2026-07-19T22:56:59+00:00,,,,,39de44,,,no_schedule_match
+2026-07-19,dep,THY6471,,,LTFM,LTFM,,,2026-07-19T20:10:56+00:00,2026-07-20T07:04:12+00:00,,,,,4ba9fa,,,no_schedule_match
 2026-07-19,arr,CTN4352,,,,LTFM,,,2026-07-19T20:11:37+00:00,2026-07-19T21:34:58+00:00,,,,,501c3b,,,no_schedule_match
 2026-07-19,arr,THY8NG,,,,LTFM,,,2026-07-19T20:16:57+00:00,2026-07-19T21:14:30+00:00,,,,,4baa67,,,no_schedule_match
 2026-07-19,arr,HMZ8004,,,LTFE,LTFM,,,2026-07-19T20:17:56+00:00,2026-07-19T21:06:34+00:00,,,,,4bb51a,,,no_schedule_match
@@ -889,10 +933,13 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,THY5LT,,,LTFM,LTFE,,,2026-07-19T20:26:33+00:00,2026-07-19T21:17:23+00:00,,,,,4baad0,,,no_schedule_match
 2026-07-19,arr,THY449,,,,LTFM,,,2026-07-19T20:36:01+00:00,2026-07-19T22:54:52+00:00,,,,,4bb201,,,no_schedule_match
 2026-07-19,arr,THY3SH,,,,LTFM,,,2026-07-19T20:37:01+00:00,2026-07-19T21:09:46+00:00,,,,,4baace,,,no_schedule_match
+2026-07-19,dep,UAE118,,,LTFM,,,,2026-07-19T20:40:11+00:00,2026-07-19T23:59:12+00:00,,,,,896622,,,no_schedule_match
 2026-07-19,arr,THY3GY,,,,LTFM,,,2026-07-19T20:43:03+00:00,2026-07-19T21:52:57+00:00,,,,,4baa0a,,,no_schedule_match
 2026-07-19,arr,DLH1742,,,EDDM,LTFM,,,2026-07-19T20:51:46+00:00,2026-07-19T22:51:55+00:00,,,,,3c65d7,,,no_schedule_match
+2026-07-19,dep,AFL2135,,,LTFM,,,,2026-07-19T20:51:51+00:00,2026-07-19T21:09:24+00:00,,,,,151fec,,,no_schedule_match
 2026-07-19,dep,FJR301,,,LTFM,OJ38,,,2026-07-19T20:53:45+00:00,2026-07-19T22:46:24+00:00,,,,,744de2,,,no_schedule_match
 2026-07-19,arr,MNS504,,,,LTFM,,,2026-07-19T20:57:08+00:00,2026-07-19T23:47:20+00:00,,,,,0180ac,,,no_schedule_match
+2026-07-19,arr,AFR1390,,,LFPG,LTFM,,,2026-07-19T21:10:33+00:00,2026-07-19T23:58:51+00:00,,,,,3991e9,,,no_schedule_match
 2026-07-19,dep,THY1FV,,,LTFM,LTFB,,,2026-07-19T21:13:31+00:00,2026-07-19T21:50:51+00:00,,,,,4baa8b,,,no_schedule_match
 2026-07-19,arr,THY7NY,,,,LTFM,,,2026-07-19T21:15:04+00:00,2026-07-19T21:48:57+00:00,,,,,4ba99a,,,no_schedule_match
 2026-07-19,arr,THY8RA,,,,LTFM,,,2026-07-19T21:17:44+00:00,2026-07-19T21:51:01+00:00,,,,,4ba915,,,no_schedule_match
@@ -900,14 +947,74 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,arr,MSR745,,,,LTFM,,,2026-07-19T21:51:02+00:00,2026-07-19T23:23:33+00:00,,,,,0100dc,,,no_schedule_match
 2026-07-19,dep,JAV272,,,LTFM,OJAI,,,2026-07-19T21:59:02+00:00,2026-07-19T23:43:58+00:00,,,,,742838,,,no_schedule_match
 2026-07-19,dep,THY9YB,,,LTFM,HEBA,,,2026-07-19T22:01:03+00:00,2026-07-19T23:49:00+00:00,,,,,4bb209,,,no_schedule_match
+2026-07-19,dep,MAC523,,,LTFM,GMME,,,2026-07-19T22:03:10+00:00,2026-07-20T02:20:12+00:00,,,,,020145,,,no_schedule_match
+2026-07-19,dep,THY098,,,LTFM,,,,2026-07-19T22:04:23+00:00,2026-07-20T00:08:17+00:00,,,,,4bb214,,,no_schedule_match
+2026-07-19,dep,THY344,,,LTFM,,,,2026-07-19T22:09:57+00:00,2026-07-20T00:06:59+00:00,,,,,4bb26b,,,no_schedule_match
+2026-07-19,dep,THY6RS,,,LTFM,,,,2026-07-19T22:11:39+00:00,2026-07-19T22:40:29+00:00,,,,,4bb208,,,no_schedule_match
+2026-07-19,dep,THY5LB,,,LTFM,,,,2026-07-19T22:20:26+00:00,2026-07-19T23:29:10+00:00,,,,,4bb1e7,,,no_schedule_match
+2026-07-19,dep,THY706,,,LTFM,,,,2026-07-19T22:21:50+00:00,2026-07-20T00:15:27+00:00,,,,,4ba9c2,,,no_schedule_match
+2026-07-19,dep,THY1CT,,,LTFM,GOBD,,,2026-07-19T22:22:15+00:00,2026-07-20T04:56:45+00:00,,,,,4ba9ca,,,no_schedule_match
 2026-07-19,dep,THY4YQ,,,LTFM,LCEN,,,2026-07-19T22:24:40+00:00,2026-07-19T23:36:09+00:00,,,,,4ba90c,,,no_schedule_match
+2026-07-19,dep,THY262,,,LTFM,,,,2026-07-19T22:24:44+00:00,2026-07-20T00:18:29+00:00,,,,,4bb213,,,no_schedule_match
 2026-07-19,dep,THY3VB,,,LTFM,,,,2026-07-19T22:25:43+00:00,2026-07-19T23:45:28+00:00,,,,,4ba996,,,no_schedule_match
+2026-07-19,dep,THY324,,,LTFM,,,,2026-07-19T22:26:16+00:00,2026-07-20T00:24:27+00:00,,,,,4bb274,,,no_schedule_match
+2026-07-19,dep,THY096,,,LTFM,,,,2026-07-19T22:27:42+00:00,2026-07-20T00:13:29+00:00,,,,,4bb20f,,,no_schedule_match
 2026-07-19,arr,AEE998,,,LGAV,LTFM,,,2026-07-19T22:28:00+00:00,2026-07-19T23:18:50+00:00,,,,,46b823,,,no_schedule_match
+2026-07-19,dep,THY7AZ,,,LTFM,LTBW,,,2026-07-19T22:28:16+00:00,2026-07-20T07:20:26+00:00,,,,,4ba9cf,,,no_schedule_match
+2026-07-19,dep,THY275,,,LTFM,,,,2026-07-19T22:29:15+00:00,2026-07-19T22:47:13+00:00,,,,,4bb203,,,no_schedule_match
+2026-07-19,dep,THY72,,,LTFM,,,,2026-07-19T22:35:18+00:00,2026-07-20T06:09:25+00:00,,,,,4ba94c,,,no_schedule_match
+2026-07-19,dep,THY7MT,,,LTFM,,,,2026-07-19T22:35:37+00:00,2026-07-20T00:18:24+00:00,,,,,4ba916,,,no_schedule_match
+2026-07-19,dep,THY356,,,LTFM,,,,2026-07-19T22:40:21+00:00,2026-07-20T00:33:21+00:00,,,,,4bb1e4,,,no_schedule_match
+2026-07-19,dep,THY5FM,,,LTFM,,,,2026-07-19T22:43:20+00:00,2026-07-19T23:12:45+00:00,,,,,4bb073,,,no_schedule_match
+2026-07-19,dep,THY5WK,,,LTFM,,,,2026-07-19T22:44:53+00:00,2026-07-19T22:58:47+00:00,,,,,4baa96,,,no_schedule_match
 2026-07-19,dep,THY87Q,,,LTFM,LTAQ,,,2026-07-19T22:46:34+00:00,2026-07-19T23:39:45+00:00,,,,,4ba994,,,no_schedule_match
+2026-07-19,dep,THY4CH,,,LTFM,,,,2026-07-19T22:47:04+00:00,2026-07-20T02:53:57+00:00,,,,,4bb21a,,,no_schedule_match
+2026-07-19,dep,THY24,,,LTFM,RCTP,,,2026-07-19T22:48:13+00:00,2026-07-20T09:23:59+00:00,,,,,4bb181,,,no_schedule_match
+2026-07-19,dep,THY70,,,LTFM,VHHH,,,2026-07-19T22:48:55+00:00,2026-07-20T08:28:27+00:00,,,,,4ba94f,,,no_schedule_match
+2026-07-19,dep,THY145,,,LTFM,LTFM,,,2026-07-19T22:50:50+00:00,2026-07-20T06:54:56+00:00,,,,,4bb270,,,no_schedule_match
+2026-07-19,dep,THY3MN,,,LTFM,,,,2026-07-19T22:52:13+00:00,2026-07-19T23:19:47+00:00,,,,,4baa09,,,no_schedule_match
 2026-07-19,dep,THY6YW,,,LTFM,LGAV,,,2026-07-19T22:53:32+00:00,2026-07-19T23:47:49+00:00,,,,,4bb204,,,no_schedule_match
+2026-07-19,dep,OYA503,,,LTFM,,,,2026-07-19T22:55:53+00:00,2026-07-20T00:56:59+00:00,,,,,4bbb30,,,no_schedule_match
+2026-07-19,dep,THY5VH,,,LTFM,,,,2026-07-19T22:56:22+00:00,2026-07-20T00:53:06+00:00,,,,,4bb263,,,no_schedule_match
+2026-07-19,dep,THY571,,,LTFM,GBYD,,,2026-07-19T22:58:11+00:00,2026-07-20T05:34:19+00:00,,,,,4ba9c4,,,no_schedule_match
+2026-07-19,dep,THY056,,,LTFM,WIII,,,2026-07-19T22:59:25+00:00,2026-07-20T10:11:29+00:00,,,,,4bb10b,,,no_schedule_match
+2026-07-19,dep,THY8PD,,,LTFM,,,,2026-07-19T23:00:21+00:00,2026-07-19T23:29:58+00:00,,,,,4ba90d,,,no_schedule_match
+2026-07-19,dep,THY88,,,LTFM,,,,2026-07-19T23:01:38+00:00,2026-07-20T06:58:18+00:00,,,,,4ba94e,,,no_schedule_match
+2026-07-19,dep,THY21Y,,,LTFM,FAOR,,,2026-07-19T23:05:05+00:00,2026-07-20T08:06:15+00:00,,,,,4bb0f0,,,no_schedule_match
+2026-07-19,dep,FDB756,,,LTFM,,,,2026-07-19T23:05:37+00:00,2026-07-20T03:17:29+00:00,,,,,896468,,,no_schedule_match
 2026-07-19,arr,THY6JM,,,LTBK,LTFM,,,2026-07-19T23:06:17+00:00,2026-07-19T23:43:06+00:00,,,,,4baa8b,,,no_schedule_match
+2026-07-19,dep,THY162,,,LTFM,,,,2026-07-19T23:07:12+00:00,2026-07-20T07:42:55+00:00,,,,,4bb0ea,,,no_schedule_match
+2026-07-19,dep,THY8YA,,,LTFM,UGTB,,,2026-07-19T23:07:38+00:00,2026-07-20T00:55:19+00:00,,,,,4bab30,,,no_schedule_match
+2026-07-19,dep,THY2BN,,,LTFM,,,,2026-07-19T23:08:07+00:00,2026-07-19T23:42:14+00:00,,,,,4baa0b,,,no_schedule_match
+2026-07-19,dep,THY49A,,,LTFM,WMKK,,,2026-07-19T23:09:42+00:00,2026-07-20T08:55:40+00:00,,,,,4bb107,,,no_schedule_match
 2026-07-19,arr,THY5UV,,,,LTFM,,,2026-07-19T23:10:31+00:00,2026-07-19T23:39:04+00:00,,,,,4baad3,,,no_schedule_match
+2026-07-19,dep,THY8NU,,,LTFM,,,,2026-07-19T23:10:38+00:00,2026-07-19T23:38:53+00:00,,,,,4bb06c,,,no_schedule_match
 2026-07-19,dep,THY8BW,,,LTFM,LTFB,,,2026-07-19T23:12:02+00:00,2026-07-19T23:49:22+00:00,,,,,4bb205,,,no_schedule_match
+2026-07-19,dep,THY646,,,LTFM,,,,2026-07-19T23:12:07+00:00,2026-07-20T00:47:58+00:00,,,,,4bb06e,,,no_schedule_match
+2026-07-19,dep,THY7FS,,,LTFM,,,,2026-07-19T23:13:43+00:00,2026-07-19T23:37:48+00:00,,,,,4bb262,,,no_schedule_match
+2026-07-19,dep,THY10J,,,LTFM,FACT,,,2026-07-19T23:13:54+00:00,2026-07-20T09:49:37+00:00,,,,,4bb0f2,,,no_schedule_match
+2026-07-19,dep,THY9ZL,,,LTFM,,,,2026-07-19T23:14:43+00:00,2026-07-19T23:56:54+00:00,,,,,4bb207,,,no_schedule_match
+2026-07-19,dep,THY4JD,,,LTFM,KMIA,,,2026-07-19T23:15:27+00:00,2026-07-20T10:26:12+00:00,,,,,4bb190,,,no_schedule_match
+2026-07-19,dep,THY4VL,,,LTFM,,,,2026-07-19T23:15:53+00:00,2026-07-20T00:47:50+00:00,,,,,4ba9c1,,,no_schedule_match
+2026-07-19,dep,THY68,,,LTFM,VTBS,,,2026-07-19T23:18:06+00:00,2026-07-20T07:49:36+00:00,,,,,4bb104,,,no_schedule_match
+2026-07-19,dep,THY181,,,LTFM,MMMX,,,2026-07-19T23:22:48+00:00,2026-07-20T12:45:59+00:00,,,,,4bb1a3,,,no_schedule_match
+2026-07-19,dep,THY9VP,,,LTFM,,,,2026-07-19T23:25:20+00:00,2026-07-20T01:13:09+00:00,,,,,4baac6,,,no_schedule_match
+2026-07-19,dep,THY2VM,,,LTFM,OJAI,,,2026-07-19T23:27:40+00:00,2026-07-20T01:25:18+00:00,,,,,4bb267,,,no_schedule_match
+2026-07-19,dep,DAH3021,,,LTFM,,,,2026-07-19T23:27:42+00:00,2026-07-20T01:38:49+00:00,,,,,0a0075,,,no_schedule_match
+2026-07-19,dep,RJA861,,,LTFM,OJAI,,,2026-07-19T23:28:24+00:00,2026-07-20T01:13:37+00:00,,,,,744824,,,no_schedule_match
+2026-07-19,dep,THY1SW,,,LTFM,,,,2026-07-19T23:30:59+00:00,2026-07-20T01:06:59+00:00,,,,,4ba9e5,,,no_schedule_match
+2026-07-19,dep,THY198,,,LTFM,RJTT,,,2026-07-19T23:31:28+00:00,2026-07-20T09:56:39+00:00,,,,,4bb147,,,no_schedule_match
+2026-07-19,dep,THY164,,,LTFM,,,,2026-07-19T23:31:59+00:00,2026-07-20T08:31:18+00:00,,,,,4bb10a,,,no_schedule_match
+2026-07-19,dep,THY734,,,LTFM,,,,2026-07-19T23:32:55+00:00,2026-07-20T03:27:11+00:00,,,,,4ba9d3,,,no_schedule_match
+2026-07-19,dep,THY71M,,,LTFM,,,,2026-07-19T23:35:41+00:00,2026-07-20T01:19:53+00:00,,,,,4bb106,,,no_schedule_match
+2026-07-19,dep,THY6139,,,LTFM,,,,2026-07-19T23:39:46+00:00,2026-07-20T00:55:34+00:00,,,,,4bb150,,,no_schedule_match
+2026-07-19,dep,THY86,,,LTFM,RJBB,,,2026-07-19T23:43:10+00:00,2026-07-20T09:43:26+00:00,,,,,4bb18e,,,no_schedule_match
+2026-07-19,dep,THY84,,,LTFM,RPLL,,,2026-07-19T23:47:16+00:00,2026-07-20T10:50:58+00:00,,,,,4bb146,,,no_schedule_match
+2026-07-19,dep,THY510,,,LTFM,,,,2026-07-19T23:47:42+00:00,2026-07-20T01:34:53+00:00,,,,,4ba910,,,no_schedule_match
+2026-07-19,dep,THY360,,,LTFM,,,,2026-07-19T23:48:52+00:00,2026-07-20T00:14:42+00:00,,,,,4bb285,,,no_schedule_match
+2026-07-19,dep,DAH3023,,,LTFM,,,,2026-07-19T23:49:46+00:00,2026-07-20T01:58:12+00:00,,,,,0a0019,,,no_schedule_match
+2026-07-19,dep,THY3DW,,,LTFM,,,,2026-07-19T23:52:39+00:00,2026-07-20T01:52:58+00:00,,,,,4baa81,,,no_schedule_match
+2026-07-19,dep,THY6164,,,LTFM,OTHH,,,2026-07-19T23:55:52+00:00,2026-07-20T04:23:27+00:00,,,,,4b9df5,,,no_schedule_match
 2026-07-19,dep,CPN7903,IV7903,Caspian Airlines,LTFM,OIIE,2026-07-19T23:00:00+00:00,2026-07-19T23:29:00+00:00,,,29,active,,,,,,no_opensky_match
 2026-07-19,dep,KMF,RQ,Kam Air,LTFM,OAMS,2026-07-19T23:55:00+00:00,,,,,scheduled,,,,,,no_movement_seen
 2026-07-19,dep,,,empty,LTFM,OJAM,2026-07-19T22:55:00+00:00,,,,,active,,,,,,no_opensky_match
@@ -931,20 +1038,16 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-19,dep,MBK7069,MB7069,Chrono Jet,LTFM,UAAA,2026-07-19T07:00:00+00:00,,,,,,,,,,,no_opensky_match
 2026-07-19,dep,THY2310,TK2310,Turkish Airlines,LTFM,LTBJ,2026-07-19T07:00:00+00:00,2026-07-19T07:23:00+00:00,,,23,landed,,G1G,,,,no_opensky_match
 2026-07-19,dep,THY2122,TK2122,Turkish Airlines,LTFM,LTAC,2026-07-19T07:00:00+00:00,2026-07-19T07:24:00+00:00,,,24,landed,,G1E,,,,no_opensky_match
-2026-07-19,dep,IRB9711,B99711,Iran Airtour,LTFM,OIIE,2026-07-19T13:15:00+00:00,2026-07-19T14:23:00+00:00,,,68,scheduled,,,,,,no_movement_seen
 2026-07-19,dep,STW81,2S81,Southwind Airlines,LTFM,UUEE,2026-07-19T19:55:00+00:00,2026-07-19T21:10:00+00:00,,,75,landed,,C1,,,,no_opensky_match
-2026-07-19,dep,MNE405,4O405,Air Montenegro,LTFM,LYPG,2026-07-19T22:15:00+00:00,2026-07-19T22:38:00+00:00,,,23,active,,P43-,,,,no_opensky_match
 2026-07-19,dep,SVR774,U6774,Ural Airlines,LTFM,USSS,2026-07-19T19:45:00+00:00,2026-07-19T20:07:00+00:00,,,22,active,,A1F,,,,no_opensky_match
 2026-07-19,dep,THY1829,TK1829,Turkish Airlines,LTFM,LFPG,2026-07-19T19:45:00+00:00,2026-07-19T20:14:00+00:00,,,29,landed,,A1G,,,,no_opensky_match
 2026-07-19,dep,THY6138,TK6138,Turkish Airlines,LTFM,HECA,2026-07-19T19:40:00+00:00,,,,,,,,,,,no_opensky_match
 2026-07-19,dep,THY1915,TK1915,Turkish Airlines,LTFM,EGCC,2026-07-19T19:40:00+00:00,2026-07-19T20:05:00+00:00,,,25,landed,,A3A,,,,no_opensky_match
-2026-07-19,dep,THY1176,TK1176,Turkish Airlines,LTFM,FIMP,2026-07-19T19:35:00+00:00,2026-07-19T20:02:00+00:00,,,27,landed,,B18,,,,no_opensky_match
 2026-07-19,dep,THY6321,TK6321,Turkish Airlines,LTFM,DNMM,2026-07-19T19:30:00+00:00,,,,,,,,,,,no_opensky_match
 2026-07-19,dep,KNE2962,XY2962,flynas,LTFM,OEAB,2026-07-19T19:30:00+00:00,,,,,,,,,,,no_opensky_match
 2026-07-19,dep,THY2610,TK2610,Turkish Airlines,LTFM,LTCC,2026-07-19T19:30:00+00:00,2026-07-19T19:59:00+00:00,,,29,,,G2B,,,,no_opensky_match
 2026-07-19,dep,THY399,TK399,Turkish Airlines,LTFM,ULLI,2026-07-19T19:30:00+00:00,2026-07-19T19:55:00+00:00,,,25,,,A4A,,,,no_opensky_match
 2026-07-19,dep,IRC513,EP513,Iran Aseman Airlines,LTFM,OIIE,2026-07-19T19:30:00+00:00,,,,,,,,,,,no_opensky_match
-2026-07-19,dep,THY2738,TK2738,Turkish Airlines,LTFM,LTAL,2026-07-19T19:25:00+00:00,2026-07-19T19:54:00+00:00,,,29,,,G7B,,,,no_opensky_match
 2026-07-19,dep,THY1015,TK1015,Turkish Airlines,LTFM,LRTR,2026-07-19T19:25:00+00:00,2026-07-19T19:54:00+00:00,,,29,landed,,A1B,,,,no_opensky_match
 2026-07-19,dep,THY1071,TK1071,Turkish Airlines,LTFM,LBWN,2026-07-19T07:30:00+00:00,2026-07-19T07:38:00+00:00,,,8,landed,,C3,,,,no_opensky_match
 2026-07-19,dep,THY1047,TK1047,Turkish Airlines,LTFM,LRCL,2026-07-19T07:30:00+00:00,2026-07-19T07:57:00+00:00,,,27,landed,,F8B,,,,no_opensky_match
