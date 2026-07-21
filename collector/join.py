@@ -8,8 +8,9 @@ MATCH_WINDOW = timedelta(hours=3)
 COLUMNS = [
     "date", "direction", "callsign_icao", "flight_iata", "airline",
     "origin_icao", "destination_icao", "scheduled_utc", "actual_utc",
-    "opensky_firstseen_utc", "opensky_lastseen_utc", "delay_minutes", "status",
-    "terminal", "gate", "icao24", "data_quality_delta_min", "quality_flags",
+    "opensky_firstseen_utc", "opensky_lastseen_utc", "delay_minutes",
+    "avs_delay_minutes", "status", "terminal", "gate", "icao24",
+    "data_quality_delta_min", "quality_flags",
 ]
 UNMATCHED_COLUMNS = COLUMNS + ["reason"]
 
@@ -92,7 +93,12 @@ def _row(date_str, os_f=None, a=None):
         "actual_utc": _iso(actual),
         "opensky_firstseen_utc": _iso(first),
         "opensky_lastseen_utc": _iso(last),
+        # our computed delay = scheduled gate time -> actual/airborne (bundles in
+        # ~15-25min IST taxi-out). avs_delay is aviationstack's OWN gate-based
+        # delay field — the honest departure-punctuality number to prefer once
+        # it's confirmed populated. Both kept so they can be compared.
         "delay_minutes": _minutes(actual or move, sched),
+        "avs_delay_minutes": side.get("delay") if a else None,
         "status": (a or {}).get("flight_status") or "",
         "terminal": side.get("terminal") or "",
         "gate": side.get("gate") or "",

@@ -44,7 +44,8 @@ def _trim_schedule(a):
          "airline": {"name": (a.get("airline") or {}).get("name")}}
     for side in ("departure", "arrival"):
         t[side] = {k: (a.get(side) or {}).get(k)
-                   for k in ("icao", "scheduled", "actual", "terminal", "gate")}
+                   for k in ("icao", "scheduled", "estimated", "actual",
+                             "delay", "terminal", "gate")}
     return t
 
 
