@@ -1,13 +1,13 @@
 {
- "generated_utc": "2026-07-21T19:33:43+00:00",
+ "generated_utc": "2026-07-21T19:44:30+00:00",
  "days": 4,
  "first_date": "2026-07-18",
  "last_date": "2026-07-21",
- "total_flights": 85,
- "delayed_15": 69,
- "ontime": 11,
- "pct_delayed": 86.2,
- "pct_ontime": 13.8,
+ "total_flights": 92,
+ "delayed_15": 74,
+ "ontime": 13,
+ "pct_delayed": 85.1,
+ "pct_ontime": 14.9,
  "daily": [
   {
    "date": "2026-07-18",
@@ -21,8 +21,8 @@
   },
   {
    "date": "2026-07-20",
-   "flights": 23,
-   "avg_dep_delay": 40.6
+   "flights": 30,
+   "avg_dep_delay": 37.8
   },
   {
    "date": "2026-07-21",
@@ -31,5 +31,5 @@
   }
  ],
  "latest_metar": "METAR LTFM 211920Z 07008KT CAVOK 25/21 Q1015 NOSIG RMK RWY17L 06006KT RWY34L 04006KT RWY16R 05006KT RWY36 06005KT 010V080 RWY18 07006KT",
- "match_rate": 0.04
+ "match_rate": 0.041
 }
