@@ -1,6 +1,7 @@
 """API fetchers: OpenSky (actual movements), aviationstack (schedules), aviationweather (METARs)."""
 import logging
 import os
+import random
 import time
 from datetime import date, datetime, timedelta, timezone
 
@@ -152,13 +153,18 @@ def fetch_aviationstack(day: date):
                 # The real-time feed is newest-first spanning ~3 days
                 # (tomorrow → today → yesterday). "Today" sits in the MIDDLE, so
                 # random sampling can miss it entirely — it did on 2026-07-20,
-                # which got 0 of its own rows. Deterministically hit the centre of
-                # the today-zone (~0.5) and yesterday-zone (~0.83, has actual
-                # times for finalization). offset 0 already grabbed tomorrow.
-                # ponytail: one 100-row page per zone → within-day time bias;
-                # upgrade to per-zone random offset once zone edges are known.
-                for frac in (0.5, 0.83):
-                    o = min(int(total * frac) // 100 * 100, max(total - 100, 0))
+                # which got 0 of its own rows. Hit the today-zone and yesterday-
+                # zone (yesterday has actual times for finalization); offset 0
+                # already grabbed tomorrow. A per-DAY seeded jitter within each
+                # zone means consecutive days sample different times of day, so
+                # coverage spreads across the clock instead of always hitting the
+                # congested midday bank (which biased the delay stats high).
+                # Mis-landing near a zone edge is harmless: rows bucket by their
+                # own scheduled date regardless.
+                rng = random.Random(day.toordinal())
+                for lo, hi in ((0.38, 0.62), (0.72, 0.92)):  # today, yesterday
+                    o = min(int(total * rng.uniform(lo, hi)) // 100 * 100,
+                            max(total - 100, 0))
                     if o and o not in offsets:
                         offsets.append(o)
             if not raw:

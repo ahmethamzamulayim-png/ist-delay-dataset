@@ -99,16 +99,24 @@ def build_summary():
     frames = [pd.read_csv(f) for f in files]
     df = (pd.concat(frames, ignore_index=True) if frames
           else pd.DataFrame(columns=COLUMNS))
-    known = df[df["delay_minutes"].notna()]
-    delayed = int((known["delay_minutes"] >= 15).sum())
-    ontime = int((known["delay_minutes"] < 15).sum())
+    # Punctuality uses aviationstack's GATE-based delay, not our computed
+    # scheduled-gate -> airborne number (which bundles in ~15-25min IST taxi and
+    # made a punctual airport look 86% late). Verified 2026-07-21: gate delay ran
+    # ~20-30min under the computed figure; on-time flights read 1-2min gate delay.
+    if "avs_delay_minutes" not in df.columns:
+        df["avs_delay_minutes"] = pd.NA
+    delay = pd.to_numeric(df["avs_delay_minutes"], errors="coerce")
+    known = df[delay.notna()]
+    delayed = int((delay >= 15).sum())
+    ontime = int((delay.notna() & (delay < 15)).sum())
 
     daily = []
     for d, g in df.groupby("date"):
-        dep = g[(g["direction"] == "dep") & g["delay_minutes"].notna()]
+        gd = pd.to_numeric(g.loc[g["direction"] == "dep", "avs_delay_minutes"],
+                           errors="coerce").dropna()
         daily.append({
             "date": str(d), "flights": int(len(g)),
-            "avg_dep_delay": round(float(dep["delay_minutes"].mean()), 1) if len(dep) else None,
+            "avg_dep_delay": round(float(gd.mean()), 1) if len(gd) else None,
         })
 
     latest_metar = ""
@@ -130,6 +138,7 @@ def build_summary():
         "first_date": files[0].stem if files else None,
         "last_date": files[-1].stem if files else None,
         "total_flights": int(len(df)),
+        "delay_known": int(len(known)),  # flights with gate-based delay data
         "delayed_15": delayed,
         "ontime": ontime,
         "pct_delayed": round(100 * delayed / len(known), 1) if len(known) else None,
