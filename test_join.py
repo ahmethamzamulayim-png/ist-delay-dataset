@@ -3,6 +3,9 @@ from datetime import datetime, timezone
 
 from collector.join import join_day
 
+# aviationstack times below are Istanbul local wall-clock mislabeled "+00:00"
+# (the real-world quirk parse_avs_utc corrects): they read 3h ahead of the true
+# UTC that OpenSky's epoch firstSeen/lastSeen encode.
 D = "2026-07-17"
 TS = int(datetime(2026, 7, 17, 8, 5, tzinfo=timezone.utc).timestamp())
 
@@ -18,14 +21,14 @@ schedules = [
     {"_direction": "dep", "flight_status": "active",
      "flight": {"icao": "THY1KM", "iata": "TK1617"},
      "airline": {"name": "Turkish Airlines"},
-     "departure": {"scheduled": "2026-07-17T07:45:00+00:00",
-                   "actual": "2026-07-17T08:03:00+00:00",
+     "departure": {"scheduled": "2026-07-17T10:45:00+00:00",
+                   "actual": "2026-07-17T11:03:00+00:00",
                    "terminal": "I", "gate": "A5"},
      "arrival": {"icao": "EDDF"}},
     {"_direction": "dep", "flight_status": "cancelled",
      "flight": {"icao": "PGT44T", "iata": "PC1234"},
      "airline": {"name": "Pegasus"},
-     "departure": {"scheduled": "2026-07-17T09:00:00+00:00"},
+     "departure": {"scheduled": "2026-07-17T12:00:00+00:00"},
      "arrival": {"icao": "EDDM"}},
 ]
 
@@ -39,8 +42,8 @@ schedules.append(
     {"_direction": "dep", "flight_status": "active",
      "flight": {"icao": "THY2408", "iata": "TK2408"},
      "airline": {"name": "Turkish Airlines"},
-     "departure": {"scheduled": "2026-07-17T09:40:00+00:00",
-                   "actual": "2026-07-17T10:02:00+00:00"},
+     "departure": {"scheduled": "2026-07-17T12:40:00+00:00",
+                   "actual": "2026-07-17T13:02:00+00:00"},
      "arrival": {"icao": "LTAI"}})
 
 flights, unmatched = join_day(D, opensky, schedules)

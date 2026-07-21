@@ -130,8 +130,12 @@ coverage gap — undecidable on the free tier, so it's labeled, not guessed.
   plan allows; the paid tiers were judged not worth it for this project.
 - **ASSUMPTION** aviationweather.gov `api/data/metar?ids=LTFM&format=json` returns
   `rawOb` + `obsTime`(epoch)/`reportTime`, with roughly ≤4 days of history.
-- **ASSUMPTION** aviationstack timestamps carry a UTC offset; naive ones are
-  treated as UTC.
+- **VERIFIED 2026-07-20** aviationstack real-time timestamps are Istanbul local
+  wall-clock mislabeled `+00:00`. OpenSky's epoch `firstSeen` (true UTC) ran a
+  constant −178 min against them = the 3h IST offset. `parse_avs_utc` corrects
+  local→UTC (Turkey is UTC+3 year-round, no DST). `delay_minutes` was already
+  correct (both times shift equally) but absolute `*_utc` columns and the match
+  window were 3h off before this fix.
 
 ## Known limitations
 

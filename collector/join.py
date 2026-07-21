@@ -18,17 +18,34 @@ def norm_callsign(cs):
     return (cs or "").strip().upper()
 
 
+# Istanbul is UTC+3 year-round (Turkey abolished DST in 2016).
+IST_UTC_OFFSET = timedelta(hours=3)
+
+
 def parse_utc(s):
-    """aviationstack ISO timestamp -> aware UTC datetime, or None."""
+    """ISO timestamp -> aware UTC datetime, or None."""
     if not s:
         return None
     try:
         dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
     except ValueError:
         return None
-    if dt.tzinfo is None:  # ASSUMPTION: naive aviationstack timestamps are UTC
+    if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.astimezone(timezone.utc)
+
+
+def parse_avs_utc(s):
+    """aviationstack real-time times arrive as Istanbul local wall-clock but
+    mislabeled '+00:00'. Calibrated against OpenSky's epoch firstSeen, which is
+    true UTC: on 2026-07-20 every aviationstack 'actual' ran a constant -178 min
+    (= the 3h IST offset) vs OpenSky. So correct local -> true UTC here. If a real
+    non-zero offset ever appears (a genuine fix on their side), honor it instead."""
+    if not s:
+        return None
+    naive_utc = s.endswith("+00:00") or s.endswith("Z") or "+" not in s[10:]
+    dt = parse_utc(s)
+    return dt - IST_UTC_OFFSET if (dt and naive_utc) else dt
 
 
 def _epoch_utc(ts):
@@ -58,8 +75,8 @@ def _row(date_str, os_f=None, a=None):
     last = _epoch_utc(os_f.get("lastSeen"))
     move = first if direction == "dep" else last  # OpenSky's "actual" at the IST side
     side, other_icao = _sched_side(a) if a else ({}, "")
-    sched = parse_utc(side.get("scheduled"))
-    actual = parse_utc(side.get("actual"))
+    sched = parse_avs_utc(side.get("scheduled"))
+    actual = parse_avs_utc(side.get("actual"))
     row = {
         "date": date_str,
         "direction": direction,
@@ -102,7 +119,7 @@ def join_day(date_str, opensky, schedules, final=False):
         for a in cands:
             if id(a) in used:
                 continue
-            sched = parse_utc(_sched_side(a)[0].get("scheduled"))
+            sched = parse_avs_utc(_sched_side(a)[0].get("scheduled"))
             if move is None or sched is None:
                 continue
             gap = abs(move - sched)
