@@ -97,4 +97,89 @@ date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,sc
 2026-07-20,dep,THY2RK,TK1173,Turkish Airlines,LTFM,EIDW,2026-07-20T17:30:00+00:00,2026-07-20T17:59:00+00:00,2026-07-20T18:00:43+00:00,2026-07-20T21:59:52+00:00,29,1,landed,,A4B,4ba90b,2,fuzzy_callsign_match
 2026-07-20,dep,THY4FB,TK1787,Turkish Airlines,LTFM,EKCH,2026-07-20T18:20:00+00:00,2026-07-20T18:25:00+00:00,2026-07-20T18:26:51+00:00,2026-07-20T21:07:45+00:00,5,,landed,,B7A,4bb061,2,fuzzy_callsign_match
 2026-07-20,dep,RJA853,RJ164,Royal Jordanian,LTFM,OJAI,2026-07-20T18:30:00+00:00,,2026-07-20T20:50:01+00:00,2026-07-20T22:35:09+00:00,140,,cancelled,,,74482e,,fuzzy_callsign_match
+2026-07-20,dep,BRU784,B2784,Belavia,LTFM,UMMS,2026-07-20T10:35:00+00:00,2026-07-20T11:21:00+00:00,,,46,40,landed,,B17,,,unconfirmed_movement
+2026-07-20,dep,THY2808,TK2808,Turkish Airlines,LTFM,LTFH,2026-07-20T10:30:00+00:00,2026-07-20T10:43:00+00:00,,,13,,landed,,G9A,,,unconfirmed_movement
+2026-07-20,dep,THY2594,TK2594,Turkish Airlines,LTFM,LTFG,2026-07-20T10:25:00+00:00,2026-07-20T10:35:00+00:00,,,10,,active,,G3H,,,unconfirmed_movement
+2026-07-20,dep,THY2466,TK2466,Turkish Airlines,LTFM,LTDB,2026-07-20T10:25:00+00:00,2026-07-20T10:49:00+00:00,,,24,3,landed,,G3J,,,unconfirmed_movement
+2026-07-20,dep,THY1345,TK1345,Turkish Airlines,LTFM,EGPH,2026-07-20T10:25:00+00:00,2026-07-20T10:59:00+00:00,,,34,4,landed,,B1B,,,unconfirmed_movement
+2026-07-20,dep,THY2720,TK2720,Turkish Airlines,LTFM,LTCT,2026-07-20T10:15:00+00:00,2026-07-20T10:30:00+00:00,,,15,,landed,,G11A,,,unconfirmed_movement
+2026-07-20,dep,THY1305,TK1305,Turkish Airlines,LTFM,LEMG,2026-07-20T10:15:00+00:00,2026-07-20T10:42:00+00:00,,,27,8,landed,,A2A,,,unconfirmed_movement
+2026-07-20,dep,THY382,TK382,Turkish Airlines,LTFM,UGTB,2026-07-20T10:15:00+00:00,2026-07-20T10:28:00+00:00,,,13,,landed,,F4B,,,unconfirmed_movement
+2026-07-20,dep,THY79,TK79,Turkish Airlines,LTFM,KSFO,2026-07-20T10:15:00+00:00,2026-07-20T10:50:00+00:00,,,35,24,landed,,D11,,,unconfirmed_movement
+2026-07-20,dep,THY1463,TK1463,Turkish Airlines,LTFM,LIRN,2026-07-20T10:10:00+00:00,2026-07-20T10:36:00+00:00,,,26,15,landed,,F6B,,,unconfirmed_movement
+2026-07-20,dep,,,empty,LTFM,LSGG,2026-07-20T07:45:00+00:00,2026-07-20T08:54:00+00:00,,,69,58,scheduled,,,,,unconfirmed_movement
+2026-07-20,dep,,,empty,LTFM,LGKO,2026-07-20T09:40:00+00:00,2026-07-20T10:10:00+00:00,,,30,25,landed,,,,,unconfirmed_movement
+2026-07-20,dep,THY2150,TK2150,Turkish Airlines,LTFM,LTAC,2026-07-20T10:00:00+00:00,2026-07-20T10:08:00+00:00,,,8,,landed,,G8B,,,unconfirmed_movement
+2026-07-20,dep,THY2016,TK2016,Turkish Airlines,LTFM,LTAU,2026-07-20T10:00:00+00:00,2026-07-20T10:15:00+00:00,,,15,,active,,G4B,,,unconfirmed_movement
+2026-07-20,dep,THY2254,TK2254,Turkish Airlines,LTFM,LTDA,2026-07-20T09:55:00+00:00,2026-07-20T10:02:00+00:00,,,7,,active,,G2B,,,unconfirmed_movement
+2026-07-20,dep,PBD770,DP770,Pobeda,LTFM,URKK,2026-07-20T09:50:00+00:00,2026-07-20T10:00:00+00:00,,,10,,active,,F9A,,,unconfirmed_movement
+2026-07-20,dep,THY2244,TK2244,Turkish Airlines,LTFM,LTCS,2026-07-20T09:50:00+00:00,2026-07-20T10:00:00+00:00,,,10,,active,,G1G,,,unconfirmed_movement
+2026-07-20,dep,AWG721,A2721,Animawings,LTFM,LRTR,2026-07-20T09:50:00+00:00,2026-07-20T10:16:00+00:00,,,26,,active,,B6A,,,unconfirmed_movement
+2026-07-20,dep,THY1023,TK1023,Turkish Airlines,LTFM,LQSA,2026-07-20T09:45:00+00:00,2026-07-20T10:12:00+00:00,,,27,4,active,,F7A,,,unconfirmed_movement
+2026-07-20,dep,AFL631,SU631,Aeroflot,LTFM,USSS,2026-07-20T09:45:00+00:00,2026-07-20T09:56:00+00:00,,,11,,active,,C1,,,unconfirmed_movement
+2026-07-20,dep,THY2226,TK2226,Turkish Airlines,LTFM,LTAJ,2026-07-20T09:40:00+00:00,2026-07-20T09:47:00+00:00,,,7,,active,,G3G,,,unconfirmed_movement
+2026-07-20,dep,THY2558,TK2558,Turkish Airlines,LTFM,LTBS,2026-07-20T09:30:00+00:00,2026-07-20T09:45:00+00:00,,,15,,landed,,G1H,,,unconfirmed_movement
+2026-07-20,dep,THY1759,TK1759,Turkish Airlines,LTFM,LPPT,2026-07-20T09:30:00+00:00,2026-07-20T10:27:00+00:00,,,57,45,scheduled,,A8B,,,unconfirmed_movement
+2026-07-20,dep,UZB272,HY272,Uzbekistan Airways,LTFM,UZTT,2026-07-20T09:30:00+00:00,2026-07-20T10:06:00+00:00,,,36,,active,,B18,,,unconfirmed_movement
+2026-07-20,dep,THY619,TK619,Turkish Airlines,LTFM,GMMX,2026-07-20T09:25:00+00:00,2026-07-20T09:53:00+00:00,,,28,,landed,,A1G,,,unconfirmed_movement
+2026-07-20,dep,THY2202,TK2202,Turkish Airlines,LTFM,LTCN,2026-07-20T09:20:00+00:00,2026-07-20T09:26:00+00:00,,,6,,active,,G7A,,,unconfirmed_movement
+2026-07-20,dep,THY1033,TK1033,Turkish Airlines,LTFM,LHBP,2026-07-20T09:20:00+00:00,2026-07-20T09:43:00+00:00,,,23,,landed,,F6A,,,unconfirmed_movement
+2026-07-20,dep,IRM117,W5117,Mahan Air,LTFM,OIIE,2026-07-20T09:15:00+00:00,2026-07-20T09:29:00+00:00,,,14,,,,B17,,,unconfirmed_movement
+2026-07-20,dep,THY2632,TK2632,Turkish Airlines,LTFM,LTAT,2026-07-20T09:15:00+00:00,2026-07-20T09:25:00+00:00,,,10,,landed,,G11B,,,unconfirmed_movement
+2026-07-20,dep,THY2462,TK2462,Turkish Airlines,LTFM,LTDB,2026-07-20T09:15:00+00:00,2026-07-20T09:31:00+00:00,,,16,,landed,,G3J,,,unconfirmed_movement
+2026-07-20,dep,THY340,TK340,Turkish Airlines,LTFM,UBBB,2026-07-20T09:15:00+00:00,2026-07-20T09:32:00+00:00,,,17,,landed,,C4,,,unconfirmed_movement
+2026-07-20,dep,ETD542,EY542,Etihad Airways,LTFM,OMAA,2026-07-20T10:50:00+00:00,2026-07-20T11:15:00+00:00,,,25,3,landed,,C3,,,unconfirmed_movement
+2026-07-20,dep,THY2560,TK2560,Turkish Airlines,LTFM,LTBS,2026-07-20T10:45:00+00:00,2026-07-20T10:56:00+00:00,,,11,,landed,,G1D,,,unconfirmed_movement
+2026-07-20,dep,THY2006,TK2006,Turkish Airlines,LTFM,LTAZ,2026-07-20T10:45:00+00:00,2026-07-20T11:07:00+00:00,,,22,,scheduled,,G6A,,,unconfirmed_movement
+2026-07-20,dep,THY1859,TK1859,Turkish Airlines,LTFM,LEMD,2026-07-20T10:45:00+00:00,2026-07-20T11:30:00+00:00,,,45,18,landed,,B2,,,unconfirmed_movement
+2026-07-20,dep,THY1031,TK1031,Turkish Airlines,LTFM,LBSF,2026-07-20T10:45:00+00:00,2026-07-20T10:57:00+00:00,,,12,,landed,,F5A,,,unconfirmed_movement
+2026-07-20,dep,QTR240,QR240,Qatar Airways,LTFM,OTHH,2026-07-20T10:45:00+00:00,2026-07-20T11:17:00+00:00,,,32,13,landed,,B4,,,unconfirmed_movement
+2026-07-20,dep,IAW230,IA230,Iraqi Airways,LTFM,ORER,2026-07-20T10:40:00+00:00,2026-07-20T11:00:00+00:00,,,20,,active,,A1H,,,unconfirmed_movement
+2026-07-20,dep,THY1995,TK1995,Turkish Airlines,LTFM,EGCC,2026-07-20T10:40:00+00:00,2026-07-20T11:08:00+00:00,,,28,,landed,,A3,,,unconfirmed_movement
+2026-07-20,dep,THY336,TK336,Turkish Airlines,LTFM,UBBB,2026-07-20T18:50:00+00:00,2026-07-20T19:12:00+00:00,,,22,13,landed,,B8A,,,unconfirmed_movement
+2026-07-20,dep,THY358,TK358,Turkish Airlines,LTFM,UDYZ,2026-07-20T18:45:00+00:00,2026-07-20T19:10:00+00:00,,,25,,active,,F9A,,,unconfirmed_movement
+2026-07-20,dep,THY2026,TK2026,Turkish Airlines,LTFM,LTAU,2026-07-20T18:40:00+00:00,2026-07-20T18:48:00+00:00,,,8,,active,,G1H,,,unconfirmed_movement
+2026-07-20,dep,IRM115,W5115,Mahan Air,LTFM,OIIE,2026-07-20T18:35:00+00:00,2026-07-20T19:20:00+00:00,,,45,10,active,,B17,,,unconfirmed_movement
+2026-07-20,dep,PGT3301,PC3301,Pegasus,LTFM,LTBJ,2026-07-20T18:35:00+00:00,2026-07-20T19:18:00+00:00,,,43,20,landed,,G5A,,,unconfirmed_movement
+2026-07-20,dep,THY812,TK812,Turkish Airlines,LTFM,OJAI,2026-07-20T18:30:00+00:00,2026-07-20T18:46:00+00:00,,,16,,landed,,D1,,,unconfirmed_movement
+2026-07-20,dep,THY686,TK686,Turkish Airlines,LTFM,HECA,2026-07-20T18:25:00+00:00,2026-07-20T18:55:00+00:00,,,30,2,landed,,D10,,,unconfirmed_movement
+2026-07-20,dep,STW123,2S123,Southwind Airlines,LTFM,UUBW,2026-07-20T18:20:00+00:00,2026-07-20T18:24:00+00:00,,,4,,landed,,F12A,,,unconfirmed_movement
+2026-07-20,dep,THY2236,TK2236,Turkish Airlines,LTFM,LTAJ,2026-07-20T18:20:00+00:00,2026-07-20T18:27:00+00:00,,,7,,active,,G11A,,,unconfirmed_movement
+2026-07-20,dep,KAL956,KE956,Korean Air,LTFM,RKSI,2026-07-20T18:20:00+00:00,2026-07-20T18:36:00+00:00,,,16,,landed,,D11,,,unconfirmed_movement
 2026-07-20,dep,THY316,TK316,Turkish Airlines,LTFM,ORER,2026-07-20T18:15:00+00:00,,,,,,cancelled,,,,,
+2026-07-20,dep,THY708,TK708,Turkish Airlines,LTFM,OPKC,2026-07-20T18:05:00+00:00,2026-07-20T18:15:00+00:00,,,10,9,landed,,B16,,,unconfirmed_movement
+2026-07-20,dep,THY421,TK421,Turkish Airlines,LTFM,UUWW,2026-07-20T18:05:00+00:00,2026-07-20T18:21:00+00:00,,,16,,landed,,A10,,,unconfirmed_movement
+2026-07-20,dep,AZO6070,A46070,Azimuth,LTFM,URMM,2026-07-20T18:05:00+00:00,2026-07-20T18:31:00+00:00,,,26,4,landed,,F7B,,,unconfirmed_movement
+2026-07-20,dep,THY2258,TK2258,Turkish Airlines,LTFM,LTDA,2026-07-20T18:00:00+00:00,2026-07-20T18:13:00+00:00,,,13,,,,G2B,,,unconfirmed_movement
+2026-07-20,dep,THY2340,TK2340,Turkish Airlines,LTFM,LTBJ,2026-07-20T18:00:00+00:00,2026-07-20T18:15:00+00:00,,,15,,landed,,G7A,,,unconfirmed_movement
+2026-07-20,dep,THY2182,TK2182,Turkish Airlines,LTFM,LTAC,2026-07-20T18:00:00+00:00,2026-07-20T18:10:00+00:00,,,10,,landed,,G8B,,,unconfirmed_movement
+2026-07-20,dep,THY2636,TK2636,Turkish Airlines,LTFM,LTAT,2026-07-20T17:55:00+00:00,2026-07-20T18:08:00+00:00,,,13,,active,,G9B,,,unconfirmed_movement
+2026-07-20,dep,THY2646,TK2646,Turkish Airlines,LTFM,LTCA,2026-07-20T17:50:00+00:00,2026-07-20T18:07:00+00:00,,,17,,landed,,G4B,,,unconfirmed_movement
+2026-07-20,dep,THY2090,TK2090,Turkish Airlines,LTFM,LTAZ,2026-07-20T17:45:00+00:00,2026-07-20T18:02:00+00:00,,,17,,active,,G4A,,,unconfirmed_movement
+2026-07-20,dep,THY726,TK726,Turkish Airlines,LTFM,VNKT,2026-07-20T17:45:00+00:00,2026-07-20T18:08:00+00:00,,,23,1,landed,,B4,,,unconfirmed_movement
+2026-07-20,dep,THY2474,TK2474,Turkish Airlines,LTFM,LTDB,2026-07-20T17:35:00+00:00,2026-07-20T17:49:00+00:00,,,14,,landed,,G5B,,,unconfirmed_movement
+2026-07-20,dep,THY710,TK710,Turkish Airlines,LTFM,OPIS,2026-07-20T17:35:00+00:00,2026-07-20T17:52:00+00:00,,,17,4,landed,,D14,,,unconfirmed_movement
+2026-07-20,dep,THY94,TK94,Turkish Airlines,LTFM,OEJN,2026-07-20T17:35:00+00:00,2026-07-20T18:00:00+00:00,,,25,1,landed,,F6A,,,unconfirmed_movement
+2026-07-20,dep,THY2814,TK2814,Turkish Airlines,LTFM,LTFH,2026-07-20T17:30:00+00:00,2026-07-20T17:44:00+00:00,,,14,,active,,G10A,,,unconfirmed_movement
+2026-07-20,dep,THY1053,TK1053,Turkish Airlines,LTFM,LDZA,2026-07-20T04:30:00+00:00,2026-07-20T04:52:00+00:00,,,22,,landed,,C2,,,unconfirmed_movement
+2026-07-20,dep,THY1047,TK1047,Turkish Airlines,LTFM,LRCL,2026-07-20T04:30:00+00:00,2026-07-20T05:21:00+00:00,,,51,30,landed,,A1K,,,unconfirmed_movement
+2026-07-20,dep,THY700,TK700,Turkish Airlines,LTFM,HESH,2026-07-20T04:30:00+00:00,2026-07-20T04:49:00+00:00,,,19,,landed,,A10B,,,unconfirmed_movement
+2026-07-20,dep,AFL2171,SU2171,Aeroflot,LTFM,UUEE,2026-07-20T04:30:00+00:00,2026-07-20T05:00:00+00:00,,,30,29,scheduled,,A6B,,,unconfirmed_movement
+2026-07-20,dep,THY1843,TK1843,Turkish Airlines,LTFM,LGAV,2026-07-20T04:25:00+00:00,2026-07-20T04:45:00+00:00,,,20,,landed,,F14,,,unconfirmed_movement
+2026-07-20,dep,THY1021,TK1021,Turkish Airlines,LTFM,LQSA,2026-07-20T04:25:00+00:00,2026-07-20T04:42:00+00:00,,,17,,landed,,F6A,,,unconfirmed_movement
+2026-07-20,dep,THY1003,TK1003,Turkish Airlines,LTFM,LWSK,2026-07-20T04:25:00+00:00,2026-07-20T04:44:00+00:00,,,19,,landed,,A3A,,,unconfirmed_movement
+2026-07-20,dep,THY142,TK142,Turkish Airlines,LTFM,OERK,2026-07-20T04:20:00+00:00,2026-07-20T04:34:00+00:00,,,14,,landed,,F7B,,,unconfirmed_movement
+2026-07-20,dep,THY289,TK289,Turkish Airlines,LTFM,KSFO,2026-07-20T04:20:00+00:00,2026-07-20T05:10:00+00:00,,,50,23,landed,,D9,,,unconfirmed_movement
+2026-07-20,dep,THY3,TK3,Turkish Airlines,LTFM,KJFK,2026-07-20T04:20:00+00:00,2026-07-20T05:33:00+00:00,,,73,38,landed,,A1J,,,unconfirmed_movement
+2026-07-20,dep,THY1343,TK1343,Turkish Airlines,LTFM,EGPH,2026-07-20T04:15:00+00:00,2026-07-20T04:37:00+00:00,,,22,,landed,,F9B,,,unconfirmed_movement
+2026-07-20,dep,THY413,TK413,Turkish Airlines,LTFM,UUWW,2026-07-20T04:15:00+00:00,2026-07-20T04:39:00+00:00,,,24,2,landed,,B10,,,unconfirmed_movement
+2026-07-20,dep,THY366,TK366,Turkish Airlines,LTFM,UZTT,2026-07-20T04:15:00+00:00,2026-07-20T05:45:00+00:00,,,90,37,scheduled,,B7A,,,unconfirmed_movement
+2026-07-20,dep,THY1453,TK1453,Turkish Airlines,LTFM,LIRN,2026-07-20T04:10:00+00:00,2026-07-20T04:21:00+00:00,,,11,,landed,,F5B,,,unconfirmed_movement
+2026-07-20,dep,THY6364,TK6364,Turkish Airlines,LTFM,RCTP,2026-07-19T23:55:00+00:00,2026-07-20T00:09:00+00:00,,,14,4,landed,,,,,unconfirmed_movement
+2026-07-20,dep,THY1807,TK1807,Turkish Airlines,LTFM,LFLL,2026-07-20T04:05:00+00:00,2026-07-20T04:28:00+00:00,,,23,,landed,,B6A,,,unconfirmed_movement
+2026-07-20,dep,THY1671,TK1671,Turkish Airlines,LTFM,EDDK,2026-07-20T04:05:00+00:00,2026-07-20T04:29:00+00:00,,,24,,landed,,A4B,,,unconfirmed_movement
+2026-07-20,dep,THY1393,TK1393,Turkish Airlines,LTFM,LICC,2026-07-20T04:00:00+00:00,2026-07-20T04:25:00+00:00,,,25,,landed,,B8B,,,unconfirmed_movement
+2026-07-20,dep,THY1757,TK1757,Turkish Airlines,LTFM,EVRA,2026-07-20T03:55:00+00:00,2026-07-20T04:09:00+00:00,,,14,,landed,,B5B,,,unconfirmed_movement
+2026-07-20,dep,THY1421,TK1421,Turkish Airlines,LTFM,EETN,2026-07-20T03:50:00+00:00,2026-07-20T04:08:00+00:00,,,18,,landed,,D2,,,unconfirmed_movement
+2026-07-20,dep,THY1297,TK1297,Turkish Airlines,LTFM,LEZL,2026-07-20T03:50:00+00:00,2026-07-20T04:07:00+00:00,,,17,,landed,,F12A,,,unconfirmed_movement
+2026-07-20,dep,THY1043,TK1043,Turkish Airlines,LTFM,LROP,2026-07-20T03:50:00+00:00,2026-07-20T04:15:00+00:00,,,25,3,landed,,A11,,,unconfirmed_movement

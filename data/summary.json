@@ -1,34 +1,34 @@
 {
- "generated_utc": "2026-07-22T19:46:07+00:00",
+ "generated_utc": "2026-07-22T20:17:28+00:00",
  "days": 5,
  "first_date": "2026-07-18",
  "last_date": "2026-07-22",
- "total_flights": 219,
- "movements_tracked": 3790,
- "delay_known": 47,
- "median_delay": 14.0,
+ "total_flights": 489,
+ "movements_tracked": 3783,
+ "delay_known": 105,
+ "median_delay": 10.0,
  "delay_hist": [
   {
    "bin": "<15",
-   "count": 24
+   "count": 63
   },
   {
    "bin": "15–30",
-   "count": 9
+   "count": 20
   },
   {
    "bin": "30–60",
-   "count": 7
+   "count": 15
   },
   {
    "bin": "60+",
    "count": 7
   }
  ],
- "delayed_15": 23,
- "ontime": 24,
- "pct_delayed": 48.9,
- "pct_ontime": 51.1,
+ "delayed_15": 42,
+ "ontime": 63,
+ "pct_delayed": 40.0,
+ "pct_ontime": 60.0,
  "daily": [
   {
    "date": "2026-07-18",
@@ -44,23 +44,23 @@
   },
   {
    "date": "2026-07-20",
-   "flights": 99,
-   "scored": 39,
-   "avg_dep_delay": 28.1
+   "flights": 184,
+   "scored": 69,
+   "avg_dep_delay": 23.0
   },
   {
    "date": "2026-07-21",
-   "flights": 67,
-   "scored": 7,
-   "avg_dep_delay": 19.7
+   "flights": 216,
+   "scored": 27,
+   "avg_dep_delay": 13.4
   },
   {
    "date": "2026-07-22",
-   "flights": 2,
-   "scored": 1,
-   "avg_dep_delay": 47.0
+   "flights": 38,
+   "scored": 9,
+   "avg_dep_delay": 12.7
   }
  ],
- "latest_metar": "METAR LTFM 221820Z 02011KT 9999 SCT028 BKN080 22/20 Q1011 NOSIG RMK RWY17L 01011KT RWY34L 36011KT RWY16R 36009KT RWY36 02010KT RWY18 02010KT",
+ "latest_metar": "METAR LTFM 221950Z 36008KT 310V030 9999 SCT032 BKN090 22/19 Q1011 NOSIG RMK RWY17L 35009KT RWY34L 34006KT RWY16R 33005KT RWY36 35008KT RWY18 36008KT",
  "match_rate": 0.007
 }
