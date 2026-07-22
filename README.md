@@ -54,7 +54,14 @@ Self-check: `python test_join.py`. Quick stats: `python analysis/explore.py`.
 | `terminal`, `gate` | IST side |
 | `icao24` | airframe hex (from OpenSky) |
 | `data_quality_delta_min` | OpenSky movement − aviationstack actual (cross-validation) |
-| `quality_flags` | pipe-joined: `garbled_callsign`, `impossible_times`, `implausible_delay`, `airport_mismatch`, `actuals_disagree` |
+| `quality_flags` | pipe-joined: `garbled_callsign`, `impossible_times`, `implausible_delay`, `airport_mismatch`, `actuals_disagree`, `fuzzy_callsign_match`, `unconfirmed_movement` |
+
+A flight is kept if **either** source confirms it flew: OpenSky matched a movement
+(gold, cross-validated, has `icao24`), **or** aviationstack reported an actual
+time / `landed` status (silver, flagged `unconfirmed_movement`, no `icao24`). The
+silver tier exists because Turkish carriers fly tactical callsigns (`THY9XT`, not
+the flight number `THY2808`) that OpenSky can't link back to a schedule — without
+it, ~75% of real, gate-delay-labelled departures would be discarded.
 
 Schema note vs. the original sketch: `scheduled_dep_utc`/`actual_dep_utc` became
 direction-relative `scheduled_utc`/`actual_utc` so one column pair serves both

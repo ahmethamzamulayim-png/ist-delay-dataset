@@ -46,6 +46,16 @@ schedules.append(
                    "actual": "2026-07-17T13:02:00+00:00"},
      "arrival": {"icao": "LTAI"}})
 
+# departed per aviationstack (actual time + landed) but no OpenSky movement flies
+# its callsign — must be kept as a flight, flagged, not discarded to unmatched
+schedules.append(
+    {"_direction": "dep", "flight_status": "landed",
+     "flight": {"icao": "THY999", "iata": "TK999"},
+     "airline": {"name": "Turkish Airlines"},
+     "departure": {"scheduled": "2026-07-17T18:00:00+00:00",
+                   "actual": "2026-07-17T18:12:00+00:00", "delay": 12},
+     "arrival": {"icao": "EDDF"}})
+
 flights, unmatched = join_day(D, opensky, schedules)
 by_cs = {r["callsign_icao"]: r for r in flights}
 
@@ -58,6 +68,10 @@ assert by_cs["PGT44T"]["delay_minutes"] is None
 assert by_cs["THY7CV"]["flight_iata"] == "TK2408", by_cs["THY7CV"]
 assert "fuzzy_callsign_match" in by_cs["THY7CV"]["quality_flags"]
 assert by_cs["THY7CV"]["delay_minutes"] == 22
+assert by_cs["THY999"]["delay_minutes"] == 12, by_cs["THY999"]
+assert by_cs["THY999"]["avs_delay_minutes"] == 12
+assert by_cs["THY999"]["icao24"] == ""  # no OpenSky confirmation
+assert "unconfirmed_movement" in by_cs["THY999"]["quality_flags"]
 assert [r["reason"] for r in unmatched] == ["missing_callsign"], unmatched
 
 # finalize pass: a still-"scheduled" row with no movement all day gets its own

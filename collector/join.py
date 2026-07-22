@@ -175,15 +175,25 @@ def join_day(date_str, opensky, schedules, final=False):
     for a in schedules:
         if id(a) in used:
             continue
-        if a.get("flight_status") == "cancelled":
-            flights.append(_row(date_str, a=a))  # cancelled flights are signal, keep them
-        elif (final and a.get("flight_status") == "scheduled"
-              and (_row(date_str, a=a)["scheduled_utc"] or "")[:10] == date_str):
+        row = _row(date_str, a=a)
+        status = a.get("flight_status")
+        departed = bool(_sched_side(a)[0].get("actual")) or status in ("active", "landed")
+        if status == "cancelled":
+            flights.append(row)  # cancelled flights are signal, keep them
+        elif departed:
+            # aviationstack confirms it flew (actual time / landed status) but no
+            # OpenSky movement matched — Turkish carriers fly tactical callsigns
+            # (THY9XT, not the flight number THY2808) and OpenSky can't estimate a
+            # departure's destination for the fuzzy pass to use. The gate delay is
+            # still real data; keep it, flagged as lacking OpenSky cross-validation.
+            row["quality_flags"] = "|".join(
+                x for x in (row["quality_flags"], "unconfirmed_movement") if x)
+            flights.append(row)
+        elif final and status == "scheduled" and (row["scheduled_utc"] or "")[:10] == date_str:
             # the day is over, the flight was never more than "scheduled", and no
             # transponder movement matched: a cancellation announced after our
-            # collection run, or an ADS-B coverage gap — undecidable on the free
-            # tier, so it gets its own label instead of generic join noise
-            unmatched.append(_row(date_str, a=a) | {"reason": "no_movement_seen"})
+            # collection run, or an ADS-B coverage gap — undecidable on the free tier
+            unmatched.append(row | {"reason": "no_movement_seen"})
         else:
-            unmatched.append(_row(date_str, a=a) | {"reason": "no_opensky_match"})
+            unmatched.append(row | {"reason": "no_opensky_match"})
     return flights, unmatched
