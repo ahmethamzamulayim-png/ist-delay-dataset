@@ -1,0 +1,3 @@
+date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,scheduled_utc,actual_utc,opensky_firstseen_utc,opensky_lastseen_utc,delay_minutes,avs_delay_minutes,status,terminal,gate,icao24,data_quality_delta_min,quality_flags
+2026-07-22,dep,THY15,TK15,Turkish Airlines,LTFM,SBGR,2026-07-22T07:25:00+00:00,2026-07-22T07:46:00+00:00,2026-07-22T07:52:51+00:00,2026-07-22T18:45:30+00:00,21,47,active,,D13,4bb108,7,
+2026-07-22,dep,THY804,TK804,Turkish Airlines,LTFM,ORER,2026-07-21T23:10:00+00:00,,,,,,cancelled,,,,,

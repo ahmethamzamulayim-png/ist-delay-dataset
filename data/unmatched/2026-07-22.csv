@@ -1,0 +1,252 @@
+date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,scheduled_utc,actual_utc,opensky_firstseen_utc,opensky_lastseen_utc,delay_minutes,avs_delay_minutes,status,terminal,gate,icao24,data_quality_delta_min,quality_flags,reason
+2026-07-22,dep,THY800,,,LTFM,,,,2026-07-22T07:28:04+00:00,2026-07-22T18:45:29+00:00,,,,,,4bb0f0,,,no_schedule_match
+2026-07-22,dep,THY3KT,,,LTFM,DTTB,,,2026-07-22T08:56:28+00:00,2026-07-22T11:16:58+00:00,,,,,,4bb28e,,,no_schedule_match
+2026-07-22,dep,MEA266,,,LTFM,OLRA,,,2026-07-22T09:10:05+00:00,2026-07-22T11:09:39+00:00,,,,,,748027,,,no_schedule_match
+2026-07-22,dep,THY5056,,,LTFM,,,,2026-07-22T09:19:00+00:00,2026-07-22T11:13:06+00:00,,,,,,4baa42,,,no_schedule_match
+2026-07-22,dep,THY7TW,,,LTFM,,,,2026-07-22T09:33:51+00:00,2026-07-22T11:34:00+00:00,,,,,,4ba912,,,no_schedule_match
+2026-07-22,dep,THY092,,,LTFM,HE38,,,2026-07-22T10:01:22+00:00,2026-07-22T11:15:28+00:00,,,,,,4bb26f,,,no_schedule_match
+2026-07-22,dep,AHY076,,,LTFM,,,,2026-07-22T10:20:18+00:00,2026-07-22T12:01:15+00:00,,,,,,4242f4,,,no_schedule_match
+2026-07-22,dep,THY5CW,,,LTFM,LTAE,,,2026-07-22T10:25:22+00:00,2026-07-22T11:02:57+00:00,,,,,,4bb056,,,no_schedule_match
+2026-07-22,dep,CWN751,,,LTFM,,,,2026-07-22T10:27:01+00:00,2026-07-22T13:15:18+00:00,,,,,,0180a4,,,no_schedule_match
+2026-07-22,dep,SIA391,,,LTFM,,,,2026-07-22T10:28:41+00:00,2026-07-22T18:45:21+00:00,,,,,,76cda2,,,no_schedule_match
+2026-07-22,dep,THY8TY,,,LTFM,,,,2026-07-22T10:32:12+00:00,2026-07-22T14:34:26+00:00,,,,,,4bb070,,,no_schedule_match
+2026-07-22,dep,THY8DH,,,LTFM,LTAE,,,2026-07-22T10:34:39+00:00,2026-07-22T10:57:03+00:00,,,,,,4baacf,,,no_schedule_match
+2026-07-22,dep,CPN7979,,,LTFM,,,,2026-07-22T10:37:37+00:00,2026-07-22T11:39:57+00:00,,,,,,732e02,,,no_schedule_match
+2026-07-22,dep,THY3SD,,,LTFM,,,,2026-07-22T10:40:01+00:00,2026-07-22T11:46:02+00:00,,,,,,4bb043,,,no_schedule_match
+2026-07-22,dep,THY44D,,,LTFM,LTAE,,,2026-07-22T10:41:46+00:00,2026-07-22T11:01:21+00:00,,,,,,4baad3,,,no_schedule_match
+2026-07-22,dep,THY2TX,,,LTFM,,,,2026-07-22T10:53:26+00:00,2026-07-22T11:20:02+00:00,,,,,,4baa12,,,no_schedule_match
+2026-07-22,dep,AEE435,,,LTFM,,,,2026-07-22T10:54:08+00:00,2026-07-22T11:14:53+00:00,,,,,,4690f9,,,no_schedule_match
+2026-07-22,dep,IRM117,,,LTFM,,,,2026-07-22T11:02:08+00:00,2026-07-22T11:22:12+00:00,,,,,,733546,,,no_schedule_match
+2026-07-22,dep,THY31H,,,LTFM,LTAD,,,2026-07-22T11:05:15+00:00,2026-07-22T11:18:45+00:00,,,,,,4ba995,,,no_schedule_match
+2026-07-22,dep,RJA166,,,LTFM,OJAI,,,2026-07-22T11:13:38+00:00,2026-07-22T12:54:24+00:00,,,,,,744825,,,no_schedule_match
+2026-07-22,dep,THY8RC,,,LTFM,LTAS,,,2026-07-22T11:13:52+00:00,2026-07-22T11:17:59+00:00,,,,,,4baa70,,,no_schedule_match
+2026-07-22,dep,LBT641,,,LTFM,,,,2026-07-22T11:18:58+00:00,2026-07-22T12:45:19+00:00,,,,,,02a1ab,,,no_schedule_match
+2026-07-22,dep,THY8YF,,,LTFM,,,,2026-07-22T11:19:08+00:00,2026-07-22T11:43:36+00:00,,,,,,4bb050,,,no_schedule_match
+2026-07-22,dep,THY6AV,,,LTFM,,,,2026-07-22T11:21:55+00:00,2026-07-22T11:46:12+00:00,,,,,,4baac5,,,no_schedule_match
+2026-07-22,dep,THY1317,,,LTFM,LEVT,,,2026-07-22T11:26:12+00:00,2026-07-22T15:04:18+00:00,,,,,,4bb268,,,no_schedule_match
+2026-07-22,dep,MSR738,,,LTFM,HE32,,,2026-07-22T11:27:07+00:00,2026-07-22T12:50:15+00:00,,,,,,010161,,,no_schedule_match
+2026-07-22,dep,THY7YR,,,LTFM,LTAE,,,2026-07-22T11:31:27+00:00,2026-07-22T11:57:35+00:00,,,,,,4bb055,,,no_schedule_match
+2026-07-22,dep,THY9ZN,,,LTFM,,,,2026-07-22T11:31:38+00:00,2026-07-22T12:01:49+00:00,,,,,,4baa0e,,,no_schedule_match
+2026-07-22,dep,SVA258,,,LTFM,,,,2026-07-22T11:32:43+00:00,2026-07-22T12:44:01+00:00,,,,,,7114c6,,,no_schedule_match
+2026-07-22,dep,THY3RP,,,LTFM,LTAE,,,2026-07-22T11:35:44+00:00,2026-07-22T11:58:03+00:00,,,,,,4baad6,,,no_schedule_match
+2026-07-22,dep,THY8SW,,,LTFM,,,,2026-07-22T11:37:50+00:00,2026-07-22T11:56:06+00:00,,,,,,4baad2,,,no_schedule_match
+2026-07-22,dep,JZR302,,,LTFM,,,,2026-07-22T11:43:28+00:00,2026-07-22T13:28:45+00:00,,,,,,70612e,,,no_schedule_match
+2026-07-22,dep,BNL302,,,LTFM,,,,2026-07-22T11:46:34+00:00,2026-07-22T13:08:50+00:00,,,,,,4a1923,,,no_schedule_match
+2026-07-22,dep,THY3LA,,,LTFM,LTAE,,,2026-07-22T11:47:31+00:00,2026-07-22T12:14:21+00:00,,,,,,4baa0d,,,no_schedule_match
+2026-07-22,dep,THY126,,,LTFM,,,,2026-07-22T11:49:17+00:00,2026-07-22T13:37:29+00:00,,,,,,4baa8e,,,no_schedule_match
+2026-07-22,dep,THY1VR,,,LTFM,,,,2026-07-22T11:51:58+00:00,2026-07-22T13:39:45+00:00,,,,,,4baa5a,,,no_schedule_match
+2026-07-22,dep,THY4EB,,,LTFM,,,,2026-07-22T11:53:53+00:00,2026-07-22T12:54:21+00:00,,,,,,4bb044,,,no_schedule_match
+2026-07-22,dep,THY3GT,,,LTFM,,,,2026-07-22T11:57:49+00:00,2026-07-22T12:42:45+00:00,,,,,,4ba994,,,no_schedule_match
+2026-07-22,dep,THY7LS,,,LTFM,LTAD,,,2026-07-22T12:26:47+00:00,2026-07-22T12:53:31+00:00,,,,,,4ba999,,,no_schedule_match
+2026-07-22,dep,MNE401,,,LTFM,LAKU,,,2026-07-22T12:32:01+00:00,2026-07-22T13:39:02+00:00,,,,,,516097,,,no_schedule_match
+2026-07-22,dep,THY663,,,LTFM,,,,2026-07-22T12:42:46+00:00,2026-07-22T14:59:57+00:00,,,,,,4baa92,,,no_schedule_match
+2026-07-22,dep,THY1139,,,LTFM,,,,2026-07-22T13:09:46+00:00,2026-07-22T15:36:58+00:00,,,,,,4bab26,,,no_schedule_match
+2026-07-22,dep,THY1NE,,,LTFM,,,,2026-07-22T13:11:59+00:00,2026-07-22T13:33:53+00:00,,,,,,4bab48,,,no_schedule_match
+2026-07-22,dep,THY2PX,,,LTFM,LTAE,,,2026-07-22T13:14:59+00:00,2026-07-22T13:42:25+00:00,,,,,,4bab45,,,no_schedule_match
+2026-07-22,dep,THY2TL,,,LTFM,,,,2026-07-22T13:19:51+00:00,2026-07-22T15:12:32+00:00,,,,,,4bb281,,,no_schedule_match
+2026-07-22,dep,THY1VX,,,LTFM,LTAE,,,2026-07-22T13:20:39+00:00,2026-07-22T13:49:21+00:00,,,,,,4ba99a,,,no_schedule_match
+2026-07-22,dep,THY6QX,,,LTFM,,,,2026-07-22T13:24:14+00:00,2026-07-22T13:52:57+00:00,,,,,,4baa0a,,,no_schedule_match
+2026-07-22,dep,THY174,,,LTFM,,,,2026-07-22T13:34:04+00:00,2026-07-22T18:45:29+00:00,,,,,,4bb0e6,,,no_schedule_match
+2026-07-22,dep,THY124,,,LTFM,,,,2026-07-22T13:38:47+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb193,,,no_schedule_match
+2026-07-22,dep,THY58,,,LTFM,,,,2026-07-22T13:39:04+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb199,,,no_schedule_match
+2026-07-22,dep,THY9VA,,,LTFM,EDUZ,,,2026-07-22T13:55:01+00:00,2026-07-22T16:22:57+00:00,,,,,,4bb068,,,no_schedule_match
+2026-07-22,dep,THY5RA,,,LTFM,,,,2026-07-22T13:56:20+00:00,2026-07-22T14:51:03+00:00,,,,,,4ba90f,,,no_schedule_match
+2026-07-22,dep,THY2QC,,,LTFM,,,,2026-07-22T14:01:32+00:00,2026-07-22T14:10:18+00:00,,,,,,4ba916,,,no_schedule_match
+2026-07-22,dep,THY170,,,LTFM,,,,2026-07-22T14:02:29+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb18f,,,no_schedule_match
+2026-07-22,dep,THY9BS,,,LTFM,,,,2026-07-22T14:05:54+00:00,2026-07-22T18:45:31+00:00,,,,,,4baac1,,,no_schedule_match
+2026-07-22,dep,THY45M,,,LTFM,,,,2026-07-22T14:10:42+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb0ed,,,no_schedule_match
+2026-07-22,dep,THY1SN,,,LTFM,,,,2026-07-22T14:11:06+00:00,2026-07-22T14:36:23+00:00,,,,,,4baa10,,,no_schedule_match
+2026-07-22,dep,THY9RK,,,LTFM,LAKU,,,2026-07-22T14:15:18+00:00,2026-07-22T15:20:54+00:00,,,,,,4baa8c,,,no_schedule_match
+2026-07-22,dep,THY81D,,,LTFM,,,,2026-07-22T14:22:26+00:00,2026-07-22T18:45:30+00:00,,,,,,4bb0eb,,,no_schedule_match
+2026-07-22,dep,THY7JA,,,LTFM,LTAE,,,2026-07-22T14:34:30+00:00,2026-07-22T15:02:44+00:00,,,,,,4baa0b,,,no_schedule_match
+2026-07-22,dep,THY2MB,,,LTFM,,,,2026-07-22T14:35:41+00:00,2026-07-22T15:02:58+00:00,,,,,,4baa44,,,no_schedule_match
+2026-07-22,dep,THY6XN,,,LTFM,LTAE,,,2026-07-22T14:36:17+00:00,2026-07-22T15:05:37+00:00,,,,,,4bb056,,,no_schedule_match
+2026-07-22,dep,THY2ZT,,,LTFM,LTAE,,,2026-07-22T14:37:49+00:00,2026-07-22T15:07:29+00:00,,,,,,4bb28d,,,no_schedule_match
+2026-07-22,dep,THY7ZH,,,LTFM,LTAE,,,2026-07-22T14:39:33+00:00,2026-07-22T15:09:00+00:00,,,,,,4ba9a9,,,no_schedule_match
+2026-07-22,dep,THY97G,,,LTFM,LTAE,,,2026-07-22T14:40:49+00:00,2026-07-22T15:10:15+00:00,,,,,,4baa0c,,,no_schedule_match
+2026-07-22,dep,THY87R,,,LTFM,,,,2026-07-22T14:54:38+00:00,2026-07-22T15:53:56+00:00,,,,,,4bb04d,,,no_schedule_match
+2026-07-22,dep,THY1QB,,,LTFM,,,,2026-07-22T15:28:28+00:00,2026-07-22T16:27:42+00:00,,,,,,4baa09,,,no_schedule_match
+2026-07-22,dep,ABY288,,,LTFM,,,,2026-07-22T15:31:33+00:00,2026-07-22T18:36:51+00:00,,,,,,896741,,,no_schedule_match
+2026-07-22,dep,VLG3071,,,LTFM,,,,2026-07-22T15:36:07+00:00,2026-07-22T18:45:31+00:00,,,,,,34535a,,,no_schedule_match
+2026-07-22,dep,THY3NS,,,LTFM,LTAB,,,2026-07-22T15:44:53+00:00,2026-07-22T16:15:36+00:00,,,,,,4baad3,,,no_schedule_match
+2026-07-22,dep,RAM911T,,,LTFM,,,,2026-07-22T15:55:58+00:00,2026-07-22T18:45:31+00:00,,,,,,02013c,,,no_schedule_match
+2026-07-22,dep,TCERM,,,LTFM,,,,2026-07-22T16:08:14+00:00,2026-07-22T18:41:39+00:00,,,,,,4b964d,,,no_schedule_match
+2026-07-22,dep,THY1YS,,,LTFM,,,,2026-07-22T16:13:07+00:00,2026-07-22T16:33:45+00:00,,,,,,4baada,,,no_schedule_match
+2026-07-22,dep,THY8XJ,,,LTFM,,,,2026-07-22T16:15:22+00:00,2026-07-22T16:39:31+00:00,,,,,,4baa13,,,no_schedule_match
+2026-07-22,dep,THY6541,,,LTFM,,,,2026-07-22T16:33:56+00:00,2026-07-22T18:17:57+00:00,,,,,,4ba9f9,,,no_schedule_match
+2026-07-22,dep,THY5TN,,,LTFM,,,,2026-07-22T16:48:44+00:00,2026-07-22T18:45:31+00:00,,,,,,4baad2,,,no_schedule_match
+2026-07-22,dep,THY29M,,,LTFM,,,,2026-07-22T16:48:58+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb0e9,,,no_schedule_match
+2026-07-22,dep,THY62Y,,,LTFM,,,,2026-07-22T16:51:00+00:00,2026-07-22T18:43:16+00:00,,,,,,4ba9e7,,,no_schedule_match
+2026-07-22,dep,THY9PG,,,LTFM,,,,2026-07-22T16:53:05+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb183,,,no_schedule_match
+2026-07-22,dep,THY2YJ,,,LTFM,,,,2026-07-22T16:55:56+00:00,2026-07-22T18:42:13+00:00,,,,,,4bb266,,,no_schedule_match
+2026-07-22,dep,THY1ZH,,,LTFM,,,,2026-07-22T16:56:43+00:00,2026-07-22T17:22:36+00:00,,,,,,4bb050,,,no_schedule_match
+2026-07-22,dep,THY1EF,,,LTFM,,,,2026-07-22T16:57:33+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa6c,,,no_schedule_match
+2026-07-22,dep,THY1SQ,,,LTFM,,,,2026-07-22T17:00:51+00:00,2026-07-22T18:45:31+00:00,,,,,,4bab2c,,,no_schedule_match
+2026-07-22,dep,BAW717,,,LTFM,,,,2026-07-22T17:00:53+00:00,2026-07-22T18:45:31+00:00,,,,,,407d74,,,no_schedule_match
+2026-07-22,dep,THY91B,,,LTFM,,,,2026-07-22T17:01:21+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa85,,,no_schedule_match
+2026-07-22,dep,THY6CN,,,LTFM,,,,2026-07-22T17:03:03+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa7a,,,no_schedule_match
+2026-07-22,dep,THY43K,,,LTFM,,,,2026-07-22T17:04:11+00:00,2026-07-22T18:43:40+00:00,,,,,,4bb06d,,,no_schedule_match
+2026-07-22,dep,THY7JR,,,LTFM,,,,2026-07-22T17:04:53+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb144,,,no_schedule_match
+2026-07-22,dep,THY11,,,LTFM,,,,2026-07-22T17:09:59+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb141,,,no_schedule_match
+2026-07-22,dep,THY4AY,,,LTFM,,,,2026-07-22T17:10:51+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb28b,,,no_schedule_match
+2026-07-22,dep,THY236,,,LTFM,,,,2026-07-22T17:13:25+00:00,2026-07-22T18:45:31+00:00,,,,,,4ba9d4,,,no_schedule_match
+2026-07-22,dep,THY7MX,,,LTFM,,,,2026-07-22T17:15:11+00:00,2026-07-22T18:45:31+00:00,,,,,,4baacc,,,no_schedule_match
+2026-07-22,dep,THY9ZD,,,LTFM,,,,2026-07-22T17:16:32+00:00,2026-07-22T18:45:02+00:00,,,,,,4bb20d,,,no_schedule_match
+2026-07-22,dep,THY8WM,,,LTFM,,,,2026-07-22T17:17:59+00:00,2026-07-22T18:45:29+00:00,,,,,,4bb287,,,no_schedule_match
+2026-07-22,dep,UAE6RM,,,LTFM,,,,2026-07-22T17:19:57+00:00,2026-07-22T18:45:31+00:00,,,,,,896173,,,no_schedule_match
+2026-07-22,dep,THY9GV,,,LTFM,,,,2026-07-22T17:20:01+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb20f,,,no_schedule_match
+2026-07-22,dep,THY7DB,,,LTFM,,,,2026-07-22T17:20:17+00:00,2026-07-22T18:45:31+00:00,,,,,,4ba915,,,no_schedule_match
+2026-07-22,dep,SVA268,,,LTFM,,,,2026-07-22T17:21:31+00:00,2026-07-22T18:45:30+00:00,,,,,,711537,,,no_schedule_match
+2026-07-22,dep,THY9YK,,,LTFM,,,,2026-07-22T17:22:59+00:00,2026-07-22T18:45:30+00:00,,,,,,4bb267,,,no_schedule_match
+2026-07-22,dep,THY6QV,,,LTFM,,,,2026-07-22T17:24:32+00:00,2026-07-22T18:43:42+00:00,,,,,,4bb321,,,no_schedule_match
+2026-07-22,dep,THY8DT,,,LTFM,,,,2026-07-22T17:25:28+00:00,2026-07-22T18:44:06+00:00,,,,,,4ba919,,,no_schedule_match
+2026-07-22,dep,THY2AV,,,LTFM,,,,2026-07-22T17:26:17+00:00,2026-07-22T18:33:21+00:00,,,,,,4bb1e2,,,no_schedule_match
+2026-07-22,dep,PGT1984,,,LTFM,,,,2026-07-22T17:26:54+00:00,2026-07-22T18:40:04+00:00,,,,,,4b9067,,,no_schedule_match
+2026-07-22,dep,THY1DY,,,LTFM,,,,2026-07-22T17:27:51+00:00,2026-07-22T18:45:31+00:00,,,,,,4ba9c8,,,no_schedule_match
+2026-07-22,dep,THY576,,,LTFM,,,,2026-07-22T17:29:43+00:00,2026-07-22T18:45:31+00:00,,,,,,4ba9c2,,,no_schedule_match
+2026-07-22,dep,AHY176,,,LTFM,,,,2026-07-22T17:31:11+00:00,2026-07-22T18:36:51+00:00,,,,,,503d6f,,,no_schedule_match
+2026-07-22,dep,THY6147,,,LTFM,,,,2026-07-22T17:31:37+00:00,2026-07-22T18:45:30+00:00,,,,,,4bb155,,,no_schedule_match
+2026-07-22,dep,THY1176,,,LTFM,,,,2026-07-22T17:33:09+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb1c6,,,no_schedule_match
+2026-07-22,dep,THY4CW,,,LTFM,,,,2026-07-22T17:35:05+00:00,2026-07-22T18:45:31+00:00,,,,,,4baacd,,,no_schedule_match
+2026-07-22,dep,SVR774,,,LTFM,,,,2026-07-22T17:36:14+00:00,2026-07-22T18:40:16+00:00,,,,,,152058,,,no_schedule_match
+2026-07-22,dep,THY51Q,,,LTFM,,,,2026-07-22T17:36:45+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb195,,,no_schedule_match
+2026-07-22,dep,SYR444,,,LTFM,,,,2026-07-22T17:37:14+00:00,2026-07-22T18:45:31+00:00,,,,,,77cf32,,,no_schedule_match
+2026-07-22,dep,THY215,,,LTFM,,,,2026-07-22T17:38:46+00:00,2026-07-22T18:45:29+00:00,,,,,,4bb106,,,no_schedule_match
+2026-07-22,dep,THY2MJ,,,LTFM,,,,2026-07-22T17:39:53+00:00,2026-07-22T18:45:31+00:00,,,,,,4baad4,,,no_schedule_match
+2026-07-22,dep,THY1HC,,,LTFM,,,,2026-07-22T17:40:18+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa63,,,no_schedule_match
+2026-07-22,dep,THY59E,,,LTFM,,,,2026-07-22T17:40:46+00:00,2026-07-22T18:35:04+00:00,,,,,,4bb148,,,no_schedule_match
+2026-07-22,dep,THY5GW,,,LTFM,,,,2026-07-22T17:41:48+00:00,2026-07-22T18:45:31+00:00,,,,,,4baac5,,,no_schedule_match
+2026-07-22,dep,THY740,,,LTFM,,,,2026-07-22T17:41:53+00:00,2026-07-22T18:45:31+00:00,,,,,,4ba9cc,,,no_schedule_match
+2026-07-22,dep,THY322,,,LTFM,,,,2026-07-22T17:42:40+00:00,2026-07-22T18:45:30+00:00,,,,,,4bb1e8,,,no_schedule_match
+2026-07-22,dep,THY350,,,LTFM,,,,2026-07-22T17:43:28+00:00,2026-07-22T18:44:34+00:00,,,,,,4ba9ea,,,no_schedule_match
+2026-07-22,dep,THY2RK,,,LTFM,,,,2026-07-22T17:45:20+00:00,2026-07-22T18:45:31+00:00,,,,,,4baac2,,,no_schedule_match
+2026-07-22,dep,THY2ES,,,LTFM,,,,2026-07-22T17:46:25+00:00,2026-07-22T18:45:29+00:00,,,,,,4bb063,,,no_schedule_match
+2026-07-22,dep,THY3AT,,,LTFM,,,,2026-07-22T17:47:31+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa88,,,no_schedule_match
+2026-07-22,dep,THY4DL,,,LTFM,,,,2026-07-22T17:52:12+00:00,2026-07-22T18:43:41+00:00,,,,,,4ba930,,,no_schedule_match
+2026-07-22,dep,THY70G,,,LTFM,,,,2026-07-22T17:52:13+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb288,,,no_schedule_match
+2026-07-22,dep,THY4HA,,,LTFM,,,,2026-07-22T17:56:37+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa76,,,no_schedule_match
+2026-07-22,dep,THY6US,,,LTFM,,,,2026-07-22T17:57:28+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb261,,,no_schedule_match
+2026-07-22,dep,THY8KU,,,LTFM,,,,2026-07-22T18:00:29+00:00,2026-07-22T18:45:31+00:00,,,,,,4ba999,,,no_schedule_match
+2026-07-22,dep,THY094,,,LTFM,,,,2026-07-22T18:01:09+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb20a,,,no_schedule_match
+2026-07-22,dep,THY5CR,,,LTFM,,,,2026-07-22T18:02:04+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa90,,,no_schedule_match
+2026-07-22,dep,THY5RD,,,LTFM,,,,2026-07-22T18:05:21+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb26e,,,no_schedule_match
+2026-07-22,dep,BBT401,,,LTFM,,,,2026-07-22T18:07:59+00:00,2026-07-22T18:45:31+00:00,,,,,,4b9c62,,,no_schedule_match
+2026-07-22,dep,THY4UM,,,LTFM,,,,2026-07-22T18:08:04+00:00,2026-07-22T18:45:31+00:00,,,,,,4ba994,,,no_schedule_match
+2026-07-22,dep,THY4GE,,,LTFM,,,,2026-07-22T18:10:41+00:00,2026-07-22T18:45:30+00:00,,,,,,4baa43,,,no_schedule_match
+2026-07-22,dep,THY1DU,,,LTFM,,,,2026-07-22T18:11:25+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa0a,,,no_schedule_match
+2026-07-22,dep,THY8XH,,,LTFM,,,,2026-07-22T18:11:58+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb28e,,,no_schedule_match
+2026-07-22,dep,THY7PA,,,LTFM,,,,2026-07-22T18:14:56+00:00,2026-07-22T18:44:50+00:00,,,,,,4baa0e,,,no_schedule_match
+2026-07-22,dep,MEA268,,,LTFM,,,,2026-07-22T18:15:16+00:00,2026-07-22T18:45:30+00:00,,,,,,5001db,,,no_schedule_match
+2026-07-22,dep,THY2TY,,,LTFM,,,,2026-07-22T18:18:28+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa08,,,no_schedule_match
+2026-07-22,dep,THY4PT,,,LTFM,,,,2026-07-22T18:20:39+00:00,2026-07-22T18:45:25+00:00,,,,,,4bb044,,,no_schedule_match
+2026-07-22,dep,THY136,,,LTFM,,,,2026-07-22T18:22:20+00:00,2026-07-22T18:45:27+00:00,,,,,,4baa8b,,,no_schedule_match
+2026-07-22,dep,THY31M,,,LTFM,,,,2026-07-22T18:24:29+00:00,2026-07-22T18:45:31+00:00,,,,,,4ba9ce,,,no_schedule_match
+2026-07-22,dep,MNS503,,,LTFM,,,,2026-07-22T18:25:22+00:00,2026-07-22T18:45:31+00:00,,,,,,4d2397,,,no_schedule_match
+2026-07-22,dep,STW123,,,LTFM,,,,2026-07-22T18:25:56+00:00,2026-07-22T18:45:31+00:00,,,,,,4b9e4a,,,no_schedule_match
+2026-07-22,dep,THY1949,,,LTFM,,,,2026-07-22T18:29:06+00:00,2026-07-22T18:45:31+00:00,,,,,,4baa53,,,no_schedule_match
+2026-07-22,dep,THY8VC,,,LTFM,,,,2026-07-22T18:31:22+00:00,2026-07-22T18:45:31+00:00,,,,,,4bab2e,,,no_schedule_match
+2026-07-22,dep,THY8ZN,,,LTFM,,,,2026-07-22T18:36:31+00:00,2026-07-22T18:45:31+00:00,,,,,,4baad6,,,no_schedule_match
+2026-07-22,dep,KNE300,,,LTFM,,,,2026-07-22T18:37:43+00:00,2026-07-22T18:45:31+00:00,,,,,,4b9e02,,,no_schedule_match
+2026-07-22,dep,THY3DK,,,LTFM,,,,2026-07-22T18:38:22+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb263,,,no_schedule_match
+2026-07-22,dep,LOT2302,,,LTFM,,,,2026-07-22T18:40:49+00:00,2026-07-22T18:45:31+00:00,,,,,,48ada4,,,no_schedule_match
+2026-07-22,dep,THY1KG,,,LTFM,,,,2026-07-22T18:44:39+00:00,2026-07-22T18:45:31+00:00,,,,,,4bb201,,,no_schedule_match
+2026-07-22,dep,TVF3411,TO3411,Transavia France,LTFM,LFPO,2026-07-22T01:05:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY6467,TK6467,Turkish Airlines,LTFM,LEMD,2026-07-22T01:05:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,MBK600,MB600,Chrono Jet,LTFM,EDDK,2026-07-22T01:00:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,AFL2133,SU2133,Aeroflot,LTFM,UUEE,2026-07-22T01:00:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,TVF3415,TO3415,Transavia France,LTFM,LFPO,2026-07-22T00:50:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,MSR746,MS746,Egyptair,LTFM,HECA,2026-07-22T00:50:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY6039,TK6039,Turkish Airlines,LTFM,KORD,2026-07-22T00:45:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY1220,TK1220,Turkish Airlines,LTFM,EDDB,2026-07-22T00:45:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,AFL813,SU813,Aeroflot,LTFM,URMM,2026-07-22T00:45:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,DLH1743,LH1743,Lufthansa,LTFM,EDDM,2026-07-22T00:45:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY6405,TK6405,Turkish Airlines,LTFM,EDDF,2026-07-22T00:40:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,LWA101,YL101,Libyan Wings,LTFM,HLLM,2026-07-22T00:30:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,,,empty,LTFM,HLLM,2026-07-22T00:30:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,CWN753,FQ753,Crown Airlines,LTFM,HLLM,2026-07-22T00:15:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,GEC8461,GEC8461,Lufthansa Cargo,LTFM,EDDF,2026-07-22T00:15:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY6562,TK6562,Turkish Airlines,LTFM,OTHH,2026-07-22T00:10:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY6403,TK6403,Turkish Airlines,LTFM,EDDF,2026-07-22T00:01:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY360,TK360,Turkish Airlines,LTFM,UDYZ,2026-07-21T23:40:00+00:00,,,,,,scheduled,,E4,,,,no_opensky_match
+2026-07-22,dep,DAH3023,AH3023,Air Algerie,LTFM,DABC,2026-07-21T23:30:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY86,TK86,Turkish Airlines,LTFM,RJBB,2026-07-21T23:25:00+00:00,,,,,,scheduled,,B13,,,,no_opensky_match
+2026-07-22,dep,THY407,TK407,Turkish Airlines,LTFM,UUWW,2026-07-21T23:20:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY429,TK429,Turkish Airlines,LTFM,UWKD,2026-07-21T23:15:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY176,TK176,Turkish Airlines,LTFM,FIMP,2026-07-21T23:15:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY84,TK84,Turkish Airlines,LTFM,RPLL,2026-07-21T23:15:00+00:00,,,,,,scheduled,,A1G,,,,no_opensky_match
+2026-07-22,dep,THY734,TK734,Turkish Airlines,LTFM,VRMM,2026-07-21T23:10:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY164,TK164,Turkish Airlines,LTFM,VVNB,2026-07-21T23:10:00+00:00,,,,,,scheduled,,A1D,,,,no_opensky_match
+2026-07-22,dep,THY6264,TK6264,Turkish Airlines,LTFM,OJAI,2026-07-21T23:05:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY198,TK198,Turkish Airlines,LTFM,RJTT,2026-07-21T23:05:00+00:00,,,,,,scheduled,,D16,,,,no_opensky_match
+2026-07-22,dep,THY2572,TK2572,Turkish Airlines,LTFM,LTBS,2026-07-21T23:00:00+00:00,,,,,,scheduled,,G5A,,,,no_opensky_match
+2026-07-22,dep,THY2440,TK2440,Turkish Airlines,LTFM,LTAI,2026-07-21T23:00:00+00:00,,,,,,scheduled,,G8B,,,,no_opensky_match
+2026-07-22,dep,THY2192,TK2192,Turkish Airlines,LTFM,LTAC,2026-07-21T23:00:00+00:00,,,,,,scheduled,,G4A,,,,no_opensky_match
+2026-07-22,dep,THY814,TK814,Turkish Airlines,LTFM,OJAI,2026-07-21T23:00:00+00:00,,,,,,scheduled,,B5B,,,,no_opensky_match
+2026-07-22,dep,THY68,TK68,Turkish Airlines,LTFM,VTBS,2026-07-21T23:00:00+00:00,,,,,,scheduled,,F14,,,,no_opensky_match
+2026-07-22,dep,THY2528,TK2528,Turkish Airlines,LTFM,LTFE,2026-07-21T22:55:00+00:00,,,,,,scheduled,,G3J,,,,no_opensky_match
+2026-07-22,dep,THY2480,TK2480,Turkish Airlines,LTFM,LTDB,2026-07-21T22:55:00+00:00,,,,,,scheduled,,G10A,,,,no_opensky_match
+2026-07-22,dep,THY2042,TK2042,Turkish Airlines,LTFM,LTAN,2026-07-21T22:55:00+00:00,,,,,,scheduled,,G4B,,,,no_opensky_match
+2026-07-22,dep,THY692,TK692,Turkish Airlines,LTFM,HECA,2026-07-21T22:55:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY646,TK646,Turkish Airlines,LTFM,HCMM,2026-07-21T22:55:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY54,TK54,Turkish Airlines,LTFM,WSSS,2026-07-21T22:55:00+00:00,,,,,,scheduled,,B15,,,,no_opensky_match
+2026-07-22,dep,THY2232,TK2232,Turkish Airlines,LTFM,LTAU,2026-07-21T22:50:00+00:00,,,,,,scheduled,,G6A,,,,no_opensky_match
+2026-07-22,dep,THY376,TK376,Turkish Airlines,LTFM,UGTB,2026-07-21T22:50:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY184,TK184,Turkish Airlines,LTFM,MMMX,2026-07-21T22:50:00+00:00,,,,,,scheduled,,D15,,,,no_opensky_match
+2026-07-22,dep,THY157,TK157,Turkish Airlines,LTFM,KMIA,2026-07-21T22:50:00+00:00,,,,,,scheduled,,D7,,,,no_opensky_match
+2026-07-22,dep,THY172,TK172,Turkish Airlines,LTFM,VTSP,2026-07-21T22:50:00+00:00,,,,,,scheduled,,B16,,,,no_opensky_match
+2026-07-22,dep,THY162,TK162,Turkish Airlines,LTFM,VVTS,2026-07-21T22:50:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY90,TK90,Turkish Airlines,LTFM,RKSI,2026-07-21T22:50:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY56,TK56,Turkish Airlines,LTFM,WIII,2026-07-21T22:45:00+00:00,,,,,,scheduled,,F17,,,,no_opensky_match
+2026-07-22,dep,THY44,TK44,Turkish Airlines,LTFM,FACT,2026-07-21T22:45:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,FDB756,FZ756,flydubai,LTFM,OMDB,2026-07-21T22:45:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY2240,TK2240,Turkish Airlines,LTFM,LTAJ,2026-07-21T22:40:00+00:00,,,,,,scheduled,,G2A,,,,no_opensky_match
+2026-07-22,dep,THY1841,TK1841,Turkish Airlines,LTFM,LGAV,2026-07-21T22:40:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY88,TK88,Turkish Airlines,LTFM,ZBAA,2026-07-21T22:40:00+00:00,,,,,,scheduled,,D17,,,,no_opensky_match
+2026-07-22,dep,THY60,TK60,Turkish Airlines,LTFM,WMKK,2026-07-21T22:40:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY42,TK42,Turkish Airlines,LTFM,FAOR,2026-07-21T22:40:00+00:00,,,,,,scheduled,,F15,,,,no_opensky_match
+2026-07-22,dep,DAH3015,AH3015,Air Algerie,LTFM,DAAG,2026-07-21T22:40:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY2818,TK2818,Turkish Airlines,LTFM,LTFH,2026-07-21T22:35:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY338,TK338,Turkish Airlines,LTFM,UBBB,2026-07-21T22:35:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY144,TK144,Turkish Airlines,LTFM,OERK,2026-07-21T22:35:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY762,TK762,Turkish Airlines,LTFM,OMDB,2026-07-21T22:30:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY26,TK26,Turkish Airlines,LTFM,ZSPD,2026-07-21T22:30:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY70,TK70,Turkish Airlines,LTFM,VHHH,2026-07-21T22:30:00+00:00,,,,,,scheduled,,A1F,,,,no_opensky_match
+2026-07-22,dep,THY24,TK24,Turkish Airlines,LTFM,RCTP,2026-07-21T22:30:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY802,TK802,Turkish Airlines,LTFM,ORBI,2026-07-21T22:25:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY368,TK368,Turkish Airlines,LTFM,UZTT,2026-07-21T22:25:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,RWZ4640,WZ4640,Red Wings,LTFM,UWUU,2026-07-21T22:20:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY72,TK72,Turkish Airlines,LTFM,ZGGG,2026-07-21T22:20:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY66,TK66,Turkish Airlines,LTFM,WADD,2026-07-21T22:20:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY275,TK275,Turkish Airlines,LTFM,LUKK,2026-07-21T22:15:00+00:00,,,,,,scheduled,,B9B,,,,no_opensky_match
+2026-07-22,dep,THY96,TK96,Turkish Airlines,LTFM,OEJN,2026-07-21T22:15:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,CSN6036,CZ6036,China Southern Airlines,LTFM,ZWWW,2026-07-21T22:15:00+00:00,,,,,,scheduled,,N,,,,no_opensky_match
+2026-07-22,dep,THY964,TK964,Turkish Airlines,LTFM,LCEN,2026-07-21T22:10:00+00:00,,,,,,scheduled,,F3A,,,,no_opensky_match
+2026-07-22,dep,THY405,TK405,Turkish Airlines,LTFM,ULLI,2026-07-21T22:10:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY324,TK324,Turkish Airlines,LTFM,UTAA,2026-07-21T22:10:00+00:00,,,,,,scheduled,,A1E,,,,no_opensky_match
+2026-07-22,dep,THY6549,TK6549,Turkish Airlines,LTFM,LHBP,2026-07-22T02:00:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY2302,TK2302,Turkish Airlines,LTFM,LTBJ,2026-07-22T02:00:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,DAH3019,AH3019,Air Algerie,LTFM,DAAG,2026-07-22T02:00:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY6313,TK6313,Turkish Airlines,LTFM,EFHK,2026-07-22T01:45:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY6136,TK6136,Turkish Airlines,LTFM,VOMM,2026-07-22T01:30:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,ASL427,JU427,AirSERBIA,LTFM,LYBE,2026-07-22T01:25:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,AFR1391,AF1391,Air France,LTFM,LFPG,2026-07-22T01:25:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY848,TK848,Turkish Airlines,LTFM,OSDI,2026-07-22T01:10:00+00:00,,,,,,scheduled,,,,,,no_opensky_match
+2026-07-22,dep,THY1963,TK1963,Turkish Airlines,LTFM,EGKK,2026-07-22T08:05:00+00:00,2026-07-22T08:20:00+00:00,,,15,,landed,,F8B,,,,no_opensky_match
+2026-07-22,dep,IAW216,IA216,Iraqi Airways,LTFM,ORBI,2026-07-22T08:00:00+00:00,2026-07-22T08:13:00+00:00,,,13,,landed,,A11A,,,,no_opensky_match
+2026-07-22,dep,THY2320,TK2320,Turkish Airlines,LTFM,LTBJ,2026-07-22T08:00:00+00:00,2026-07-22T08:09:00+00:00,,,9,2,landed,,G1G,,,,no_opensky_match
+2026-07-22,dep,THY2138,TK2138,Turkish Airlines,LTFM,LTAC,2026-07-22T08:00:00+00:00,2026-07-22T08:07:00+00:00,,,7,,landed,,G1F,,,,no_opensky_match
+2026-07-22,dep,THY2014,TK2014,Turkish Airlines,LTFM,LTAU,2026-07-22T08:00:00+00:00,2026-07-22T08:12:00+00:00,,,12,,landed,,G11A,,,,no_opensky_match
+2026-07-22,dep,THY1943,TK1943,Turkish Airlines,LTFM,EBBR,2026-07-22T07:55:00+00:00,2026-07-22T08:10:00+00:00,,,15,,landed,,F8A,,,,no_opensky_match
+2026-07-22,dep,THY2508,TK2508,Turkish Airlines,LTFM,LTFE,2026-07-22T07:50:00+00:00,2026-07-22T07:59:00+00:00,,,9,,landed,,G9B,,,,no_opensky_match
+2026-07-22,dep,THY1957,TK1957,Turkish Airlines,LTFM,EHAM,2026-07-22T07:45:00+00:00,2026-07-22T08:05:00+00:00,,,20,,landed,,B10,,,,no_opensky_match
+2026-07-22,dep,THY2414,TK2414,Turkish Airlines,LTFM,LTAI,2026-07-22T07:40:00+00:00,2026-07-22T07:48:00+00:00,,,8,,landed,,G5B,,,,no_opensky_match
+2026-07-22,dep,AEE991,A3991,Aegean Airlines,LTFM,LGAV,2026-07-22T07:40:00+00:00,2026-07-22T08:07:00+00:00,,,27,2,landed,,A3B,,,,no_opensky_match
+2026-07-22,dep,THY1207,TK1207,Turkish Airlines,LTFM,LSZH,2026-07-22T07:35:00+00:00,2026-07-22T07:53:00+00:00,,,18,,landed,,B12A,,,,no_opensky_match
+2026-07-22,dep,VSV486,DV486,SCAT,LTFM,UAII,2026-07-22T07:30:00+00:00,2026-07-22T07:43:00+00:00,,,13,,landed,,E1,,,,no_opensky_match
+2026-07-22,dep,THY2824,TK2824,Turkish Airlines,LTFM,LTCG,2026-07-22T07:20:00+00:00,2026-07-22T07:24:00+00:00,,,4,,landed,,G7B,,,,no_opensky_match
+2026-07-22,dep,UTA728,UT728,UTair,LTFM,URMG,2026-07-22T07:15:00+00:00,2026-07-22T07:59:00+00:00,,,44,18,scheduled,,B9B,,,,no_opensky_match
+2026-07-22,dep,THY6140,TK6140,Turkish Airlines,LTFM,OTHH,2026-07-22T07:15:00+00:00,,,,,,,,,,,,no_opensky_match
+2026-07-22,dep,THY2036,TK2036,Turkish Airlines,LTFM,LTAN,2026-07-22T07:15:00+00:00,2026-07-22T07:50:00+00:00,,,35,26,landed,,G1D,,,,no_opensky_match
+2026-07-22,dep,ROT262,RO262,Tarom,LTFM,LROP,2026-07-22T07:15:00+00:00,2026-07-22T07:27:00+00:00,,,12,,landed,,A1D,,,,no_opensky_match
+2026-07-22,dep,THY1823,TK1823,Turkish Airlines,LTFM,LFPG,2026-07-22T07:10:00+00:00,2026-07-22T07:19:00+00:00,,,9,,landed,,B15,,,,no_opensky_match
+2026-07-22,dep,TRA3423,HV3423,Transavia,LTFM,LFPO,2026-07-22T03:45:00+00:00,2026-07-22T04:00:00+00:00,,,15,,landed,,D3,,,,no_opensky_match
