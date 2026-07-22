@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-07-22T18:46:11+00:00",
+ "generated_utc": "2026-07-22T19:39:59+00:00",
  "days": 5,
  "first_date": "2026-07-18",
  "last_date": "2026-07-22",
@@ -32,26 +32,31 @@
   {
    "date": "2026-07-18",
    "flights": 3,
+   "scored": 0,
    "avg_dep_delay": null
   },
   {
    "date": "2026-07-19",
    "flights": 48,
+   "scored": 0,
    "avg_dep_delay": null
   },
   {
    "date": "2026-07-20",
    "flights": 99,
+   "scored": 39,
    "avg_dep_delay": 28.1
   },
   {
    "date": "2026-07-21",
    "flights": 67,
+   "scored": 7,
    "avg_dep_delay": 19.7
   },
   {
    "date": "2026-07-22",
    "flights": 2,
+   "scored": 1,
    "avg_dep_delay": 47.0
   }
  ],

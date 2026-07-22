@@ -123,7 +123,7 @@ def build_summary():
         gd = pd.to_numeric(g.loc[g["direction"] == "dep", "avs_delay_minutes"],
                            errors="coerce").dropna()
         daily.append({
-            "date": str(d), "flights": int(len(g)),
+            "date": str(d), "flights": int(len(g)), "scored": int(len(gd)),
             "avg_dep_delay": round(float(gd.mean()), 1) if len(gd) else None,
         })
 
