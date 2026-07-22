@@ -135,10 +135,14 @@ def build_summary():
             latest_metar = str(w.iloc[-1]["raw"])
 
     match_rate = None
+    movements_tracked = None
     if METRICS.exists():
         m = pd.read_csv(METRICS).sort_values("date")
         if len(m) and "match_rate" in m.columns and pd.notna(m.iloc[-1]["match_rate"]):
             match_rate = float(m.iloc[-1]["match_rate"])
+        if "opensky_rows" in m.columns:  # total ADS-B movements OpenSky saw at IST
+            movements_tracked = int(pd.to_numeric(m["opensky_rows"], errors="coerce")
+                                    .fillna(0).sum())
 
     summary = {
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -146,6 +150,7 @@ def build_summary():
         "first_date": files[0].stem if files else None,
         "last_date": files[-1].stem if files else None,
         "total_flights": int(len(df)),
+        "movements_tracked": movements_tracked,  # ADS-B movements OpenSky saw
         "delay_known": int(len(known)),  # flights with gate-based delay data
         "median_delay": median_delay,
         "delay_hist": delay_hist,
