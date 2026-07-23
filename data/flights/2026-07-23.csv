@@ -1,0 +1,7 @@
+date,direction,callsign_icao,flight_iata,airline,origin_icao,destination_icao,scheduled_utc,actual_utc,opensky_firstseen_utc,opensky_lastseen_utc,delay_minutes,avs_delay_minutes,status,terminal,gate,icao24,data_quality_delta_min,quality_flags
+2026-07-23,dep,THY360,TK360,Turkish Airlines,LTFM,UDYZ,2026-07-22T23:40:00+00:00,,2026-07-22T23:52:26+00:00,2026-07-23T01:16:12+00:00,12,,scheduled,,,4bb28a,,
+2026-07-23,dep,AFL2133,SU2133,Aeroflot,LTFM,UUEE,2026-07-23T01:00:00+00:00,,2026-07-23T01:10:00+00:00,2026-07-23T01:27:55+00:00,10,,scheduled,,,151fff,,
+2026-07-23,dep,LWA101,YL101,Libyan Wings,LTFM,HLLM,2026-07-23T00:30:00+00:00,,2026-07-23T01:51:04+00:00,2026-07-23T04:42:46+00:00,81,,scheduled,,,018086,,
+2026-07-23,dep,DAH3019,AH3019,Air Algerie,LTFM,DAAG,2026-07-23T02:15:00+00:00,,2026-07-23T03:10:45+00:00,2026-07-23T05:54:39+00:00,56,,scheduled,,,0a0090,,
+2026-07-23,dep,THY770,TK770,Turkish Airlines,LTFM,OKKK,2026-07-22T23:00:00+00:00,,,,,,cancelled,,,,,
+2026-07-23,dep,THY6898,TK6898,Turkish Airlines,LTFM,OLBA,2026-07-22T21:40:00+00:00,,,,,,cancelled,,A1H,,,
