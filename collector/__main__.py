@@ -11,6 +11,17 @@ from .join import join_day
 log = logging.getLogger("collector")
 
 
+def _conversion(flights, unmatched):
+    """Share of the schedules we HAD that became flights — the honest join-quality
+    number. `match_rate` divides by all OpenSky movements instead, ~1100/day of
+    which we only ever hold schedules for ~200, so it reads ~7% while the join is
+    actually running 65-95%."""
+    missed = sum(1 for r in unmatched
+                 if r.get("reason") in ("no_opensky_match", "no_movement_seen"))
+    total = len(flights) + missed
+    return round(len(flights) / total, 3) if total else None
+
+
 def collect(day):
     """Collect one UTC day. Returns True if at least one flight source delivered."""
     date_str = day.isoformat()
@@ -41,6 +52,7 @@ def collect(day):
     store.update_metrics(date_str, rows=len(flights), unmatched=len(unmatched),
                          opensky_rows=os_n, avs_rows=len(schedules or []),
                          match_rate=round(matched / os_n, 3) if os_n else None,
+                         schedule_conversion=_conversion(flights, unmatched),
                          notes=notes)
     log.info("%s: %d flights, %d unmatched, %d weather obs", date_str,
              len(flights), len(unmatched), len(weather))
@@ -72,6 +84,7 @@ def finalize(day):
     store.update_metrics(date_str, rows=len(flights), unmatched=len(unmatched),
                          opensky_rows=os_n, avs_rows=len(schedules),
                          match_rate=round(matched / os_n, 3) if os_n else None,
+                         schedule_conversion=_conversion(flights, unmatched),
                          notes="finalized")
     log.info("%s finalized: %d flights, %d unmatched", date_str, len(flights), len(unmatched))
 
